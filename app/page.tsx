@@ -511,10 +511,10 @@ function ApplySection() {
       <Reveal>
         <div className="mx-auto max-w-[640px]">
           <p className="mb-3 text-center text-[12px] font-medium uppercase tracking-[0.3em] text-[#2dd4bf]/60">Interest Form</p>
-          <h2 className="mb-4 text-center text-[36px] font-bold tracking-tight text-white sm:text-[44px] whitespace-nowrap">
+          <h2 className="mb-4 text-center text-[24px] sm:text-[36px] font-bold tracking-tight text-white sm:text-[44px] whitespace-nowrap">
             <Typewriter segments={[{ text: "Ready to " }, { text: "delete", className: "bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9] bg-clip-text text-transparent" }, { text: " your " }, { text: "overhead", className: "text-red-400" }, { text: "?" }]} />
           </h2>
-          <p className="mb-14 text-center text-[16px] font-light text-white/35">
+          <p className="mb-14 text-center text-[16px] font-light text-white/50">
             Fill out the form below to see if olo is a fit to help your business save time, money, and headaches on admin work.
           </p>
 
@@ -575,7 +575,7 @@ function ApplySection() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Website <span className="text-white/20">(optional)</span></label>
+                  <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Website <span className="text-white/35">(optional)</span></label>
                   <input ref={websiteRef} type="text" placeholder="www.example.com" className={inputClass} />
                 </div>
                 <div>
@@ -599,7 +599,7 @@ function ApplySection() {
                 <label className="mb-2.5 block text-[13px] font-medium uppercase tracking-wider text-white">Employees</label>
                 <div className="flex flex-wrap gap-2">
                   {employeeRanges.map((r) => (
-                    <button key={r} onClick={() => setEmployees(r)} className={`rounded-lg border px-4 py-2 text-[13px] font-medium transition-all duration-200 ${employees === r ? "border-[#2dd4bf]/50 bg-[#2dd4bf]/10 text-[#2dd4bf] shadow-[0_0_12px_rgba(45,212,191,0.15)]" : "border-white/[0.06] text-white/35 hover:border-white/15 hover:text-white/50"}`}>
+                    <button key={r} onClick={() => setEmployees(r)} className={`rounded-lg border px-4 py-2 text-[13px] font-medium transition-all duration-200 ${employees === r ? "border-[#2dd4bf]/50 bg-[#2dd4bf]/10 text-[#2dd4bf] shadow-[0_0_12px_rgba(45,212,191,0.15)]" : "border-white/[0.06] text-white/50 hover:border-white/15 hover:text-white/50"}`}>
                       {r}
                     </button>
                   ))}
@@ -610,7 +610,7 @@ function ApplySection() {
                 <label className="mb-2.5 block text-[13px] font-medium uppercase tracking-wider text-white">Monthly Admin Overhead</label>
                 <div className="flex flex-wrap gap-2">
                   {overheadRanges.map((r) => (
-                    <button key={r} onClick={() => setOverhead(r)} className={`rounded-lg border px-4 py-2 text-[13px] font-medium transition-all duration-200 ${overhead === r ? "border-[#2dd4bf]/50 bg-[#2dd4bf]/10 text-[#2dd4bf] shadow-[0_0_12px_rgba(45,212,191,0.15)]" : "border-white/[0.06] text-white/35 hover:border-white/15 hover:text-white/50"}`}>
+                    <button key={r} onClick={() => setOverhead(r)} className={`rounded-lg border px-4 py-2 text-[13px] font-medium transition-all duration-200 ${overhead === r ? "border-[#2dd4bf]/50 bg-[#2dd4bf]/10 text-[#2dd4bf] shadow-[0_0_12px_rgba(45,212,191,0.15)]" : "border-white/[0.06] text-white/50 hover:border-white/15 hover:text-white/50"}`}>
                       {r}
                     </button>
                   ))}
@@ -654,7 +654,7 @@ function MeetOloSection() {
               <p className="mb-10 text-[16px] leading-[1.8] text-white/45">
                 olo detects admin work, coordinates the right tools, completes the task, validates the result, and logs what happened — asking before acting whenever your rules require approval.
               </p>
-              <h3 className="mb-6 text-[12px] font-bold uppercase tracking-[0.2em] text-white/30">What olo handles</h3>
+              <h3 className="mb-6 text-[12px] font-bold uppercase tracking-[0.2em] text-white/45">What olo handles</h3>
               <FeatureGrid />
             </div>
 
@@ -706,10 +706,10 @@ function TestimonialsSection() {
     <section id="testimonials" className="relative py-28 px-6">
       <Reveal>
         <div className="mx-auto max-w-[600px] text-center">
-          <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.3em] text-white/30">What they say</p>
+          <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.3em] text-white/45">What they say</p>
           <h2 className="mb-12 text-[36px] font-bold tracking-tight text-white sm:text-[44px]"><Typewriter segments={[{ text: "Testimonials" }]} /></h2>
           <div className="rounded-3xl border border-white/[0.04] bg-white/[0.01] px-12 py-16">
-            <p className="text-[18px] font-light italic text-white/25">Coming soon.</p>
+            <p className="text-[18px] font-light italic text-white/40">Coming soon.</p>
           </div>
         </div>
       </Reveal>
@@ -753,9 +753,9 @@ function ContactSection() {
     <section id="contact" className="relative py-28 px-6">
       <Reveal>
         <div className="mx-auto max-w-[500px]">
-          <p className="mb-3 text-center text-[12px] font-medium uppercase tracking-[0.3em] text-white/30">Get in touch</p>
+          <p className="mb-3 text-center text-[12px] font-medium uppercase tracking-[0.3em] text-white/45">Get in touch</p>
           <h2 className="mb-4 text-center text-[36px] font-bold tracking-tight text-white sm:text-[44px]"><Typewriter segments={[{ text: "Want to talk?" }]} /></h2>
-          <p className="mb-12 text-center text-[15px] font-light text-white/35">
+          <p className="mb-12 text-center text-[15px] font-light text-white/50">
             For investor, partner, and general inquiries.
           </p>
           <div className="relative rounded-3xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.05] shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-xl p-8 sm:p-10 overflow-hidden noise-texture">
