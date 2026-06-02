@@ -510,7 +510,7 @@ function ApplySection() {
     <section id="apply" className="relative py-28 px-6">
       <Reveal>
         <div className="mx-auto max-w-[640px]">
-          <p className="mb-3 text-center text-[12px] font-medium uppercase tracking-[0.3em] text-[#2dd4bf]/60">Limited to <Counter target={100} /> SMBs</p>
+          <p className="mb-3 text-center text-[12px] font-medium uppercase tracking-[0.3em] text-[#2dd4bf]/60">Interest Form</p>
           <h2 className="mb-4 text-center text-[36px] font-bold tracking-tight text-white sm:text-[44px] whitespace-nowrap">
             <Typewriter segments={[{ text: "Ready to " }, { text: "delete", className: "bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9] bg-clip-text text-transparent" }, { text: " your " }, { text: "overhead", className: "text-red-400" }, { text: "?" }]} />
           </h2>
