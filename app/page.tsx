@@ -283,7 +283,7 @@ function FeatureGrid() {
       {cards.map((card, i) => (
         <div
           key={i}
-          className={`rounded-xl ${card.bg} border ${card.border} p-5 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${visible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-95"}`}
+          className={`rounded-xl ${card.bg} border ${card.border} p-3 sm:p-5 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${visible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-95"}`}
           style={{ transitionDelay: `${i * 120}ms` }}
         >
           {card.icon}
@@ -326,22 +326,19 @@ function Nav({ mobileOpen, setMobileOpen }: { mobileOpen: boolean; setMobileOpen
           ))}
         </div>
       </nav>
-      <button onClick={() => setMobileOpen(!mobileOpen)} className="fixed right-5 top-5 z-50 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-black/50 backdrop-blur-xl lg:hidden">
-        <div className="flex flex-col gap-1">
-          <div className={`h-[1px] w-3.5 bg-white/70 transition-all duration-300 ${mobileOpen ? "translate-y-[3px] rotate-45" : ""}`} />
-          <div className={`h-[1px] w-3.5 bg-white/70 transition-all duration-300 ${mobileOpen ? "opacity-0" : ""}`} />
-          <div className={`h-[1px] w-3.5 bg-white/70 transition-all duration-300 ${mobileOpen ? "-translate-y-[3px] -rotate-45" : ""}`} />
+      {/* Mobile top nav bar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-3 bg-[#030d12]/80 backdrop-blur-xl border-b border-[#2dd4bf]/10 lg:hidden">
+        <a href="#" className="flex items-center gap-[3px] text-[#2dd4bf]/70">
+          <div className="h-[12px] w-[12px] rounded-full border-[1.5px] border-current" />
+          <div className="h-[14px] w-[1.5px] bg-current" />
+          <div className="h-[12px] w-[12px] rounded-full border-[1.5px] border-current" />
+        </a>
+        <div className="flex items-center gap-4">
+          {links.map((link) => (
+            <a key={link.href} href={link.href} className="text-[10px] font-medium uppercase tracking-[0.1em] text-white/50 transition-colors hover:text-[#2dd4bf]">{link.label}</a>
+          ))}
         </div>
-      </button>
-      {mobileOpen && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-[#020a0e]/98 backdrop-blur-2xl lg:hidden">
-          <div className="flex flex-col gap-8">
-            {links.map((link) => (
-              <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="text-center text-[24px] font-light tracking-[0.1em] text-white/60 transition-all hover:text-[#2dd4bf]">{link.label}</a>
-            ))}
-          </div>
-        </div>
-      )}
+      </nav>
     </>
   );
 }
@@ -597,7 +594,7 @@ function MeetOloSection() {
             {/* Right column - phone + diagram */}
             <div className="lg:col-span-3 flex items-center justify-center pt-8 relative">
               <div className="absolute inset-0 m-auto w-[300px] h-[500px] rounded-full pointer-events-none" style={{ background: 'rgba(45,212,191,0.12)', filter: 'blur(60px)' }} />
-              <img src="/pics/olo-admin (1).png" alt="olo admin" className="relative h-[400px] sm:h-[500px] lg:h-[600px] object-contain cursor-pointer hover:scale-[1.05] transition-transform duration-300 lg:scale-[1.25] lg:hover:scale-[1.28] origin-center drop-shadow-[0_0_40px_rgba(45,212,191,0.3)]" />
+              <img src="/pics/olo-admin (1).png" alt="olo admin" className="relative h-[500px] sm:h-[600px] lg:h-[600px] object-contain cursor-pointer hover:scale-[1.05] transition-transform duration-300 lg:scale-[1.25] lg:hover:scale-[1.28] origin-center drop-shadow-[0_0_40px_rgba(45,212,191,0.3)]" />
             </div>
           </div>
         </div>
@@ -625,7 +622,7 @@ function OnboardingSection() {
 
           <div className="flex justify-center pt-8 relative">
             <div className="absolute inset-0 m-auto w-[300px] h-[500px] rounded-full pointer-events-none" style={{ background: 'rgba(45,212,191,0.12)', filter: 'blur(60px)' }} />
-            <img src="/pics/olo-onboarding (1).png" alt="olo onboarding" className="relative h-[400px] sm:h-[500px] lg:h-[600px] object-contain cursor-pointer hover:scale-[1.05] transition-transform duration-300 lg:scale-[1.25] lg:hover:scale-[1.28] origin-center drop-shadow-[0_0_40px_rgba(45,212,191,0.3)]" />
+            <img src="/pics/olo-onboarding (1).png" alt="olo onboarding" className="relative h-[500px] sm:h-[600px] lg:h-[600px] object-contain cursor-pointer hover:scale-[1.05] transition-transform duration-300 lg:scale-[1.25] lg:hover:scale-[1.28] origin-center drop-shadow-[0_0_40px_rgba(45,212,191,0.3)]" />
           </div>
         </div>
       </Reveal>
@@ -715,6 +712,8 @@ export default function Page() {
 
   return (
     <div className="relative min-h-screen font-[var(--font-montserrat)] text-white antialiased">
+      {/* Scroll progress bar */}
+      <div className="fixed top-0 left-0 z-[60] h-[2px] bg-[#2dd4bf]/80 shadow-[0_0_8px_rgba(45,212,191,0.5)]" style={{ width: `${scrollProgress * 100}%`, transition: "width 0.1s linear" }} />
       {/* WebGL Lava Background */}
       <LavaBackground />
       {/* Noise grain overlay */}
