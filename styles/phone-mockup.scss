@@ -1,0 +1,200 @@
+:root {
+  --size: max(5px, 1vmin);
+  --height: 80em;
+  --pad: 1.25em;
+  --border-radius: 6.666em;
+  --gutter: calc(var(--pad) * 2);
+  --button-width: 0.333em;
+  --notch-height: 3.33em;
+  --notch-width: 33.3%;
+  --notch-radius: calc(var(--border-radius) - calc(var(--pad) * 2));
+  --border-width: 0.4em;
+  --c-h: 180;
+  --c-s: 50%;
+  --c-l: 30%;
+}
+
+@keyframes appear {
+  to {
+    transform: scale3d(1,1,1);
+    opacity: 1;
+  }
+}
+
+.phone-scene {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: var(--size);
+  box-sizing: border-box;
+  background: transparent;
+}
+
+@keyframes phoneShadowMove {
+  0% { box-shadow: 20px 20px 80px 10px rgba(45,212,191,0.4); }
+  25% { box-shadow: -20px 25px 80px 10px rgba(45,212,191,0.4); }
+  50% { box-shadow: -25px -20px 80px 10px rgba(45,212,191,0.4); }
+  75% { box-shadow: 20px -25px 80px 10px rgba(45,212,191,0.4); }
+  100% { box-shadow: 20px 20px 80px 10px rgba(45,212,191,0.4); }
+}
+
+.phone-glow {
+  display: block;
+  position: relative;
+}
+
+.phone {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 37/76;
+  background: black;
+  height: var(--height);
+  border-radius: var(--border-radius);
+  box-shadow:
+    0 0 0.1em 0.25em hsl(var(--c-h), 20%, 25%),
+    0 0 0 var(--border-width) hsl(var(--c-h), 30%, 85%);
+  box-sizing: border-box;
+  opacity: 0;
+  transform: scale3d(1.1,1.1,1);
+  animation: appear 1s cubic-bezier(.15,0,.333,1) forwards;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: var(--border-radius);
+    right: calc(var(--border-width) * -1);
+    bottom: var(--border-radius);
+    left: calc(var(--border-width) * -1);
+    border: 0.5em solid hsl(var(--c-h), 20%, 30%);
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+}
+
+.phone-buttons {
+  position: absolute;
+  inset: calc(var(--border-width) * -1);
+  pointer-events: none;
+
+  .left, .right {
+    position: absolute;
+    width: var(--button-width);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5em;
+  }
+
+  .left {
+    right: 100%;
+    top: calc(var(--border-radius) * 2);
+
+    .button:nth-child(1) {
+      height: 3em;
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .right {
+    left: 100%;
+    transform: scale3d(-1, 1, 1);
+    top: calc(var(--border-radius) * 3);
+
+    .button {
+      height: 9.5em;
+    }
+  }
+
+  .button {
+    background: hsl(var(--c-h), 20%, 95%);
+    height: 6em;
+    box-shadow:
+      inset -0.15em 0 0.1em black,
+      inset 0 0 0.1em hsl(var(--c-h), 30%, 90%),
+      inset 0 0.2em 0.1em hsl(var(--c-h), 30%, 90%),
+      inset 0 -0.2em 0.1em hsl(var(--c-h), 30%, 90%),
+      inset -0.1em 0.333em 0.1em rgba(black, 0.5),
+      inset -0.1em -0.333em 0.1em rgba(black, 0.5);
+    border-top-left-radius: 0.2em;
+    border-bottom-left-radius: 0.2em;
+  }
+}
+
+.phone-screen-container {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--border-radius);
+  border: var(--pad) solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // Home indicator
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    background: white;
+    width: 36.6%;
+    bottom: calc(var(--pad) * 0.75);
+    height: calc(var(--pad) * 0.5);
+    border-radius: calc(var(--pad) * 0.25);
+    filter: drop-shadow(0 0.1em 0.25em rgba(black, 0.1));
+  }
+}
+
+.phone-bg {
+  position: absolute;
+  inset: 0;
+  background: black;
+  border-radius: calc(var(--border-radius) - var(--pad));
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.phone-notch-container {
+  position: absolute;
+  z-index: 3;
+  top: var(--pad);
+  right: var(--pad);
+  left: var(--pad);
+  display: flex;
+  justify-content: center;
+  height: var(--notch-height);
+  pointer-events: none;
+}
+
+.phone-notch {
+  position: relative;
+  border-radius: var(--notch-radius);
+  overflow: hidden;
+  width: var(--notch-width);
+  height: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: calc(var(--pad) * 1);
+}
+
+.phone-camera {
+  height: 33.3%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0.25em #4c4da3;
+  background:
+    radial-gradient(#6667ac, transparent 50%) no-repeat 33.3% 10% / 75% 50%,
+    radial-gradient(darken(#6667ac, 15), transparent 50%) no-repeat 60% 85% / 50% 50%;
+  background-color: #080928;
+}
+
+.phone-screen-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: calc(var(--border-radius) - var(--pad));
+  overflow: hidden;
+  z-index: 1;
+}
