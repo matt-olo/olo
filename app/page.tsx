@@ -511,9 +511,8 @@ function ApplySection() {
       <Reveal>
         <div className="mx-auto max-w-[640px]">
           <p className="mb-3 text-center text-[12px] font-medium uppercase tracking-[0.3em] text-[#2dd4bf]/60">Limited to <Counter target={100} /> SMBs</p>
-          <h2 className="mb-4 text-center text-[36px] font-bold tracking-tight text-white sm:text-[44px]">
-            <span className="block"><Typewriter segments={[{ text: "Ready to " }, { text: "delete", className: "bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9] bg-clip-text text-transparent" }]} /></span>
-            <span className="block"><Typewriter segments={[{ text: "your " }, { text: "overhead", className: "text-red-400" }, { text: "?" }]} speed={40} /></span>
+          <h2 className="mb-4 text-center text-[36px] font-bold tracking-tight text-white sm:text-[44px] whitespace-nowrap">
+            <Typewriter segments={[{ text: "Ready to " }, { text: "delete", className: "bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9] bg-clip-text text-transparent" }, { text: " your " }, { text: "overhead", className: "text-red-400" }, { text: "?" }]} />
           </h2>
           <p className="mb-14 text-center text-[16px] font-light text-white/35">
             Fill out the form below to see if olo is a fit to help your business save time, money, and headaches on admin work.
