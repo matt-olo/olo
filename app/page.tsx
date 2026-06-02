@@ -715,8 +715,6 @@ export default function Page() {
 
   return (
     <div className="relative min-h-screen font-[var(--font-montserrat)] text-white antialiased">
-      {/* Scroll progress bar */}
-      <div className="fixed top-0 left-0 z-[60] h-[2px] bg-[#2dd4bf]/80 shadow-[0_0_8px_rgba(45,212,191,0.5)]" style={{ width: `${scrollProgress * 100}%`, transition: "width 0.1s linear" }} />
       {/* WebGL Lava Background */}
       <LavaBackground />
       {/* Noise grain overlay */}
@@ -741,7 +739,7 @@ export default function Page() {
             <div className="h-[16px] w-[1.5px] bg-current" />
             <div className="h-[14px] w-[14px] rounded-full border-[1.5px] border-current" />
           </div>
-          <p className="text-[12px] tracking-[0.2em] text-white/15">oloai.com</p>
+          <p className="text-[12px] tracking-[0.2em] text-white/15">meetolo.ai</p>
           <p className="mt-2 text-[10px] text-white/10">© 2026 SMB Automation R&D LLC. All rights reserved.</p>
         </footer>
       </main>
