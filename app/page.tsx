@@ -814,9 +814,9 @@ export default function Page() {
         <ContactSection />
         <footer className="py-16 text-center">
           <div className="mb-4 flex items-center justify-center gap-1 text-[#2dd4bf]/30">
-            <div className="h-[14px] w-[14px] rounded-full border-[1.5px] border-current" />
-            <div className="h-[16px] w-[1.5px] bg-current" />
-            <div className="h-[14px] w-[14px] rounded-full border-[1.5px] border-current" />
+            <div className="h-[16px] w-[16px] rounded-full border-[2px] border-current" />
+            <div className="h-[18px] w-[2px] bg-current" />
+            <div className="h-[16px] w-[16px] rounded-full border-[2px] border-current" />
           </div>
           <p className="text-[12px] tracking-[0.2em] text-white/15">meetolo.ai</p>
           <p className="mt-2 text-[10px] text-white/10">© 2026 SMB Automation R&D LLC. All rights reserved.</p>
