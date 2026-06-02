@@ -279,7 +279,7 @@ function FeatureGrid() {
   ];
 
   return (
-    <div ref={ref} className="grid grid-cols-2 gap-4">
+    <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {cards.map((card, i) => (
         <div
           key={i}
@@ -368,19 +368,19 @@ function Hero() {
       <div className="relative z-10 flex flex-col items-center px-6 text-center">
         {/* Logo - starts dim, lights up on click */}
         {/* Logo - starts dim, lights up on click */}
-          <div className={`mb-16 flex items-center text-[#2dd4bf] transition-all duration-700 ${clicked ? "opacity-100 drop-shadow-[0_0_20px_rgba(45,212,191,0.6)]" : "opacity-30"}`} style={{ animation: "fadeIn 0.8s ease-out both" }}>
-            <div className="h-[90px] w-[90px] rounded-full border-[4px] border-[#2dd4bf]" />
-            <div className="mx-2 h-[100px] w-[4px] bg-[#2dd4bf]" />
-            <div className="h-[90px] w-[90px] rounded-full border-[4px] border-[#2dd4bf]" />
+          <div className={`mb-10 sm:mb-16 flex items-center text-[#2dd4bf] transition-all duration-700 ${clicked ? "opacity-100 drop-shadow-[0_0_20px_rgba(45,212,191,0.6)]" : "opacity-30"}`} style={{ animation: "fadeIn 0.8s ease-out both" }}>
+            <div className="h-[60px] w-[60px] sm:h-[90px] sm:w-[90px] rounded-full border-[3px] sm:border-[4px] border-[#2dd4bf]" />
+            <div className="mx-1.5 sm:mx-2 h-[70px] sm:h-[100px] w-[3px] sm:w-[4px] bg-[#2dd4bf]" />
+            <div className="h-[60px] w-[60px] sm:h-[90px] sm:w-[90px] rounded-full border-[3px] sm:border-[4px] border-[#2dd4bf]" />
           </div>
 
         {/* Headline */}
         <h1 className="mb-8 animate-[fadeIn_0.5s_ease-out_0.5s_both]">
-          <span className="flex flex-wrap items-center justify-center gap-5 text-[52px] font-bold tracking-tight sm:text-[72px]">
+          <span className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-[36px] font-bold tracking-tight sm:text-[52px] lg:text-[72px]">
             {/* Delete key */}
             <span className="relative inline-flex">
               <span className="relative z-10 inline-flex items-center justify-center rounded-lg border border-[#2dd4bf]/50 bg-gradient-to-b from-[#1a5c5c]/80 to-[#0f3d3d]/80 px-6 py-2.5 shadow-[inset_0_1px_0_rgba(45,212,191,0.2),0_4px_0_#0a2020,0_6px_20px_rgba(0,0,0,0.4)] animate-[keyPress_0.3s_ease-out_2.2s_both]">
-                <span className="text-[38px] font-semibold tracking-wider text-[#2dd4bf] sm:text-[48px]">delete</span>
+                <span className="text-[28px] font-semibold tracking-wider text-[#2dd4bf] sm:text-[38px] lg:text-[48px]">delete</span>
               </span>
               {/* Cursor - animated in */}
               <span className="absolute -bottom-4 -right-3 z-20 animate-[cursorIn_0.5s_ease-out_1.8s_both]">
@@ -395,7 +395,7 @@ function Hero() {
         </h1>
 
         {/* Sub */}
-        <p className="mb-16 max-w-[600px] text-[18px] font-medium leading-relaxed text-white whitespace-nowrap animate-[fadeIn_0.4s_ease-out_2.8s_both]">
+        <p className="mb-16 max-w-[600px] text-[15px] sm:text-[18px] font-medium leading-relaxed text-white animate-[fadeIn_0.4s_ease-out_2.8s_both]">
           Automate work that creates headaches instead of revenue.
         </p>
 
@@ -475,7 +475,7 @@ function ApplySection() {
                   </select>
                 </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Name</label>
                   <div className="relative">
@@ -492,7 +492,7 @@ function ApplySection() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Phone</label>
                   <div className="flex gap-2">
@@ -509,7 +509,7 @@ function ApplySection() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Website <span className="text-white/20">(optional)</span></label>
                   <input type="text" placeholder="www.example.com" className={inputClass} />
@@ -573,7 +573,7 @@ function MeetOloSection() {
   return (
     <section id="meet-olo" className="relative py-28 px-6">
       <Reveal>
-        <div className="mx-auto max-w-[1200px] pl-8">
+        <div className="mx-auto max-w-[1200px] lg:pl-8">
           <p className="mb-3 text-center text-[12px] font-medium uppercase tracking-[0.3em] text-[#2dd4bf]/60">The Product</p>
           <h2 className="mb-4 text-center text-[36px] font-bold tracking-tight text-white sm:text-[44px]">
             <Typewriter segments={[{ text: "Meet " }, { text: "olo", className: "bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9] bg-clip-text text-transparent" }]} />
@@ -582,9 +582,9 @@ function MeetOloSection() {
             Autonomous Small Business Automation.
           </p>
 
-          <div className="grid gap-8 lg:grid-cols-5 pl-10">
+          <div className="grid gap-8 lg:grid-cols-5 lg:pl-10">
             {/* Left column - text */}
-            <div className="lg:col-span-2 relative rounded-3xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.05] shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-xl p-9 min-h-[560px] flex flex-col justify-center overflow-hidden noise-texture mt-6">
+            <div className="lg:col-span-2 relative rounded-3xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.05] shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-xl p-6 sm:p-9 lg:min-h-[560px] flex flex-col justify-center overflow-hidden noise-texture lg:mt-6">
               <RotatingBorder />
               <p className="mb-4 text-[22px] font-semibold text-[#2dd4bf]">The power of automation without any of the complexity.</p>
               <p className="mb-10 text-[16px] leading-[1.8] text-white/45">
@@ -597,7 +597,7 @@ function MeetOloSection() {
             {/* Right column - phone + diagram */}
             <div className="lg:col-span-3 flex items-center justify-center pt-8 relative">
               <div className="absolute inset-0 m-auto w-[300px] h-[500px] rounded-full pointer-events-none" style={{ background: 'rgba(45,212,191,0.12)', filter: 'blur(60px)' }} />
-              <img src="/pics/olo-admin (1).png" alt="olo admin" className="relative h-[600px] object-contain cursor-pointer hover:scale-[1.28] transition-transform duration-300 scale-[1.25] origin-center drop-shadow-[0_0_40px_rgba(45,212,191,0.3)]" />
+              <img src="/pics/olo-admin (1).png" alt="olo admin" className="relative h-[400px] sm:h-[500px] lg:h-[600px] object-contain cursor-pointer hover:scale-[1.05] transition-transform duration-300 lg:scale-[1.25] lg:hover:scale-[1.28] origin-center drop-shadow-[0_0_40px_rgba(45,212,191,0.3)]" />
             </div>
           </div>
         </div>
@@ -625,7 +625,7 @@ function OnboardingSection() {
 
           <div className="flex justify-center pt-8 relative">
             <div className="absolute inset-0 m-auto w-[300px] h-[500px] rounded-full pointer-events-none" style={{ background: 'rgba(45,212,191,0.12)', filter: 'blur(60px)' }} />
-            <img src="/pics/olo-onboarding (1).png" alt="olo onboarding" className="relative h-[600px] object-contain cursor-pointer hover:scale-[1.28] transition-transform duration-300 scale-[1.25] origin-center drop-shadow-[0_0_40px_rgba(45,212,191,0.3)]" />
+            <img src="/pics/olo-onboarding (1).png" alt="olo onboarding" className="relative h-[400px] sm:h-[500px] lg:h-[600px] object-contain cursor-pointer hover:scale-[1.05] transition-transform duration-300 lg:scale-[1.25] lg:hover:scale-[1.28] origin-center drop-shadow-[0_0_40px_rgba(45,212,191,0.3)]" />
           </div>
         </div>
       </Reveal>
