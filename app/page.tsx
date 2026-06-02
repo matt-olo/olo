@@ -445,6 +445,42 @@ function ApplySection() {
   const [zipArea, setZipArea] = useState("");
   const [employees, setEmployees] = useState("");
   const [overhead, setOverhead] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const businessRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<HTMLInputElement>(null);
+  const industryRef = useRef<HTMLInputElement>(null);
+  const websiteRef = useRef<HTMLInputElement>(null);
+  const titleRef = useRef<HTMLSelectElement>(null);
+
+  const handleApplySubmit = async () => {
+    if (submitting) return;
+    setSubmitting(true);
+    try {
+      await fetch("/api/apply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: nameRef.current?.value || "",
+          business: businessRef.current?.value || "",
+          email: emailRef.current?.value || "",
+          phone: phoneRef.current?.value || "",
+          industry: industryRef.current?.value || "",
+          website: websiteRef.current?.value || "",
+          title: titleRef.current?.value || "",
+          zip,
+          employees,
+          overhead,
+        }),
+      });
+      setSubmitted(true);
+    } catch (e) {
+      console.error(e);
+    }
+    setSubmitting(false);
+  };
 
   const employeeRanges = ["1-5", "6-15", "16-50", "51-100", "100+"];
   const overheadRanges = ["< $2K", "$2K-$5K", "$5K-$10K", "$10K-$25K", "$25K+"];
@@ -485,7 +521,7 @@ function ApplySection() {
               <div className="space-y-7">
                 <div>
                   <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Title</label>
-                  <select className={`${inputClass} appearance-none pr-12`} style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.4)' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 1.2rem center", backgroundSize: "12px" }}>
+                  <select ref={titleRef} className={`${inputClass} appearance-none pr-12`} style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.4)' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 1.2rem center", backgroundSize: "12px" }}>
                     <option value="" className="bg-[#0a1a1e]">Select...</option>
                     {titles.map((t) => (<option key={t} value={t} className="bg-[#0a1a1e]">{t}</option>))}
                   </select>
@@ -495,14 +531,14 @@ function ApplySection() {
                 <div>
                   <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Name</label>
                   <div className="relative">
-                    <input type="text" placeholder="Full name" className={inputClass} onChange={(e) => markFilled("name", e.target.value)} />
+                    <input ref={nameRef} type="text" placeholder="Full name" className={inputClass} onChange={(e) => markFilled("name", e.target.value)} />
                     {filledFields.has("name") && <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[#2dd4bf] text-[14px] animate-[fadeIn_0.3s_ease-out]">✓</span>}
                   </div>
                 </div>
                 <div>
                   <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Business</label>
                   <div className="relative">
-                    <input type="text" placeholder="Business name" className={inputClass} onChange={(e) => markFilled("business", e.target.value)} />
+                    <input ref={businessRef} type="text" placeholder="Business name" className={inputClass} onChange={(e) => markFilled("business", e.target.value)} />
                     {filledFields.has("business") && <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[#2dd4bf] text-[14px] animate-[fadeIn_0.3s_ease-out]">✓</span>}
                   </div>
                 </div>
@@ -513,13 +549,13 @@ function ApplySection() {
                   <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Phone</label>
                   <div className="flex gap-2">
                     <input type="text" maxLength={3} placeholder="000" className={`${inputClass} w-[70px] text-center`} />
-                    <input type="text" maxLength={7} placeholder="000-0000" className={inputClass} />
+                    <input ref={phoneRef} type="text" maxLength={7} placeholder="000-0000" className={inputClass} />
                   </div>
                 </div>
                 <div>
                   <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Email</label>
                   <div className="relative">
-                    <input type="email" placeholder="you@company.com" className={inputClass} onChange={(e) => markFilled("email", e.target.value)} />
+                    <input ref={emailRef} type="email" placeholder="you@company.com" className={inputClass} onChange={(e) => markFilled("email", e.target.value)} />
                     {filledFields.has("email") && <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[#2dd4bf] text-[14px] animate-[fadeIn_0.3s_ease-out]">✓</span>}
                   </div>
                 </div>
@@ -528,12 +564,12 @@ function ApplySection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Website <span className="text-white/20">(optional)</span></label>
-                  <input type="text" placeholder="www.example.com" className={inputClass} />
+                  <input ref={websiteRef} type="text" placeholder="www.example.com" className={inputClass} />
                 </div>
                 <div>
                   <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Industry</label>
                   <div className="relative">
-                    <input type="text" placeholder="e.g. HVAC, Legal..." className={inputClass} onChange={(e) => markFilled("industry", e.target.value)} />
+                    <input ref={industryRef} type="text" placeholder="e.g. HVAC, Legal..." className={inputClass} onChange={(e) => markFilled("industry", e.target.value)} />
                     {filledFields.has("industry") && <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[#2dd4bf] text-[14px] animate-[fadeIn_0.3s_ease-out]">✓</span>}
                   </div>
                 </div>
@@ -569,8 +605,8 @@ function ApplySection() {
                 </div>
               </div>
 
-              <button className={`mt-6 w-full rounded-xl bg-[#2dd4bf] py-4 text-[14px] font-bold uppercase tracking-[0.15em] text-[#030d12] transition-all duration-300 hover:shadow-[0_0_40px_rgba(45,212,191,0.4)] ${allFilled ? "shadow-[0_0_20px_rgba(45,212,191,0.3)] animate-pulse" : ""}`}>
-                Apply for Pilot
+              <button onClick={handleApplySubmit} disabled={submitting || submitted} className={`mt-6 w-full rounded-xl bg-[#2dd4bf] py-4 text-[14px] font-bold uppercase tracking-[0.15em] text-[#030d12] transition-all duration-300 hover:shadow-[0_0_40px_rgba(45,212,191,0.4)] ${allFilled ? "shadow-[0_0_20px_rgba(45,212,191,0.3)]" : ""} ${submitted ? "opacity-60" : ""}`}>
+                {submitted ? "Application Sent ✓" : submitting ? "Sending..." : "Apply for Pilot"}
               </button>
               </div>
             </div>
@@ -675,6 +711,31 @@ function TestimonialsSection() {
 
 function ContactSection() {
   const inputClass = "w-full rounded-xl border border-white/[0.06] bg-[#0a1a1e] px-5 py-3.5 text-[15px] text-white/90 placeholder-white/20 outline-none transition-all duration-300 focus:border-[#2dd4bf]/40 focus:bg-[#0d2228] focus:shadow-[0_0_0_3px_rgba(45,212,191,0.05)]";
+  const contactNameRef = useRef<HTMLInputElement>(null);
+  const contactEmailRef = useRef<HTMLInputElement>(null);
+  const contactMsgRef = useRef<HTMLTextAreaElement>(null);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleContactSubmit = async () => {
+    if (submitting) return;
+    setSubmitting(true);
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: contactNameRef.current?.value || "",
+          email: contactEmailRef.current?.value || "",
+          message: contactMsgRef.current?.value || "",
+        }),
+      });
+      setSubmitted(true);
+    } catch (e) {
+      console.error(e);
+    }
+    setSubmitting(false);
+  };
 
   return (
     <section id="contact" className="relative py-28 px-6">
@@ -690,18 +751,18 @@ function ContactSection() {
             <div className="space-y-5 relative z-[1] isolate">
               <div>
                 <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Name</label>
-                <input type="text" placeholder="Your name" className={inputClass} />
+                <input ref={contactNameRef} type="text" placeholder="Your name" className={inputClass} />
               </div>
               <div>
                 <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Email</label>
-                <input type="email" placeholder="you@company.com" className={inputClass} />
+                <input ref={contactEmailRef} type="email" placeholder="you@company.com" className={inputClass} />
               </div>
               <div>
                 <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Message</label>
-                <textarea rows={4} placeholder="How can we help?" className={`${inputClass} resize-none`} />
+                <textarea ref={contactMsgRef} rows={4} placeholder="How can we help?" className={`${inputClass} resize-none`} />
               </div>
-              <button className="group relative w-full overflow-hidden rounded-xl bg-[#2dd4bf] py-4 text-[14px] font-bold uppercase tracking-[0.15em] text-[#030d12] transition-all duration-300 hover:shadow-[0_0_40px_rgba(45,212,191,0.4)]">
-                <span className="relative z-10">Send Message</span>
+              <button onClick={handleContactSubmit} disabled={submitting || submitted} className={`group relative w-full overflow-hidden rounded-xl bg-[#2dd4bf] py-4 text-[14px] font-bold uppercase tracking-[0.15em] text-[#030d12] transition-all duration-300 hover:shadow-[0_0_40px_rgba(45,212,191,0.4)] ${submitted ? "opacity-60" : ""}`}>
+                <span className="relative z-10">{submitted ? "Message Sent ✓" : submitting ? "Sending..." : "Send Message"}</span>
                 <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-400 group-hover:translate-x-full" />
               </button>
             </div>
