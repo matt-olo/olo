@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { TextWidget } from "@livechat/widget-react";
+import { isValidPhoneNumber, AsYouType } from "libphonenumber-js";
 
 import LavaBackground from "@/components/lava-background";
 
@@ -551,12 +552,19 @@ function ApplySection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Phone</label>
-                  <input ref={phoneRef} type="tel" placeholder="000-000-0000" maxLength={12} className={inputClass} onChange={(e) => {
-                    const raw = e.target.value.replace(/\D/g, "").slice(0, 10);
-                    let formatted = raw;
-                    if (raw.length > 6) formatted = `${raw.slice(0,3)}-${raw.slice(3,6)}-${raw.slice(6)}`;
-                    else if (raw.length > 3) formatted = `${raw.slice(0,3)}-${raw.slice(3)}`;
+                  <input ref={phoneRef} type="tel" placeholder="(000) 000-0000" maxLength={14} className={inputClass} onChange={(e) => {
+                    const formatter = new AsYouType("US");
+                    const formatted = formatter.input(e.target.value);
                     e.target.value = formatted;
+                    const raw = e.target.value.replace(/\D/g, "");
+                    if (raw.length >= 10) {
+                      const valid = isValidPhoneNumber(e.target.value, "US");
+                      e.target.style.borderColor = valid ? "rgba(45,212,191,0.5)" : "rgba(239,68,68,0.6)";
+                      e.target.style.boxShadow = valid ? "0 0 0 4px rgba(45,212,191,0.08)" : "0 0 0 4px rgba(239,68,68,0.08)";
+                    } else {
+                      e.target.style.borderColor = "";
+                      e.target.style.boxShadow = "";
+                    }
                   }} />
                 </div>
                 <div>
