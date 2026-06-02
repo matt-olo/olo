@@ -327,16 +327,18 @@ function Nav({ mobileOpen, setMobileOpen }: { mobileOpen: boolean; setMobileOpen
         </div>
       </nav>
       {/* Mobile top nav bar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-3 bg-[#030d12]/80 backdrop-blur-xl border-b border-[#2dd4bf]/10 lg:hidden">
-        <a href="#" className="flex items-center gap-[3px] text-[#2dd4bf]/70">
-          <div className="h-[12px] w-[12px] rounded-full border-[1.5px] border-current" />
-          <div className="h-[14px] w-[1.5px] bg-current" />
-          <div className="h-[12px] w-[12px] rounded-full border-[1.5px] border-current" />
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-2.5 bg-[#030d12]/80 backdrop-blur-xl border-b border-[#2dd4bf]/10 lg:hidden">
+        <a href="#" className="flex items-center gap-[2px] text-[#2dd4bf]/70 shrink-0">
+          <div className="h-[10px] w-[10px] rounded-full border-[1.5px] border-current" />
+          <div className="h-[12px] w-[1.5px] bg-current" />
+          <div className="h-[10px] w-[10px] rounded-full border-[1.5px] border-current" />
         </a>
-        <div className="flex items-center gap-4">
-          {links.map((link) => (
-            <a key={link.href} href={link.href} className="text-[10px] font-medium uppercase tracking-[0.1em] text-white/50 transition-colors hover:text-[#2dd4bf]">{link.label}</a>
-          ))}
+        <div className="flex items-center gap-5">
+          <a href="#meet-olo" className="text-[9px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf]">Olo</a>
+          <a href="#onboarding" className="text-[9px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf]">Setup</a>
+          <a href="#apply" className="text-[9px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf]">Pilot</a>
+          <a href="#testimonials" className="text-[9px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf]">Reviews</a>
+          <a href="#contact" className="text-[9px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf]">Talk</a>
         </div>
       </nav>
     </>
