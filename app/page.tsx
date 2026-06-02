@@ -333,12 +333,12 @@ function Nav({ mobileOpen, setMobileOpen }: { mobileOpen: boolean; setMobileOpen
           <div className="h-[12px] w-[1.5px] bg-current" />
           <div className="h-[10px] w-[10px] rounded-full border-[1.5px] border-current" />
         </a>
-        <div className="flex items-center gap-5">
-          <a href="#meet-olo" className="text-[9px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf]">Olo</a>
-          <a href="#onboarding" className="text-[9px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf]">Setup</a>
-          <a href="#apply" className="text-[9px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf]">Pilot</a>
-          <a href="#testimonials" className="text-[9px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf]">Reviews</a>
-          <a href="#contact" className="text-[9px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf]">Talk</a>
+        <div className="flex items-center gap-6">
+          <a href="#meet-olo" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf] py-2">Olo</a>
+          <a href="#onboarding" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf] py-2">Setup</a>
+          <a href="#apply" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf] py-2">Pilot</a>
+          <a href="#testimonials" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf] py-2">Reviews</a>
+          <a href="#contact" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf] py-2">Talk</a>
         </div>
       </nav>
     </>
