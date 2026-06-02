@@ -336,7 +336,7 @@ function Nav({ mobileOpen, setMobileOpen }: { mobileOpen: boolean; setMobileOpen
         <div className="flex items-center gap-6">
           <a href="#meet-olo" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf] py-2">Olo</a>
           <a href="#onboarding" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf] py-2">Setup</a>
-          <a href="#apply" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf] py-2">Pilot</a>
+          <a href="#apply" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf] py-2">Interest</a>
           <a href="#testimonials" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf] py-2">Reviews</a>
           <a href="#contact" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/50 transition-colors hover:text-[#2dd4bf] py-2">Talk</a>
         </div>
@@ -451,7 +451,7 @@ function ApplySection() {
   const businessRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const phoneRef = useRef<HTMLInputElement>(null);
-  const industryRef = useRef<HTMLInputElement>(null);
+  const industryRef = useRef<HTMLSelectElement>(null);
   const websiteRef = useRef<HTMLInputElement>(null);
   const titleRef = useRef<HTMLSelectElement>(null);
 
@@ -485,6 +485,7 @@ function ApplySection() {
   const employeeRanges = ["1-5", "6-15", "16-50", "51-100", "100+"];
   const overheadRanges = ["< $2K", "$2K-$5K", "$5K-$10K", "$10K-$25K", "$25K+"];
   const titles = ["Owner", "CEO", "COO", "Operations Manager", "Office Manager", "Other"];
+  const industries = ["Home Services", "Contractors / Trades", "Property / Real Estate", "Medical / Dental", "Health & Wellness", "Legal / Accounting", "Insurance / Financial", "Auto Services", "Beauty / Fitness", "Education / Tutoring", "Pet Services", "Events / Hospitality", "Retail", "Cleaning / Janitorial", "Transportation", "Technology", "Other"];
 
   useEffect(() => {
     if (zip.length === 5) {
@@ -510,10 +511,10 @@ function ApplySection() {
         <div className="mx-auto max-w-[640px]">
           <p className="mb-3 text-center text-[12px] font-medium uppercase tracking-[0.3em] text-[#2dd4bf]/60">Limited to <Counter target={100} /> SMBs</p>
           <h2 className="mb-4 text-center text-[36px] font-bold tracking-tight text-white sm:text-[44px]">
-            <Typewriter segments={[{ text: "Ready to Join the " }, { text: "Pilot", className: "bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9] bg-clip-text text-transparent" }, { text: "?" }]} />
+            Ready to <span className="bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9] bg-clip-text text-transparent">delete</span> your <span className="text-red-400">overhead</span>?
           </h2>
           <p className="mb-14 text-center text-[16px] font-light text-white/35">
-            Delete your overhead — painlessly.
+            Fill out the form below to see if olo is a fit to help your business save time, money, and headaches on admin work.
           </p>
 
           <GlowCard className="bg-[#2dd4bf]/[0.03] backdrop-blur-xl noise-texture">
@@ -547,10 +548,13 @@ function ApplySection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Phone</label>
-                  <div className="flex gap-2">
-                    <input type="text" maxLength={3} placeholder="000" className={`${inputClass} w-[70px] text-center`} />
-                    <input ref={phoneRef} type="text" maxLength={7} placeholder="000-0000" className={inputClass} />
-                  </div>
+                  <input ref={phoneRef} type="tel" placeholder="000-000-0000" maxLength={12} className={inputClass} onChange={(e) => {
+                    const raw = e.target.value.replace(/\D/g, "").slice(0, 10);
+                    let formatted = raw;
+                    if (raw.length > 6) formatted = `${raw.slice(0,3)}-${raw.slice(3,6)}-${raw.slice(6)}`;
+                    else if (raw.length > 3) formatted = `${raw.slice(0,3)}-${raw.slice(3)}`;
+                    e.target.value = formatted;
+                  }} />
                 </div>
                 <div>
                   <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Email</label>
@@ -568,10 +572,10 @@ function ApplySection() {
                 </div>
                 <div>
                   <label className="mb-2.5 block text-[14px] font-medium uppercase tracking-wider text-white/80">Industry</label>
-                  <div className="relative">
-                    <input ref={industryRef} type="text" placeholder="e.g. HVAC, Legal..." className={inputClass} onChange={(e) => markFilled("industry", e.target.value)} />
-                    {filledFields.has("industry") && <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[#2dd4bf] text-[14px] animate-[fadeIn_0.3s_ease-out]">✓</span>}
-                  </div>
+                  <select ref={industryRef} onChange={(e) => markFilled("industry", e.target.value)} className={`${inputClass} appearance-none pr-12`} style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.4)' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 1.2rem center", backgroundSize: "12px" }}>
+                    <option value="" className="bg-[#0a1a1e]">Select...</option>
+                    {industries.map((ind) => (<option key={ind} value={ind} className="bg-[#0a1a1e]">{ind}</option>))}
+                  </select>
                 </div>
               </div>
 
