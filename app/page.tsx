@@ -351,11 +351,20 @@ function Nav({ mobileOpen, setMobileOpen }: { mobileOpen: boolean; setMobileOpen
 
 function Hero() {
   const [clicked, setClicked] = useState(false);
+  const [hasPlayed, setHasPlayed] = useState(false);
 
   useEffect(() => {
-    // Trigger after overhead fades in (1.9s) + a beat
-    const timer = setTimeout(() => setClicked(true), 2200);
-    return () => clearTimeout(timer);
+    const played = sessionStorage.getItem("hero-played");
+    if (played) {
+      setClicked(true);
+      setHasPlayed(true);
+    } else {
+      const timer = setTimeout(() => {
+        setClicked(true);
+        sessionStorage.setItem("hero-played", "1");
+      }, 2200);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   return (
@@ -367,39 +376,41 @@ function Hero() {
       <div className="relative z-10 flex flex-col items-center px-6 text-center">
         {/* Logo - starts dim, lights up on click */}
         {/* Logo - starts dim, lights up on click */}
-          <div className={`mb-10 sm:mb-16 flex items-center text-[#2dd4bf] transition-all duration-700 ${clicked ? "opacity-100 drop-shadow-[0_0_20px_rgba(45,212,191,0.6)]" : "opacity-30"}`} style={{ animation: "fadeIn 0.8s ease-out both" }}>
+          <div className={`mb-10 sm:mb-16 flex items-center text-[#2dd4bf] transition-all duration-700 ${clicked ? "opacity-100 drop-shadow-[0_0_20px_rgba(45,212,191,0.6)]" : "opacity-30"}`} style={!hasPlayed ? { animation: "fadeIn 0.8s ease-out both" } : undefined}>
             <div className="h-[60px] w-[60px] sm:h-[90px] sm:w-[90px] rounded-full border-[3px] sm:border-[4px] border-[#2dd4bf]" />
             <div className="mx-1.5 sm:mx-2 h-[70px] sm:h-[100px] w-[3px] sm:w-[4px] bg-[#2dd4bf]" />
             <div className="h-[60px] w-[60px] sm:h-[90px] sm:w-[90px] rounded-full border-[3px] sm:border-[4px] border-[#2dd4bf]" />
           </div>
 
         {/* Headline */}
-        <h1 className="mb-8 animate-[fadeIn_0.5s_ease-out_0.5s_both]">
+        <h1 className={`mb-8 ${!hasPlayed ? "animate-[fadeIn_0.5s_ease-out_0.5s_both]" : ""}`}>
           <span className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-[36px] font-bold tracking-tight sm:text-[52px] lg:text-[72px]">
             {/* Delete key */}
             <span className="relative inline-flex">
-              <span className="relative z-10 inline-flex items-center justify-center rounded-lg border border-[#2dd4bf]/50 bg-gradient-to-b from-[#1a5c5c]/80 to-[#0f3d3d]/80 px-6 py-2.5 shadow-[inset_0_1px_0_rgba(45,212,191,0.2),0_4px_0_#0a2020,0_6px_20px_rgba(0,0,0,0.4)] animate-[keyPress_0.3s_ease-out_2.2s_both]">
+              <span className={`relative z-10 inline-flex items-center justify-center rounded-lg border border-[#2dd4bf]/50 bg-gradient-to-b from-[#1a5c5c]/80 to-[#0f3d3d]/80 px-6 py-2.5 shadow-[inset_0_1px_0_rgba(45,212,191,0.2),0_4px_0_#0a2020,0_6px_20px_rgba(0,0,0,0.4)] ${!hasPlayed ? "animate-[keyPress_0.3s_ease-out_2.2s_both]" : ""}`}>
                 <span className="text-[28px] font-semibold tracking-wider text-[#2dd4bf] sm:text-[38px] lg:text-[48px]">delete</span>
               </span>
               {/* Cursor - animated in */}
+              {!hasPlayed && (
               <span className="absolute -bottom-4 -right-3 z-20 animate-[cursorIn_0.5s_ease-out_1.8s_both]">
                 <svg viewBox="0 0 24 24" className="h-[42px] w-[42px] animate-[clickPulse_0.3s_ease-out_2.2s_both]" style={{ filter: "drop-shadow(0 0 6px rgba(45,212,191,0.5))" }} fill="none">
                   <path d="M5 3l14 8-6 1.5-3.5 5.5z" fill="#2dd4bf" stroke="#0a2a2a" strokeWidth="1.5" />
                 </svg>
               </span>
+              )}
             </span>
-            <span className="animate-[fadeIn_0.4s_ease-out_1.0s_both] bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9] bg-clip-text text-transparent">your</span>
-            <span className={`animate-[fadeIn_0.4s_ease-out_1.3s_both] text-red-400 ${clicked ? "line-through decoration-[#2dd4bf] decoration-2" : ""} transition-all duration-300`}>overhead</span>
+            <span className={`${!hasPlayed ? "animate-[fadeIn_0.4s_ease-out_1.0s_both]" : ""} bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9] bg-clip-text text-transparent`}>your</span>
+            <span className={`${!hasPlayed ? "animate-[fadeIn_0.4s_ease-out_1.3s_both]" : ""} text-red-400 ${clicked ? "line-through decoration-[#2dd4bf] decoration-2" : ""} transition-all duration-300`}>overhead</span>
           </span>
         </h1>
 
         {/* Sub */}
-        <p className="mb-16 max-w-[600px] text-[15px] sm:text-[18px] font-medium leading-relaxed text-white animate-[fadeIn_0.4s_ease-out_2.8s_both]">
+        <p className={`mb-16 max-w-[600px] text-[15px] sm:text-[18px] font-medium leading-relaxed text-white ${!hasPlayed ? "animate-[fadeIn_0.4s_ease-out_2.8s_both]" : ""}`}>
           Automate work that creates headaches instead of revenue.
         </p>
 
         {/* CTAs */}
-        <div className="flex gap-4 animate-[fadeIn_0.4s_ease-out_3.2s_both]">
+        <div className={`flex gap-4 ${!hasPlayed ? "animate-[fadeIn_0.4s_ease-out_3.2s_both]" : ""}`}>
           <a href="#apply" className="rounded-full bg-[#2dd4bf] px-10 py-4 text-[14px] font-bold uppercase tracking-[0.15em] text-[#030d12] transition-all duration-300 hover:shadow-[0_0_40px_rgba(45,212,191,0.4)] shadow-[0_0_20px_rgba(45,212,191,0.3)]">
             Apply for Pilot
           </a>
@@ -410,9 +421,15 @@ function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center animate-[fadeIn_0.4s_ease-out_3.6s_both]">
-        <div className="relative h-[50px] w-[26px] rounded-full border-2 border-white/15">
+      <div className={`absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center ${!hasPlayed ? "animate-[fadeIn_0.4s_ease-out_3.6s_both]" : ""}`}>
+        {/* Desktop - mouse */}
+        <div className="hidden sm:block relative h-[50px] w-[26px] rounded-full border-2 border-white/15">
           <div className="absolute left-1/2 top-2 h-[8px] w-[2px] -translate-x-1/2 animate-bounce rounded-full bg-[#2dd4bf]/70" />
+        </div>
+        {/* Mobile - chevron */}
+        <div className="sm:hidden flex flex-col items-center gap-0.5 animate-bounce">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(45,212,191,0.6)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(45,212,191,0.3)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="-mt-2.5"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
       </div>
     </section>
