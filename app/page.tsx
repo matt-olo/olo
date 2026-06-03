@@ -376,11 +376,29 @@ function Hero() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center px-6 text-center">
         {/* Logo - starts dim, lights up on click */}
-        {/* Logo - starts dim, lights up on click */}
-          <div className={`mb-10 sm:mb-16 flex items-center text-[#2dd4bf] transition-all duration-700 ${clicked ? "opacity-100 drop-shadow-[0_0_20px_rgba(45,212,191,0.6)]" : "opacity-30"}`} style={!hasPlayed ? { animation: "fadeIn 0.8s ease-out both" } : undefined}>
-            <div className="h-[60px] w-[60px] sm:h-[90px] sm:w-[90px] rounded-full border-[3px] sm:border-[4px] border-[#2dd4bf]" />
-            <div className="mx-1.5 sm:mx-2 h-[70px] sm:h-[100px] w-[3px] sm:w-[4px] bg-[#2dd4bf]" />
-            <div className="h-[60px] w-[60px] sm:h-[90px] sm:w-[90px] rounded-full border-[3px] sm:border-[4px] border-[#2dd4bf]" />
+        {/* Logo - iridescent layered neon */}
+          <div className={`mb-10 sm:mb-16 flex items-center transition-all duration-700 ${clicked ? "opacity-100 animate-[neonFlicker_7s_ease-in-out_infinite_3s]" : "opacity-30"}`} style={!hasPlayed ? { animation: "fadeIn 0.8s ease-out both" } : undefined}>
+            {/* Left O */}
+            <div className="relative h-[60px] w-[60px] sm:h-[90px] sm:w-[90px]">
+              {/* Back layer - offset, different color */}
+              <div className="absolute inset-0 translate-x-[1px] translate-y-[1px] rounded-full border-[3px] sm:border-[4px] border-[#0ea5e9]/50" />
+              {/* Mid layer */}
+              <div className="absolute inset-0 -translate-x-[0.5px] -translate-y-[0.5px] rounded-full border-[3px] sm:border-[4px] border-[#06b6d4]/60" />
+              {/* Front layer - brightest */}
+              <div className="absolute inset-0 rounded-full border-[3px] sm:border-[4px] border-[#2dd4bf]" style={{ filter: 'drop-shadow(0 0 6px rgba(45,212,191,0.7))' }} />
+            </div>
+            {/* Bar */}
+            <div className="relative mx-1.5 sm:mx-2 h-[70px] sm:h-[100px]">
+              <div className="absolute inset-0 w-[3px] sm:w-[4px] translate-x-[1px] rounded-full bg-[#0ea5e9]/50" />
+              <div className="absolute inset-0 w-[3px] sm:w-[4px] -translate-x-[0.5px] rounded-full bg-[#06b6d4]/60" />
+              <div className="absolute inset-0 w-[3px] sm:w-[4px] rounded-full bg-[#2dd4bf]" style={{ filter: 'drop-shadow(0 0 6px rgba(45,212,191,0.7))' }} />
+            </div>
+            {/* Right O */}
+            <div className="relative h-[60px] w-[60px] sm:h-[90px] sm:w-[90px]">
+              <div className="absolute inset-0 translate-x-[1px] translate-y-[1px] rounded-full border-[3px] sm:border-[4px] border-[#34d399]/40" />
+              <div className="absolute inset-0 -translate-x-[0.5px] -translate-y-[0.5px] rounded-full border-[3px] sm:border-[4px] border-[#2dd4bf]/50" />
+              <div className="absolute inset-0 rounded-full border-[3px] sm:border-[4px] border-[#06b6d4]" style={{ filter: 'drop-shadow(0 0 6px rgba(6,182,212,0.7))' }} />
+            </div>
           </div>
 
         {/* Headline */}
@@ -389,7 +407,7 @@ function Hero() {
             {/* Delete key */}
             <span className="relative inline-flex">
               <span className={`relative z-10 inline-flex items-center justify-center rounded-lg border border-[#2dd4bf]/50 bg-gradient-to-b from-[#1a5c5c]/80 to-[#0f3d3d]/80 px-6 py-2.5 shadow-[inset_0_1px_0_rgba(45,212,191,0.2),0_4px_0_#0a2020,0_6px_20px_rgba(0,0,0,0.4)] ${!hasPlayed ? "animate-[keyPress_0.3s_ease-out_2.2s_both]" : ""}`}>
-                <span className="text-[28px] font-semibold tracking-wider text-[#2dd4bf] sm:text-[38px] lg:text-[48px]">delete</span>
+                <span className="text-[28px] font-bold tracking-wider text-[#2dd4bf] sm:text-[38px] lg:text-[48px] font-[var(--font-economica)]">delete</span>
               </span>
               {/* Cursor - animated in */}
               {!hasPlayed && (

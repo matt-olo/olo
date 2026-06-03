@@ -158,6 +158,12 @@
   50% { opacity: 0; }
 }
 
+@keyframes neonFlicker {
+  0%, 92%, 94%, 96%, 100% { opacity: 1; }
+  93% { opacity: 0.7; }
+  95% { opacity: 0.85; }
+}
+
 .bg-stripes {
   background-image: repeating-linear-gradient(
     135deg,
