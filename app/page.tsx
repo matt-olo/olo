@@ -413,7 +413,7 @@ function Hero() {
         {/* CTAs */}
         <div className={`flex gap-4 ${!hasPlayed ? "animate-[fadeIn_0.4s_ease-out_3.2s_both]" : ""}`}>
           <a href="#apply" className="rounded-full bg-[#2dd4bf] px-10 py-4 text-[14px] font-bold uppercase tracking-[0.15em] text-[#030d12] transition-all duration-300 hover:shadow-[0_0_40px_rgba(45,212,191,0.4)] shadow-[0_0_20px_rgba(45,212,191,0.3)]">
-            Apply for Pilot
+            Use Olo
           </a>
           <a href="#contact" className="inline-flex items-center justify-center rounded-full border border-white/10 px-10 py-4 text-[14px] font-medium uppercase tracking-[0.15em] text-white/60 transition-all duration-300 hover:border-[#2dd4bf]/30 hover:text-[#2dd4bf]/80 hover:shadow-[0_0_20px_rgba(45,212,191,0.1)]">
             Contact
@@ -618,7 +618,7 @@ function ApplySection() {
               </div>
 
               <button onClick={handleApplySubmit} disabled={submitting || submitted} className={`mt-6 w-full rounded-xl bg-[#2dd4bf] py-4 text-[14px] font-bold uppercase tracking-[0.15em] text-[#030d12] transition-all duration-300 hover:shadow-[0_0_40px_rgba(45,212,191,0.4)] ${allFilled ? "shadow-[0_0_20px_rgba(45,212,191,0.3)]" : ""} ${submitted ? "opacity-60" : ""}`}>
-                {submitted ? "Application Sent ✓" : submitting ? "Sending..." : "Apply for Pilot"}
+                {submitted ? "Application Sent ✓" : submitting ? "Sending..." : "Use Olo"}
               </button>
               </div>
             </div>
