@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono, Montserrat, Inter, Economica } from 'next/font/google'
+import { Geist, Geist_Mono, Montserrat, Inter, Economica, Urbanist } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
@@ -8,6 +8,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const economica = Economica({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-economica" });
+const urbanist = Urbanist({ subsets: ["latin"], variable: "--font-urbanist" });
 
 export const metadata: Metadata = {
   title: 'olo ai',
@@ -38,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased ${montserrat.variable} ${inter.variable} ${_geist.variable} ${economica.variable}`}>
+      <body className={`font-sans antialiased ${montserrat.variable} ${inter.variable} ${_geist.variable} ${economica.variable} ${urbanist.variable}`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

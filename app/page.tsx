@@ -424,7 +424,7 @@ function Hero() {
         </h1>
 
         {/* Sub */}
-        <p className={`mb-16 max-w-[600px] text-[15px] sm:text-[18px] font-medium leading-relaxed text-white ${!hasPlayed ? "animate-[fadeIn_0.4s_ease-out_2.8s_both]" : ""}`}>
+        <p className={`mb-16 max-w-[600px] text-[15px] sm:text-[18px] font-medium leading-relaxed text-white font-[var(--font-urbanist)] ${!hasPlayed ? "animate-[fadeIn_0.4s_ease-out_2.8s_both]" : ""}`}>
           Automate work that creates headaches instead of revenue.
         </p>
 
