@@ -618,7 +618,7 @@ function ApplySection() {
               </div>
 
               <button onClick={handleApplySubmit} disabled={submitting || submitted} className={`mt-6 w-full rounded-xl bg-[#2dd4bf] py-4 text-[14px] font-bold uppercase tracking-[0.15em] text-[#030d12] transition-all duration-300 hover:shadow-[0_0_40px_rgba(45,212,191,0.4)] ${allFilled ? "shadow-[0_0_20px_rgba(45,212,191,0.3)]" : ""} ${submitted ? "opacity-60" : ""}`}>
-                {submitted ? "Application Sent ✓" : submitting ? "Sending..." : "Use Olo"}
+                {submitted ? "Application Sent ✓" : submitting ? "Sending..." : "Get Started"}
               </button>
               </div>
             </div>
