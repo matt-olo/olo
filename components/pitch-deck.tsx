@@ -74,9 +74,9 @@ const slidesData = [
   {
     id: 5,
     title: "solution",
-    subtitle: "{{strike}}the user{{/strike}} {{turq}}olo{{/turq}} is the **orchestration layer**",
+    subtitle: "{{strike}}the user{{/strike}} {{turq}}olo{{/turq}} manages the **automation layer**",
     bullets: [
-      "olo connects isolated automation tools into one unified system — letting them share context, coordinate actions, and compound the value of every tool plugged in.",
+      "olo manages the automation layer — connecting isolated tools to share context, coordinate actions, and log outcomes so the user stays in control without doing any of the coordination.",
     ],
     content: "One call becomes a completed workflow. {{underlinewhite}}Coordination is the multiplier.{{/underlinewhite}}",
     bgColor: "bg-[#040e14]",
