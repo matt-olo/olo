@@ -64,11 +64,11 @@ const slidesData = [
     title: "problem",
     subtitle: "{{red}}Isolation{{/red}} {{white}}={{/white}} {{red}}Inefficiency{{/red}}",
     bullets: [
-      "AI tools are powerful in isolation, but SMB workflows are **not isolated**. They are chains of dependent work across calls, email, scheduling, accounting, invoicing, payroll, and more.",
-      "This isolation doesn\u2019t just create a poor **user experience** \u2014 it limits what automation can {{turq}}unlock{{/turq}}.",
-      "**When tools do not know about one another, {{underline}}the user becomes the orchestration layer.{{/underline}}**",
+      "AI tools are powerful in isolation, but SMB owners cannot babysit a multitude of **prompts**, **agents**, **dashboards**, and **disconnected apps**.",
+      "Their work does not live in one tool or software. It moves across {{turq}}calls{{/turq}}, {{turq}}email{{/turq}}, {{turq}}scheduling{{/turq}}, {{turq}}accounting{{/turq}}, {{turq}}invoicing{{/turq}}, {{turq}}payroll{{/turq}}, {{turq}}customer messages{{/turq}}, and more.",
+      "When each tool needs direction, context, and follow-up, {{underline}}the user becomes the manager of the automation layer.{{/underline}}",
     ],
-    content: "This is the new form of administrative overhead.",
+    content: "This is the new administrative overhead.",
     bgColor: "bg-[#040e14]",
   },
   {
