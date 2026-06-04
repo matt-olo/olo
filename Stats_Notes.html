@@ -1,0 +1,1398 @@
+<h1>Statistics Notes</h1>
+<hr>
+<h2>Measures of Central Tendency</h2>
+<p>Three measures: <strong>Mean, Median, Mode</strong>. Created to summarize lots of numbers into a single value our brains can understand.</p>
+<h3>Mean (Arithmetic Mean)</h3>
+<ul>
+<li>Most common measure of central tendency. <strong>The one that gets plugged into statistical tests.</strong></li>
+<li>Also called the &quot;arithmetic average.&quot; Technically all central tendency measures are types of averages, but &quot;mean&quot; = arithmetic average specifically.</li>
+<li>Population mean symbol = <strong>μ</strong> | Sample mean symbol = <strong>M</strong> or <strong>X̄</strong> (X-bar)</li>
+<li>Formula: μ = ΣX / N</li>
+<li><strong>Plain English:</strong> Add up all the values, then divide by how many values there are</li>
+<li><strong>Excel:</strong> <code>=AVERAGE(A1:A31)</code> — shortcut that does sum/count in one step<ul>
+<li>Long way: <code>=SUM(A1:A11)/COUNT(A1:A11)</code> (sum ÷ number of values)</li>
+</ul>
+</li>
+<li>Example: 2, 4, 6, 2, 4 → sum = 18, N = 5, mean = 18/5 = 3.6</li>
+<li>If &quot;mean&quot; is used without specification, it refers to arithmetic mean (not geometric mean)</li>
+<li><strong>Weakness of the mean: OUTLIERS (extreme scores).</strong> Extreme values pull the mean up or down, making it no longer representative. Example: average home price in a beach town = $1.4M because a few $50M+ houses pull the average up, even though most homes cost far less.</li>
+<li><strong>When outliers exist → use the MEDIAN instead.</strong> That&#39;s why home sale data reports median price, not mean.</li>
+<li>Mean works fine when the distribution is <strong>normal</strong> (most values cluster around the middle, low/high values are rare)</li>
+</ul>
+<h3>Median</h3>
+<ul>
+<li>Midpoint of a distribution; equal number of scores above and below</li>
+<li>Same as the 50th percentile</li>
+<li><strong>Plain English:</strong> Line up all values from lowest to highest, pick the one in the middle. If two middle numbers, average them.</li>
+<li><strong>Excel:</strong> <code>=MEDIAN(A1:A31)</code></li>
+<li><strong>Odd count:</strong> middle number (e.g., 2, 4, 7 → median = 4)</li>
+<li><strong>Even count:</strong> mean of two middle numbers (e.g., 2, 4, 7, 12 → (4+7)/2 = 5.5)</li>
+<li>When values repeat, use the formula for the 50th percentile</li>
+<li><strong>Use median over mean when there are extreme scores/outliers</strong> (skewed distributions)</li>
+</ul>
+<h3>Mode</h3>
+<ul>
+<li>Most frequently occurring value</li>
+<li><strong>Plain English:</strong> Whichever value shows up the most times in your data</li>
+<li><strong>Excel:</strong> <code>=MODE(A1:A31)</code> or <code>=MODE.SNGL()</code> for single mode, <code>=MODE.MULT()</code> for multiple modes<ul>
+<li>If no value repeats → Excel returns &quot;N/A&quot; (no mode exists)</li>
+</ul>
+</li>
+<li>Example: In TD passes data, mode = 18 (4 teams had 18, more than any other value)</li>
+<li>If two values tie for most frequent = <strong>bimodal</strong> (2 modes)</li>
+<li><strong>In statistics, mode is mostly used for categories, not numbers</strong> — e.g., most common eye color (brown), most popular pizza place, favorite meal. It identifies the most frequently occurring case/category.</li>
+<li>With continuous data, mode is computed from a <strong>grouped frequency distribution</strong> (since no two scores are exactly alike)</li>
+<li>Mode = middle of the interval with the highest frequency (e.g., interval 600–700 has freq 6 → mode = 650)</li>
+</ul>
+<h3>When to Use Which</h3>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Best For</th>
+<th>Weakness</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Mean</strong></td>
+<td>Most situations; plugs into statistical tests</td>
+<td>Pulled by outliers/extreme scores</td>
+</tr>
+<tr>
+<td><strong>Median</strong></td>
+<td>When outliers exist (skewed data, e.g., home prices)</td>
+<td>Doesn&#39;t use all data points</td>
+</tr>
+<tr>
+<td><strong>Mode</strong></td>
+<td>Categorical data (eye color, favorite food, etc.)</td>
+<td>May not exist; less useful for numerical data</td>
+</tr>
+</tbody></table>
+<h3>Key Excel Summary</h3>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Formula</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sum</td>
+<td><code>=SUM(range)</code></td>
+</tr>
+<tr>
+<td>Count</td>
+<td><code>=COUNT(range)</code></td>
+</tr>
+<tr>
+<td>Mean</td>
+<td><code>=AVERAGE(range)</code></td>
+</tr>
+<tr>
+<td>Median</td>
+<td><code>=MEDIAN(range)</code></td>
+</tr>
+<tr>
+<td>Mode</td>
+<td><code>=MODE.SNGL(range)</code> or <code>=MODE.MULT(range)</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Measures of Variability</h2>
+<p>Variability (also called spread or dispersion) = how &quot;spread out&quot; scores are. Two distributions can have the same mean but very different variability. Four measures: <strong>Range, IQR, Variance, Standard Deviation</strong>.</p>
+<h3>Range</h3>
+<ul>
+<li>Simplest measure of variability</li>
+<li><strong>Plain English:</strong> Highest score minus lowest score</li>
+<li><strong>Excel:</strong> <code>=MAX(range) - MIN(range)</code></li>
+<li>Example: 10, 2, 5, 6, 7, 3, 4 → Range = 10 - 2 = 8</li>
+</ul>
+<h3>Interquartile Range (IQR)</h3>
+<ul>
+<li>Range of the <strong>middle 50%</strong> of scores</li>
+<li><strong>Plain English:</strong> Find the 75th percentile and the 25th percentile, subtract them</li>
+<li>Formula: IQR = 75th percentile − 25th percentile</li>
+<li><strong>Excel:</strong> <code>=QUARTILE(range, 3) - QUARTILE(range, 1)</code></li>
+<li>75th percentile = upper hinge; 25th percentile = lower hinge; IQR = H-spread</li>
+<li><strong>Semi-interquartile range</strong> = IQR / 2. In a symmetric distribution, median ± semi-IQR contains half the scores.</li>
+</ul>
+<h3>Variance</h3>
+<ul>
+<li>How close scores are to the middle (mean) of the distribution</li>
+<li><strong>Plain English:</strong> Average of the squared differences between each score and the mean. Squaring makes all deviations positive and penalizes big deviations more.</li>
+<li><strong>Key fact:</strong> The mean of the raw deviations from the mean ALWAYS = 0 (that&#39;s why we square them)</li>
+</ul>
+<p><strong>Population variance (σ²):</strong></p>
+<ul>
+<li>Formula: σ² = Σ(X − μ)² / N</li>
+<li><strong>Excel:</strong> <code>=VAR.P(range)</code></li>
+<li>Use when you have the entire population</li>
+</ul>
+<p><strong>Sample variance (s²) — estimating population variance from a sample:</strong></p>
+<ul>
+<li>Formula: s² = Σ(X − M)² / (N − 1)</li>
+<li><strong>Excel:</strong> <code>=VAR.S(range)</code></li>
+<li>Divides by <strong>N−1</strong> (not N) because dividing by N underestimates the true population variance</li>
+<li>This is the formula used most often in practice</li>
+</ul>
+<p><strong>Example:</strong> Scores 1, 2, 4, 5 (sample)</p>
+<ul>
+<li>M = (1+2+4+5)/4 = 3</li>
+<li>s² = [(1−3)² + (2−3)² + (4−3)² + (5−3)²] / (4−1) = (4+1+1+4)/3 = 10/3 = 3.333</li>
+</ul>
+<h3>Standard Deviation</h3>
+<ul>
+<li><strong>Plain English:</strong> Square root of the variance. Puts variability back into the original units (not squared). Tells you how far scores typically fall from the mean.</li>
+<li>Population SD symbol = <strong>σ</strong> | Sample SD symbol = <strong>s</strong></li>
+<li>Formula: σ = √σ² or s = √s²</li>
+<li><strong>Excel:</strong> <code>=STDEV.P(range)</code> for population | <code>=STDEV.S(range)</code> for sample</li>
+</ul>
+<p><strong>Why it matters — the 68-95-99.7 rule (for normal distributions):</strong></p>
+<ul>
+<li><strong>68%</strong> of scores fall within <strong>1 SD</strong> of the mean</li>
+<li><strong>95%</strong> of scores fall within <strong>2 SD</strong> of the mean</li>
+<li><strong>99.7%</strong> of scores fall within <strong>3 SD</strong> of the mean</li>
+<li>Example: Mean = 50, SD = 10 → 68% between 40–60, 95% between 30–70, 99.7% between 20–80</li>
+</ul>
+<h3>Key Excel Summary — Variability</h3>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Formula</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Range</td>
+<td><code>=MAX(range) - MIN(range)</code></td>
+</tr>
+<tr>
+<td>IQR</td>
+<td><code>=QUARTILE(range,3) - QUARTILE(range,1)</code></td>
+</tr>
+<tr>
+<td>Population Variance</td>
+<td><code>=VAR.P(range)</code></td>
+</tr>
+<tr>
+<td>Sample Variance</td>
+<td><code>=VAR.S(range)</code></td>
+</tr>
+<tr>
+<td>Population SD</td>
+<td><code>=STDEV.P(range)</code></td>
+</tr>
+<tr>
+<td>Sample SD</td>
+<td><code>=STDEV.S(range)</code></td>
+</tr>
+</tbody></table>
+<h3>Standard Deviation — Step-by-Step in Excel (Lecture Method)</h3>
+<p>The SD is the <strong>average difference between each score and the mean.</strong> Here&#39;s the manual process:</p>
+<ol>
+<li><strong>Calculate the mean:</strong> <code>=AVERAGE(range)</code> or <code>=SUM(range)/COUNT(range)</code></li>
+<li><strong>Paste the mean as a value</strong> next to each score (Copy → Paste Special → Values, then drag down). This prevents Excel from changing the formula reference when dragging.</li>
+<li><strong>Deviation scores:</strong> <code>=raw score - mean</code> for each row, then drag down. These show how much each score differs from the mean.</li>
+<li><strong>Squared deviations:</strong> <code>=deviation^2</code> (caret <code>^</code> = &quot;raised to the power of&quot;). Eliminates negatives. Squared deviations can NEVER be negative — if they are, you did something wrong.</li>
+<li><strong>Sum of squares (SS):</strong> <code>=SUM(squared deviations)</code>. Adds up all squared deviations.</li>
+<li><strong>Variance:</strong> <code>=SS / COUNT(scores)</code> — divides by N to get the average squared deviation.</li>
+<li><strong>Standard deviation:</strong> <code>=SQRT(variance)</code> — takes the square root to undo the squaring and put it back in original units.</li>
+</ol>
+<p><strong>Shortcut:</strong> <code>=STDEV.P(range)</code> does all of this in one step.</p>
+<p><strong>Key terminology:</strong> Sum of Squares is abbreviated <strong>SS</strong> (Σ of squared deviations). The <code>=</code> sign in Excel tells it you&#39;re entering a function. The caret <code>^</code> (Shift+6) means &quot;raised to the power of.&quot;</p>
+<p><strong>What SD means in plain English:</strong> &quot;On average, scores differ from the mean by [SD value] units.&quot; Example: If heights have mean = 66.7 inches and SD = 3.65, then heights typically differ from 66.7 by about 3.65 inches.</p>
+<p><strong>SD is a kind of average</strong> — just like the mean is a kind of average (average of scores), SD is an average (average of how far scores are from the mean). Mean = measure of central tendency. SD = measure of variability. SD is the most powerful measure of variability because it uses ALL scores.</p>
+<hr>
+<h2>Null Hypothesis &amp; Alternate Hypothesis</h2>
+<ul>
+<li><strong>Alternate Hypothesis:</strong> Your research claim — a relationship EXISTS or a difference EXISTS between variables.</li>
+<li><strong>Null Hypothesis:</strong> The opposite — NO relationship/difference; results are due to <strong>random chance</strong>.</li>
+<li><strong>Plain English:</strong> Assume nothing is happening (null) until proven otherwise. &quot;Innocent until proven guilty.&quot;</li>
+<li>You do NOT directly prove the alternate. You <strong>refute (reject) the null hypothesis.</strong></li>
+<li>Null rejected → supports your alternate. Can&#39;t reject null → results may be random chance.</li>
+<li>Null = &quot;no effect / no difference / no relationship.&quot; Alternate = &quot;there IS one.&quot;</li>
+<li>You must assume the alternate is wrong until evidence says otherwise.</li>
+<li><strong>Numerically:</strong> The null hypothesis always predicts <strong>zero</strong> (no difference between groups, zero correlation).<ul>
+<li>Example: Subtract women&#39;s height from men&#39;s height → null predicts = 0</li>
+<li>On the normal distribution, null hypothesis value = 0 (the center/mean)</li>
+</ul>
+</li>
+<li><strong>Other names for alternate hypothesis:</strong> experimental hypothesis, research hypothesis, study hypothesis</li>
+</ul>
+<h3>Directional vs Non-Directional Hypotheses</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>What It Says</th>
+<th>Also Called</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Directional</strong></td>
+<td>Specifies WHICH group is higher/lower, or direction of relationship (positive/negative)</td>
+<td>One-tailed test</td>
+</tr>
+<tr>
+<td><strong>Non-directional</strong></td>
+<td>Says there IS a difference/relationship but doesn&#39;t specify which direction</td>
+<td>Two-tailed test</td>
+</tr>
+</tbody></table>
+<p><strong>Why &quot;tailed&quot;?</strong></p>
+<ul>
+<li><strong>One-tailed:</strong> Predicting result falls in ONE specific tail of the distribution (e.g., positive side only)</li>
+<li><strong>Two-tailed:</strong> Result could fall in EITHER tail (positive or negative)</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Directional: &quot;Men are taller than women&quot; → one-tailed</li>
+<li>Non-directional: &quot;There is a difference in height between men and women&quot; → two-tailed</li>
+<li>Directional relationship: &quot;There is a positive relationship between height and weight&quot;</li>
+<li>Non-directional relationship: &quot;There is a relationship between height and weight&quot;</li>
+</ul>
+<hr>
+<h2>Scales of Measurement (Levels of Measurement)</h2>
+<p>Two broad categories: <strong>Metric</strong> (Continuous) and <strong>Non-Metric</strong> (Categorical)</p>
+<h3>Metric Variables (Continuous)</h3>
+<p>Measured on <strong>equal interval scales</strong> — the distance between any two adjacent points is exactly the same (like inches on a ruler: 2→3 same distance as 7→8).</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Definition</th>
+<th>Key Difference</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Interval</strong></td>
+<td>Equal intervals; can have positive AND negative values. No true zero point — zero is arbitrary, doesn&#39;t mean &quot;absence of.&quot;</td>
+<td>Can go negative; can&#39;t compute meaningful ratios (can&#39;t say &quot;twice as hot&quot;)</td>
+<td>Temperature (°F), golf scores (above/below par), credit card balance, grades (if penalties go below 0), sea level, rushing yards, goal differential in soccer</td>
+</tr>
+<tr>
+<td><strong>Ratio</strong></td>
+<td>Equal intervals + absolute zero point (zero = complete absence of quantity). Most informative scale — all lower scales rolled into one.</td>
+<td>Has true zero; CAN compute ratios (&quot;twice as much&quot; is valid)</td>
+<td>Height, weight, age, number of students, number of shoes, speed, income, ETA, songs on album, money in pocket, Kelvin temp, number of items recalled</td>
+</tr>
+</tbody></table>
+<p><strong>Plain English:</strong></p>
+<ul>
+<li><strong>Interval</strong> = equal spacing, but zero doesn&#39;t mean &quot;nothing&quot; and you can go negative. 0°F ≠ no temperature. Fahrenheit = interval, Kelvin = ratio.</li>
+<li><strong>Ratio</strong> = equal spacing AND meaningful zero. Can&#39;t have negatives. Height can&#39;t be negative. 50¢ is genuinely twice 25¢.</li>
+</ul>
+<p><strong>Why you can&#39;t compute ratios on interval:</strong> If you shift where zero is on the scale, the ratio changes. 80°F is NOT &quot;twice as hot&quot; as 40°F — move zero and that ratio breaks.</p>
+<h3>Non-Metric Variables (Categorical)</h3>
+<p>NOT on equal-interval scales. Just identify categories or types.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Definition</th>
+<th>Key Feature</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Nominal</strong> (lowest level)</td>
+<td>Categories that only identify differences; no order</td>
+<td>Just names/labels; no ranking</td>
+<td>Eye color, hair color, race, gender, skin tone, handedness, favorite color, religion, pizza places, football teams, car manufacturer, initials, speeding ticket (yes/no)</td>
+</tr>
+<tr>
+<td><strong>Ordinal</strong></td>
+<td>Categories with meaningful order/rank, but distances between ranks are NOT equal</td>
+<td>Order matters; gaps unknown</td>
+<td>Military/police ranks, birth order, race finish (1st/2nd/3rd), days of week, satisfaction scales, Netflix top 10, star ratings, movie rankings</td>
+</tr>
+</tbody></table>
+<p><strong>Plain English:</strong></p>
+<ul>
+<li><strong>Nominal</strong> = just labels. Things are DIFFERENT but no ranking. Brown eyes vs. blue eyes — neither is &quot;more.&quot;</li>
+<li><strong>Ordinal</strong> = has an order, but gaps aren&#39;t equal. 1st place vs. 2nd could be 0.5 seconds; 2nd vs. 3rd could be 8 minutes. You know ORDER but not DISTANCE.</li>
+</ul>
+<h3>Key Distinctions</h3>
+<ul>
+<li>Can it go negative? → <strong>Interval.</strong> Must be ≥ 0? → <strong>Ratio.</strong></li>
+<li>Is there a rank/order? → <strong>Ordinal.</strong> Just categories? → <strong>Nominal.</strong></li>
+<li>&quot;Number of [things]&quot; = almost always <strong>Ratio</strong></li>
+<li><strong>Changing ordinal labels to numbers (1-4) does NOT make it interval</strong> — the mental step from 1→2 isn&#39;t necessarily same as 3→4</li>
+<li>Psychological rating scales (pain, satisfaction, 5-point/7-point) = <strong>Ordinal</strong></li>
+<li>Just because something uses numbers doesn&#39;t make it interval or ratio</li>
+</ul>
+<h3>Tricky Cases</h3>
+<ul>
+<li><strong>Number of items recalled:</strong> Seems ratio (true zero). But recalling 1 extra easy item ≠ same ability as 1 extra hard item. Equal intervals may not hold psychologically.</li>
+<li><strong>Pain ratings 1-10:</strong> Ordinal. Reducing pain 7→6 isn&#39;t guaranteed same relief as 3→2.</li>
+</ul>
+<h3>Which Statistics Apply to Which Scale?</h3>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Mean?</th>
+<th>Median?</th>
+<th>Mode?</th>
+<th>Ratios?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Nominal</strong></td>
+<td>NO (meaningless)</td>
+<td>NO</td>
+<td>YES</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Ordinal</strong></td>
+<td>Debated (usually yes)</td>
+<td>YES</td>
+<td>YES</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Interval</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Ratio</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+<p><strong>Rule of thumb:</strong></p>
+<ul>
+<li><strong>Mean</strong> = only numerical/metric variables (interval or ratio). Can&#39;t add up words.</li>
+<li><strong>Median</strong> = only variables that can be ordered (ordinal, interval, ratio). Can&#39;t order nominal.</li>
+<li><strong>Mode</strong> = ALL scale types including nominal. Just &quot;most frequent.&quot;</li>
+<li><strong>Error to avoid:</strong> Coding nominal as numbers (blue=1, red=2) then computing a mean → nonsense (&quot;average favorite color is yellow&quot;)</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Initials, car manufacturer, yes/no speeding ticket = <strong>nominal</strong> → mode only</li>
+<li>Birthday day of month, number of pets, number of cousins = <strong>ratio</strong> → mean, median, mode all apply</li>
+</ul>
+<h3>Applying Measures — Clarifications from Lecture</h3>
+<ul>
+<li><strong>Birthday (day of month):</strong> Tricky — borderline. Different months have different numbers of days, so it loses meaning as an equal-interval measure. A hardcore statistician would say you can&#39;t compute a mean on it. Best classified as <strong>ordinal</strong> (you can tell order — born on 3rd is before 7th — but intervals aren&#39;t truly equal). Professor gave credit for birthday as ratio too, but the precise answer is ordinal.</li>
+<li><strong>Mode for metric/continuous data:</strong> Technically you CAN compute a mode for numbers like pets/cousins, but it&#39;s not very meaningful. Mode was developed for categorical/non-metric data. For metric data, most values get left out — mode just tells you the single most frequent number.</li>
+<li><strong>SD applies to:</strong> Only ratio (and interval) variables — pets and cousins. Not meaningful for nominal/ordinal.</li>
+</ul>
+<h3>Likert Scale Rule (from lecture)</h3>
+<ul>
+<li><strong>7+ response options, all positive values</strong> → treat as <strong>ratio</strong></li>
+<li><strong>7+ options with positive AND negative ends</strong> → treat as <strong>interval</strong></li>
+<li><strong>6 or fewer options</strong> → treat as <strong>ordinal</strong> (non-metric) because it may no longer approximate normally distributed data. Can&#39;t validly compute means.</li>
+<li>Many researchers ignore this rule, but technically you shouldn&#39;t compute averages on scales with ≤6 points.</li>
+</ul>
+<hr>
+<h2>Normal Distribution</h2>
+<h3>What It Is</h3>
+<ul>
+<li><strong>Plain English:</strong> When you measure things in the natural world (heights, weights, IQ, etc.), the data almost always follows the same pattern: most values cluster around the middle (the mean), and values become less and less frequent the farther you get from the mean. This pattern = normal distribution.</li>
+<li>Also called: <strong>bell-shaped curve</strong>, <strong>bell curve</strong>, <strong>Gaussian curve</strong> (after Karl Friedrich Gauss, though <strong>Abraham de Moivre</strong> first discovered it)</li>
+<li>Also called: <strong>Z distribution</strong> (standard deviation units = Z scores)</li>
+<li><strong>&quot;Normal&quot;</strong> = what&#39;s typical/generally expected when measuring natural phenomena</li>
+<li>There are MANY normal distributions — they can differ in their means and standard deviations</li>
+<li>A normal distribution is <strong>fully defined by just two parameters: μ (mean) and σ (standard deviation)</strong></li>
+</ul>
+<h3>Key Properties (The 7 Features of Normal Distributions)</h3>
+<ol>
+<li><strong>Symmetrical</strong> — both sides are mirror images</li>
+<li><strong>Mean = Median = Mode</strong> — all three at the exact center</li>
+<li><strong>Total area under the curve = 1.0 (100%)</strong></li>
+<li><strong>Denser in center, less dense in tails</strong></li>
+<li><strong>Defined by two parameters:</strong> μ (mean) and σ (standard deviation)</li>
+<li><strong>68% within ±1 SD</strong> of the mean</li>
+<li><strong>~95% within ±2 SD</strong> of the mean</li>
+</ol>
+<ul>
+<li><strong>Asymptotic</strong> — tails NEVER touch x-axis (accounts for extremely rare events)</li>
+</ul>
+<h3>The 68-95-99.7 Rule (Detail)</h3>
+<table>
+<thead>
+<tr>
+<th>Distance from Mean</th>
+<th>% in Band (each side)</th>
+<th>Cumulative</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>±1 SD</td>
+<td>34% each side</td>
+<td>68% total</td>
+</tr>
+<tr>
+<td>±2 SD</td>
+<td>13.5% each additional band</td>
+<td>95% total</td>
+</tr>
+<tr>
+<td>±3 SD</td>
+<td>2.35% each additional band</td>
+<td>99.7% total</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>50% of scores above the mean, 50% below</strong> (always — it&#39;s symmetrical)</li>
+<li>Scores beyond ±3 SD = extremely rare (0.3% total, split between both tails)</li>
+</ul>
+<h3>Standard Deviation Units</h3>
+<ul>
+<li>Mean = <strong>0</strong> SD from itself (by definition)</li>
+<li>+1 = one SD above mean | -1 = one SD below mean</li>
+<li>+2, +3, -2, -3 follow the same pattern</li>
+</ul>
+<h3>Normal Distribution as a Probability Distribution</h3>
+<ul>
+<li>Percentages = probability = area under the curve. All the same thing.</li>
+<li>Random person within 1 SD of mean? 68% probability.</li>
+<li><strong>Can&#39;t find probability of an EXACT value</strong> — probability of any single point = 0. Must use a RANGE.</li>
+<li>Height of curve ≠ probability. <strong>Area</strong> under curve between two points = probability.</li>
+<li>The normal distribution is a <strong>probability density function (PDF).</strong></li>
+</ul>
+<h3>Key Differences: Normal vs Binomial</h3>
+<ul>
+<li><strong>Binomial</strong> = discrete (finite number of possible values, like a bar chart)</li>
+<li><strong>Normal</strong> = continuous (defined over the entire real number line, -∞ to +∞). Any value is theoretically possible, even extremely unlikely ones.</li>
+</ul>
+<h3>Central Limit Theorem (Why Normal Distribution Matters)</h3>
+<ul>
+<li><strong>Plain English:</strong> Add up many independent trials → the sum approaches a normal distribution, even if individual trials aren&#39;t normal.</li>
+<li>This is WHY it shows up everywhere in nature: most measurements = sum of many tiny independent factors.</li>
+<li>Example: Height = thousands of genetic + environmental factors combined → normally distributed.</li>
+</ul>
+<h3>Effect of Changing Mean and SD</h3>
+<ul>
+<li><strong>Changing the mean</strong> → shifts the entire curve left or right (center moves)</li>
+<li><strong>Smaller SD</strong> → narrower, taller curve (scores are closer to the mean)</li>
+<li><strong>Larger SD</strong> → wider, flatter curve (scores are more spread out)</li>
+</ul>
+<h3>Central Tendency vs. Normal Distribution (Exam Question)</h3>
+<ul>
+<li><strong>Central tendency</strong> = ONE summary number (mean/median/mode). Doesn&#39;t show full picture.</li>
+<li><strong>Normal distribution</strong> = shows where ALL scores fall, how spread out, how far from mean. Universal measurement allowing cross-dataset comparison via Z-scores.</li>
+</ul>
+<h3>Cumulative Distribution Function (CDF)</h3>
+<ul>
+<li>CDF(x) = probability of getting ≤ x (all area to the LEFT of x)</li>
+<li>P(between A and B) = CDF(B) − CDF(A)</li>
+<li>This is what the Z-score calculator does behind the scenes.</li>
+</ul>
+<h3>Excel: NORM.DIST Function</h3>
+<ul>
+<li><code>=NORM.DIST(x, mean, sd, TRUE)</code> → gives CDF (probability of getting ≤ x)</li>
+<li><code>=NORM.DIST(x, mean, sd, FALSE)</code> → gives PDF height at x (not probability itself)</li>
+<li>To find P(between A and B): <code>=NORM.DIST(B, mean, sd, TRUE) - NORM.DIST(A, mean, sd, TRUE)</code></li>
+</ul>
+<h3>IQ Example (Raw Scores on Normal Distribution)</h3>
+<p>IQ is normed: <strong>Mean (μ) = 100, SD = 15</strong></p>
+<table>
+<thead>
+<tr>
+<th>SD Units</th>
+<th>-3</th>
+<th>-2</th>
+<th>-1</th>
+<th>0 (mean)</th>
+<th>+1</th>
+<th>+2</th>
+<th>+3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>IQ Score</strong></td>
+<td>55</td>
+<td>70</td>
+<td>85</td>
+<td>100</td>
+<td>115</td>
+<td>130</td>
+<td>145</td>
+</tr>
+</tbody></table>
+<ul>
+<li>To convert: Raw score = Mean + (SD units × SD). Example: +2 SD = 100 + (2×15) = 130</li>
+<li><strong>70 and below</strong> = cognitively disabled (technically 72, rounded to 70); qualifies for Social Security benefits. = 2.5% of population.</li>
+<li><strong>130 and above</strong> = genius IQ. = 2.5% of population.</li>
+<li><strong>College students</strong> tend to fall just below 115 and up.</li>
+</ul>
+<h3>Calculating Percentages on the Distribution</h3>
+<ul>
+<li>&quot;What % of scores fall above the mean?&quot; → Always <strong>50%</strong></li>
+<li>&quot;What % fall below the mean?&quot; → Always <strong>50%</strong></li>
+<li>&quot;What % fall between -1 SD and +1 SD?&quot; → <strong>68%</strong></li>
+<li>&quot;What % fall between 85 and 130 (IQ)?&quot; = between -1 and +2 SD = 34% + 34% + 13.5% = <strong>81.5%</strong></li>
+<li>To find % in a tail beyond a certain point: Start with 50%, subtract the known bands.<ul>
+<li>Example: % below -2 SD = 50% - 34% - 13.5% = <strong>2.5%</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Skewed &amp; Non-Normal Distributions</h2>
+<ul>
+<li><strong>Positively skewed:</strong> Long tail trailing to the RIGHT (high end). Example: home prices in a beach town — most are normal, a few are $40M+ pulling the tail right.</li>
+<li><strong>Negatively skewed:</strong> Long tail trailing to the LEFT (low end).</li>
+<li><strong>Bimodal:</strong> Two peaks in frequency (two modes).</li>
+<li><strong>Trimodal:</strong> Three peaks.</li>
+<li><strong>Key point:</strong> You can ONLY make probability estimates from normally distributed data. Skewed/bimodal distributions can&#39;t be used for probability predictions.</li>
+</ul>
+<hr>
+<h2>Z-Scores (Preview)</h2>
+<ul>
+<li>The normal distribution is also called the <strong>Z distribution</strong></li>
+<li>Standard deviation unit scores = <strong>Z scores</strong></li>
+<li>Z score tells you how many standard deviations a score is from the mean</li>
+</ul>
+<h3>Z-Score Formula</h3>
+<ul>
+<li><strong>Formula:</strong> Z = (X − M) / SD<ul>
+<li>X = the raw score</li>
+<li>M = the mean</li>
+<li>SD = the standard deviation</li>
+</ul>
+</li>
+<li><strong>Plain English:</strong> Take the score, subtract the mean, then divide by the standard deviation. This converts any raw score into &quot;how many standard deviations away from the mean is it?&quot;</li>
+<li><strong>Excel:</strong> <code>=(raw score - mean) / standard deviation</code> — or since deviation scores = X − M already, just <code>=deviation score / SD</code></li>
+</ul>
+<h3>Z-Score Step-by-Step in Excel</h3>
+<p>Steps 1–7 are the same as SD calculation (see above), then add:</p>
+<ol start="8">
+<li>Paste SD as value, drag down next to all deviation scores</li>
+<li><strong>Z score:</strong> <code>=deviation score / SD</code> for each, drag down</li>
+</ol>
+<p><strong>Key points:</strong></p>
+<ul>
+<li>Paste Special as Value for BOTH mean and SD before dragging</li>
+<li>Deviation scores = numerator of Z formula (X − M), so Z = just dividing them by SD</li>
+</ul>
+<h3>What Z-Scores Mean</h3>
+<ul>
+<li>Z = 0 → score IS the mean | Z = +1 → 1 SD above | Z = -1 → 1 SD below</li>
+<li>Positive = above mean | Negative = below mean</li>
+<li><strong>Universal comparison:</strong> Converts any unit to SD units. Compare inches to centimeters by converting both to Z scores.</li>
+</ul>
+<h3>Z-Score Distribution Properties</h3>
+<ul>
+<li>Mean of Z scores = <strong>always 0</strong></li>
+<li>SD of Z scores = <strong>always 1</strong></li>
+<li>When using the Z calculator tool, you NEVER change the mean (0) or SD (1) — just plug in Z scores directly.</li>
+</ul>
+<h3>Using the Z-Score Calculator (Online Tool)</h3>
+<p>The calculator finds the <strong>percentage of scores (area under the curve)</strong> in different parts of the normal distribution.</p>
+<p><strong>Four options:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What It Answers</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Below</strong></td>
+<td>What % of scores are LOWER than this Z score?</td>
+<td>&quot;Lower than,&quot; &quot;less than,&quot; &quot;fewer than&quot;</td>
+</tr>
+<tr>
+<td><strong>Above</strong></td>
+<td>What % of scores are HIGHER than this Z score?</td>
+<td>&quot;More than,&quot; &quot;higher than,&quot; &quot;greater than&quot;</td>
+</tr>
+<tr>
+<td><strong>Between</strong></td>
+<td>What % of scores fall BETWEEN two Z scores?</td>
+<td>&quot;More than X but less than Y&quot;</td>
+</tr>
+<tr>
+<td><strong>Outside</strong></td>
+<td>What % of scores are MORE EXTREME than two Z scores?</td>
+<td>&quot;More extreme than X and Y&quot;</td>
+</tr>
+</tbody></table>
+<p><strong>Rules:</strong></p>
+<ul>
+<li><strong>Lower Z score ALWAYS goes in the left/lower box</strong> (even if the question mentions the higher one first)</li>
+<li>Leave mean = 0 and SD = 1 (don&#39;t change these when using Z scores)</li>
+<li>The answer is a decimal (e.g., 0.4202 = 42.02%)</li>
+</ul>
+<p><strong>Examples from class:</strong></p>
+<ul>
+<li>&quot;What % of states have police number lower than Florida?&quot; → Use <strong>Below</strong>, paste Florida&#39;s Z score</li>
+<li>&quot;What % have more police than Mississippi?&quot; → Use <strong>Above</strong>, paste Mississippi&#39;s Z score</li>
+<li>&quot;What % have more than Mississippi but less than New Jersey?&quot; → Use <strong>Between</strong>, Mississippi (lower) on left, New Jersey (higher) on right</li>
+<li>&quot;What % more extreme than New York or New Jersey?&quot; → Use <strong>Outside</strong>, lower Z on left, higher Z on right</li>
+</ul>
+<h3>Using the Z-Table (Standard Normal Distribution Table)</h3>
+<p>The Z-table gives the area from <strong>0 to Z</strong> (area between the mean and your Z score).</p>
+<p><strong>How to read it:</strong></p>
+<ul>
+<li>Rows = first digit + tenths (e.g., 0.4)</li>
+<li>Columns = hundredths (e.g., 0.05)</li>
+<li>Together: row 0.4 + column 0.05 = Z of 0.45 → area = 0.1736 (17.36%)</li>
+</ul>
+<p><strong>Key facts:</strong></p>
+<ul>
+<li>The table shows area from 0 (mean) to Z — NOT from -∞ to Z</li>
+<li>The curve is symmetrical, so <strong>negative Z scores have the same area</strong> as positive (e.g., -0.45 has same area as +0.45)</li>
+<li>Total area on one side of mean = 0.5000 (50%)</li>
+</ul>
+<p><strong>How to use for different questions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Question Type</th>
+<th>How to Calculate</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Area between 0 and Z</td>
+<td>Look up Z directly in table</td>
+</tr>
+<tr>
+<td>Area between -Z and +Z (symmetric)</td>
+<td>Look up Z, multiply by 2</td>
+</tr>
+<tr>
+<td>Area between -A and +B (asymmetric)</td>
+<td>Look up A + look up B, add them</td>
+</tr>
+<tr>
+<td>Area above Z</td>
+<td>0.5 − table value</td>
+</tr>
+<tr>
+<td>Area below negative Z</td>
+<td>0.5 − table value</td>
+</tr>
+<tr>
+<td>Area below positive Z</td>
+<td>0.5 + table value</td>
+</tr>
+</tbody></table>
+<p><strong>Example:</strong> % between Z = -1 and Z = +2</p>
+<ul>
+<li>From -1 to 0 = same as 0 to +1 = 0.3413</li>
+<li>From 0 to +2 = 0.4772</li>
+<li>Total = 0.3413 + 0.4772 = <strong>0.8185 (81.85%)</strong></li>
+</ul>
+<hr>
+<h2>Distribution Tail Weight</h2>
+<ul>
+<li><strong>Normal distribution tails</strong> = &quot;Goldilocks zone&quot; — not too heavy, not too light</li>
+<li><strong>Heavy tails</strong> = tails are HIGH/FAR from the x-axis (more extreme scores than normal)</li>
+<li><strong>Light tails</strong> = tails hug the x-axis (fewer extreme scores than normal)</li>
+<li><strong>No tails</strong> = distribution drops straight down (looks like a rectangle/plateau)</li>
+<li>Be able to identify which distribution has heaviest tails, lightest tails, looks most normal, or has fewest extreme scores</li>
+</ul>
+<hr>
+<h2>Other Quick Facts</h2>
+<ul>
+<li><strong>Paper/pencil note-taking</strong> performs almost <strong>1 SD higher</strong> than laptop/tablet note-taking (research finding)</li>
+<li><strong>IQ and criminality:</strong> Lower IQ → more likely to commit &quot;street crimes&quot; (obvious crimes, getting caught). Higher IQ → more likely for white-collar crimes (embezzlement, complex fraud — requires cognitive ability). Very high IQ criminals may never get caught.</li>
+<li><strong>IQ and health/safety:</strong> Higher IQ → less likely to sustain injuries, have accidents, or succumb to disease at young ages (better at recognizing risk).</li>
+</ul>
+<hr>
+<h2>Sample vs Population Symbols</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Sample</th>
+<th>Population</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Symbols look like</strong></td>
+<td>Regular English letters</td>
+<td>Greek letters</td>
+</tr>
+<tr>
+<td><strong>Mean</strong></td>
+<td>X̄ (X-bar) or M</td>
+<td>μ (mu)</td>
+</tr>
+<tr>
+<td><strong>Standard Deviation</strong></td>
+<td>s</td>
+<td>σ (sigma)</td>
+</tr>
+</tbody></table>
+<ul>
+<li>When you see Greek letters → population level data</li>
+<li>When you see regular letters → sample level data</li>
+</ul>
+<hr>
+<h2>Z-Score vs T-Score</h2>
+<ul>
+<li><strong>Z score formula:</strong> Z = (X − μ) / σ → requires knowing POPULATION mean and POPULATION standard deviation</li>
+<li><strong>If you don&#39;t know population SD</strong> (only have sample SD) → you&#39;re calculating a <strong>T score</strong>, not a Z score</li>
+<li>T scores use the T distribution instead of the Z (normal) distribution</li>
+</ul>
+<hr>
+<h2>Inferential Statistics &amp; Significance Testing</h2>
+<h3>Why We Need It</h3>
+<ul>
+<li>Science wants <strong>objectivity</strong> — same results regardless of who does it</li>
+<li>Entire population measured → difference is just real, no stats needed</li>
+<li>We almost never have the entire population → collect samples → need inferential statistics to estimate if patterns are real vs. due to chance</li>
+</ul>
+<h3>Significance Testing — The Core Logic</h3>
+<ul>
+<li>Scientists decided (arbitrarily): if there&#39;s <strong>less than 5% chance</strong> results are due to random factors → it&#39;s <strong>statistically significant</strong></li>
+<li>This 5% threshold uses the normal probability distribution</li>
+<li><strong>Two-tailed test:</strong> Need to be in the extreme <strong>2.5%</strong> on either side (total 5% split across both tails)</li>
+<li><strong>One-tailed test:</strong> All 5% on ONE tail</li>
+</ul>
+<h3>Critical Values</h3>
+<table>
+<thead>
+<tr>
+<th>Test Type</th>
+<th>Critical Value Needed</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Two-tailed</strong></td>
+<td>≥ +1.96 or ≤ -1.96</td>
+</tr>
+<tr>
+<td><strong>One-tailed</strong></td>
+<td>≥ +1.645 or ≤ -1.645</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Your test statistic (from the formula) must exceed the critical value to be &quot;statistically significant&quot;</li>
+<li><strong>One-tailed tests are easier</strong> to reach significance (lower critical value) — this is why scientists are accused of cheating if they use them</li>
+</ul>
+<h3>Why One-Tailed Tests = Cheating</h3>
+<ul>
+<li>Scientists do two-tailed → get 1.84 (not significant, needs 1.96) → change write-up to one-tailed after seeing data (1.84 &gt; 1.645 = significant)</li>
+<li>So rampant that science now <strong>defaults to two-tailed</strong>. Real scientists don&#39;t use one-tailed.</li>
+</ul>
+<h3>The Significance Test Formula (Conceptual)</h3>
+<p><strong>Numerator</strong> (between-group differences): Mean of Group A − Mean of Group B</p>
+<p><strong>Denominator</strong> (within-group differences/error): SD of A / √N_A + SD of B / √N_B</p>
+<ul>
+<li><strong>Plain English:</strong> Is the difference BETWEEN the groups bigger than the differences WITHIN the groups (accounting for sample size)?</li>
+<li>The result goes on the normal distribution to see if it&#39;s in the extreme 5%</li>
+</ul>
+<h3>The Role of N (Sample Size)</h3>
+<ul>
+<li>Bigger N → smaller denominator → bigger test statistic → easier to reach significance</li>
+<li>Good: More representative. Bad: Can FORCE significance on trivial differences.</li>
+<li><strong>Inflated N</strong> = primary cause of <strong>Type I (Alpha) error</strong></li>
+</ul>
+<hr>
+<h2>Type I and Type II Errors</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Type I (Alpha Error)</th>
+<th>Type II (Beta Error)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>What happens</strong></td>
+<td>You DETECT something that doesn&#39;t really exist</td>
+<td>You FAIL TO DETECT something that really does exist</td>
+</tr>
+<tr>
+<td><strong>Stats version</strong></td>
+<td>You find &quot;significant&quot; results that aren&#39;t real</td>
+<td>You miss real differences because test wasn&#39;t powerful enough</td>
+</tr>
+<tr>
+<td><strong>Cause</strong></td>
+<td>Inflated N, one-tailed cheating</td>
+<td>Too small N (low statistical power)</td>
+</tr>
+<tr>
+<td><strong>Psychology example</strong></td>
+<td>Male sexual overperception bias (men think women are interested when they&#39;re not)</td>
+<td>Female commitment skepticism bias (women underestimate men&#39;s commitment)</td>
+</tr>
+<tr>
+<td><strong>CJ example</strong></td>
+<td>Accusing an innocent person of being guilty</td>
+<td>Letting a guilty person go free</td>
+</tr>
+<tr>
+<td><strong>General example</strong></td>
+<td>Thinking your partner loves you when they don&#39;t</td>
+<td>Not realizing your partner loves you when they do</td>
+</tr>
+</tbody></table>
+<h3>Effect Size — The Correction for Type I Error</h3>
+<ul>
+<li><strong>Formula:</strong> Effect size (Cohen&#39;s d) = (Mean A − Mean B) / pooled SD — <strong>no N involved!</strong></li>
+<li><strong>Plain English:</strong> How big is the difference in standard deviation units, without sample size inflating it?</li>
+<li>Rule: Want <strong>≥ 0.10</strong> to consider something might be real</li>
+<li>Significance huge + effect size tiny → likely <strong>Type I error</strong></li>
+<li>Significance huge + effect size large → real finding</li>
+<li>Some journals now only want effect sizes (no significance testing)</li>
+</ul>
+<hr>
+<h2>Types of Statistical Tests</h2>
+<h3>Z-Test</h3>
+<ul>
+<li>Compares a <strong>sample mean to a population mean</strong></li>
+<li>Requires: population mean (μ) AND population standard deviation (σ)</li>
+<li>Formula: Z = (Sample mean − Population mean) / (σ / √N)</li>
+<li>Example: Is Wisconsin&#39;s homicide rate different from the US average?</li>
+<li>Uses the <strong>Z (normal) distribution</strong></li>
+</ul>
+<h3>Single Sample T-Test</h3>
+<ul>
+<li>Same as Z-test but you <strong>don&#39;t know population SD</strong> — substitute sample SD instead</li>
+<li>Uses the <strong>T distribution</strong> (not normal/Z distribution)</li>
+<li>T distribution has <strong>heavier tails</strong> than normal distribution (especially with small N)</li>
+<li>As N increases, T distribution approaches normal distribution</li>
+<li>Critical values are HIGHER for T-tests (harder to reach significance with small N)</li>
+</ul>
+<h3>Independent Samples T-Test</h3>
+<ul>
+<li>Compares means from <strong>2 separate/unrelated groups</strong></li>
+<li>Example: Boys&#39; running speed vs. girls&#39; running speed</li>
+<li>Groups are independently drawn, not matched</li>
+<li>Has <strong>2 sources of within-group variance</strong> (SD for each group)</li>
+<li>Uses T distribution</li>
+</ul>
+<h3>Dependent (Paired) Samples T-Test</h3>
+<ul>
+<li>Compares means from the <strong>same people measured twice</strong> (or matched pairs)</li>
+<li>Example: Your Homework 1 score vs. your Homework 2 score</li>
+<li>Only <strong>1 source of within-group variance</strong> (because same people = same characteristics both times)</li>
+<li><strong>Easier to get significant results</strong> than independent samples T-test (smaller denominator)</li>
+<li>Fewer sources of variability = individual differences are controlled</li>
+</ul>
+<h3>Error Variance</h3>
+<ul>
+<li>Also called <strong>within-group variance</strong> or <strong>individual difference factors</strong></li>
+<li>Sources of variability NOT accounted for by your data</li>
+<li>Examples: study habits, background knowledge, age, prior experience</li>
+<li>Fewer in dependent designs (comparing people to themselves) than independent designs (comparing different groups)</li>
+</ul>
+<h3>Summary of Tests</h3>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Compares</th>
+<th>Requires</th>
+<th>Distribution Used</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Z-test</strong></td>
+<td>Sample mean vs. population mean</td>
+<td>Population μ AND σ</td>
+<td>Z (normal)</td>
+</tr>
+<tr>
+<td><strong>Single sample T-test</strong></td>
+<td>Sample mean vs. population mean</td>
+<td>Population μ only (use sample s)</td>
+<td>T distribution</td>
+</tr>
+<tr>
+<td><strong>Independent samples T-test</strong></td>
+<td>2 separate group means</td>
+<td>Neither population parameter</td>
+<td>T distribution</td>
+</tr>
+<tr>
+<td><strong>Dependent samples T-test</strong></td>
+<td>Same group measured twice</td>
+<td>Neither population parameter</td>
+<td>T distribution</td>
+</tr>
+</tbody></table>
+<h3>T-Distribution Key Facts</h3>
+<ul>
+<li>Has heavier tails than normal distribution (especially with small N)</li>
+<li>Small N (e.g., 10) → very heavy tails → critical values much higher than 1.96</li>
+<li>As N increases → T distribution approaches normal distribution</li>
+<li>N ≈ 100+ → T distribution is practically identical to Z distribution</li>
+<li>Small N → harder to detect real differences (more likely Type II error)</li>
+</ul>
+<hr>
+<h2>How to Identify Which Test to Use (Decision Rules)</h2>
+<h3>The Key Questions to Ask:</h3>
+<ol>
+<li><p><strong>Are you comparing a sample to a population?</strong> → Z-test or Single Sample T-test</p>
+<ul>
+<li>Know population SD (σ)? → <strong>Z-test</strong></li>
+<li>Don&#39;t know population SD? → <strong>Single Sample T-test</strong></li>
+<li>If not specified that you don&#39;t know σ → assume you DO know it → Z-test</li>
+</ul>
+</li>
+<li><p><strong>Are you comparing 2 different/unrelated groups?</strong> → <strong>Independent Samples T-test</strong></p>
+<ul>
+<li>Examples: boys vs girls, dogs vs cats, track runners vs wrestlers, Eagles vs Chiefs</li>
+</ul>
+</li>
+<li><p><strong>Are you comparing the same group measured twice (or rating 2 things)?</strong> → <strong>Dependent (Paired) Samples T-test</strong></p>
+<ul>
+<li>Examples: same students&#39; grades at beginning vs end, same people rating tacos AND pizza, same team&#39;s performance in 2 different seasons</li>
+</ul>
+</li>
+<li><p><strong>Are you just counting things (frequencies, not averages)?</strong> → <strong>Chi-Square</strong> (non-parametric, covered later)</p>
+<ul>
+<li>Examples: number of dogs vs cats at park, number of students who prefer tacos vs pizza, number of men vs women in class</li>
+</ul>
+</li>
+</ol>
+<h3>One-Tailed vs Two-Tailed:</h3>
+<ul>
+<li><strong>One-tailed:</strong> Hypothesis specifies a DIRECTION (more, less, higher, faster, etc.)</li>
+<li><strong>Two-tailed:</strong> Hypothesis just says &quot;different&quot; or &quot;differ&quot; without specifying which is more/less</li>
+</ul>
+<h3>Key Rules for Writing Hypotheses:</h3>
+<ul>
+<li><strong>Z-test/Single Sample T:</strong> Compare a sample TO THE POPULATION IT COMES FROM (including itself). NOT &quot;versus the rest&quot; — always versus ALL.<ul>
+<li>✅ &quot;New Jersey&#39;s DUI rate compared to all states in the US&quot;</li>
+<li>❌ &quot;New Jersey&#39;s DUI rate compared to other states&quot; (excludes NJ)</li>
+</ul>
+</li>
+<li><strong>Include &quot;on average&quot; or &quot;average&quot;</strong> in parametric test hypotheses so it&#39;s clear you&#39;re computing means, not just counting frequencies</li>
+<li><strong>Specify the group</strong> for dependent T-tests (e.g., &quot;Stockton students&quot; not just &quot;students&quot;)</li>
+<li>If it doesn&#39;t specify you don&#39;t know population SD → default to <strong>Z-test</strong></li>
+<li>If it says &quot;don&#39;t know population SD/variance/variability&quot; → <strong>Single Sample T-test</strong></li>
+</ul>
+<h3>Common Mistakes:</h3>
+<ul>
+<li>Comparing 2 different groups (boys vs girls) is NOT a Z-test → it&#39;s Independent T-test</li>
+<li>Same group rating 2 things (rate dogs AND rate cats) = Dependent, not Independent</li>
+<li>&quot;More dogs than cats at the park&quot; = frequency (Chi-Square), NOT a T-test (unless you add &quot;on average day&quot;)</li>
+<li>Z-test and Single Sample T-test do the EXACT same thing — only difference is whether you know population SD</li>
+</ul>
+<h3>Parametric vs Non-Parametric Tests</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Parametric</th>
+<th>Non-Parametric</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Involves</strong></td>
+<td>Computing averages/means</td>
+<td>Comparing frequencies (counting)</td>
+</tr>
+<tr>
+<td><strong>Foundation</strong></td>
+<td>General Linear Model (linear relationships)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Tests</strong></td>
+<td>Z-test, T-tests (all types), ANOVA, Correlation, Regression</td>
+<td>Chi-Square (χ²)</td>
+</tr>
+<tr>
+<td><strong>Key rule</strong></td>
+<td>All involve calculating a mean somewhere</td>
+<td>Just counting things up</td>
+</tr>
+</tbody></table>
+<h3>P &lt; .05 Notation</h3>
+<ul>
+<li>When a result exceeds the critical value (1.96 for two-tailed) → it falls in the extreme 5% of the distribution</li>
+<li>This is notated as <strong>P &lt; .05</strong> (probability less than 5% that result is due to chance)</li>
+<li>The higher the test statistic beyond 1.96, the LOWER the P-value (more extreme = less likely to be chance)</li>
+<li>P &lt; .01 = even more significant (extreme 1%)</li>
+<li>A score of 3, 4, 5+ → extremely unlikely to be chance → very low P-value</li>
+</ul>
+<h3>SPSS Note</h3>
+<ul>
+<li>In this class, calculations are done in <strong>SPSS</strong> (mandated by CJ department)</li>
+<li>SPSS calls dependent T-test → <strong>&quot;Paired Samples T-test&quot;</strong> (same thing, different name)</li>
+</ul>
+<h3>Running T-Tests in SPSS</h3>
+<p><strong>Path:</strong> Analyze → Compare Means → choose test type</p>
+<p><strong>Dependent (Paired Samples) T-Test in SPSS:</strong></p>
+<ol>
+<li>Analyze → Compare Means → Paired Samples T-Test</li>
+<li>Put the variable you hypothesize is LARGER as Variable 1, smaller as Variable 2</li>
+<li>Make sure &quot;Estimates of effect sizes&quot; is checked</li>
+<li>Click OK</li>
+<li>If you get a NEGATIVE T value → it means you put them in backwards (Variable 2 is actually larger)</li>
+</ol>
+<p><strong>Independent Samples T-Test in SPSS:</strong></p>
+<ol>
+<li>Analyze → Compare Means → Independent Samples T-Test</li>
+<li>Put your grouping variable (independent variable, e.g., &quot;3strikes&quot;) in the &quot;Grouping Variable&quot; box</li>
+<li>Click &quot;Define Groups&quot; → SPSS detects the codes (1 and 2) → Continue</li>
+<li>Put your measured/test variable (dependent variable, e.g., &quot;assault&quot;) in the &quot;Test Variable&quot; box</li>
+<li>Make sure effect sizes checked → Click OK</li>
+<li><strong>Always read the TOP row</strong> (&quot;Equal variances assumed&quot;) — ignore the bottom row unless dealing with tiny data</li>
+</ol>
+<h3>How to Report T-Test Results</h3>
+<p><strong>If SIGNIFICANT:</strong></p>
+<p>Plain English + means/SDs + APA format:</p>
+<blockquote>
+<p>&quot;Average assault rates are significantly higher than average robbery rates in the US (M = 316.98, SD = 164.56) compared to robbery (M = 133.98, SD = 83.45), t(49) = 10.49, p &lt; .001, d = 1.22.&quot;</p>
+</blockquote>
+<p><strong>Format:</strong> t(degrees of freedom) = T-value, p = P-value, d = Cohen&#39;s d</p>
+<p><strong>If NOT SIGNIFICANT:</strong></p>
+<blockquote>
+<p>&quot;There are no significant differences in assault rates between states with three strikes laws (M = 343.69, SD = 192.22) and states without (M = 291.50, SD = 137.09), t(48) = 1.109, NS.&quot;</p>
+</blockquote>
+<ul>
+<li><strong>NS</strong> = &quot;Not Significant&quot; — you don&#39;t need to report the exact p-value or Cohen&#39;s d if not significant (convention)</li>
+<li>But you wouldn&#39;t lose points for including them</li>
+</ul>
+<h3>Degrees of Freedom (df)</h3>
+<ul>
+<li><strong>Dependent T-test:</strong> df = N − 1 (N = number of pairs). Example: 50 pairs → df = 49</li>
+<li><strong>Independent T-test:</strong> df = N − 2 (N = total scores, subtract 1 for each group). Example: 50 total, 2 groups → df = 48</li>
+<li><strong>General rule:</strong> df = total observations minus number of groups being compared</li>
+</ul>
+<h3>Independent vs Dependent Variables in T-Tests</h3>
+<ul>
+<li><strong>Independent variable</strong> = grouping variable (nominal or ordinal) — tells you the groups being compared<ul>
+<li>Examples: 3 strikes laws (yes/no), death penalty (yes/no), region, gun control</li>
+<li>Coded as 1 = yes, 2 = no (typically)</li>
+</ul>
+</li>
+<li><strong>Dependent variable</strong> = measured/test variable (interval or ratio/metric) — what you&#39;re calculating means of<ul>
+<li>Examples: murder rate, robbery, assault, police number, population</li>
+</ul>
+</li>
+</ul>
+<h3>Key Rules for Identifying Test Type (with SPSS Lab Examples)</h3>
+<p><strong>It&#39;s DEPENDENT (Paired) if:</strong></p>
+<ul>
+<li>2 different measured variables from the SAME source/group</li>
+<li>&quot;Is the white prison population higher than the Black prison population?&quot; → same source (US), 2 measures = dependent</li>
+<li>&quot;Are violent crimes more prevalent than property crimes?&quot; → same group, 2 measures = dependent</li>
+<li>&quot;Are more people on probation or parole?&quot; → same group, 2 measures = dependent</li>
+<li>&quot;Eagles players rate tacos as yummier than pizza&quot; → same group rating 2 things = dependent (one-tailed)</li>
+<li>&quot;Midwest people rate appeal of dogs and cats differently&quot; → same group, 2 ratings = dependent (two-tailed)</li>
+</ul>
+<p><strong>It&#39;s INDEPENDENT if:</strong></p>
+<ul>
+<li>You&#39;re comparing the SAME measured variable between 2 DIFFERENT groups (created by an independent variable)</li>
+<li>&quot;Do death penalty laws affect homicide rates?&quot; → 2 groups (with/without), 1 measure = independent</li>
+<li>&quot;Do car theft rates differ between region 1 and region 2?&quot; → 2 groups, 1 measure = independent</li>
+<li>&quot;Are 3 strikes laws related to rape rates?&quot; → 2 groups, 1 measure = independent</li>
+<li>&quot;Dogs have more olfactory acuity than cats&quot; → 2 groups, 1 measure = independent (one-tailed)</li>
+<li>&quot;Squirrels gather more acorns than chipmunks&quot; → 2 groups, 1 measure = independent (one-tailed)</li>
+<li>&quot;Pigeons have different flight speed than Goshawks&quot; → 2 groups, 1 measure = independent (two-tailed)</li>
+</ul>
+<p><strong>It&#39;s a Z-TEST if:</strong></p>
+<ul>
+<li>Comparing a sample to the POPULATION it comes from (including itself)</li>
+<li>&quot;2025 Eagles lost more games than all Eagles teams in history&quot; → sample vs population = Z-test (one-tailed)</li>
+</ul>
+<p><strong>Common mistake:</strong> &quot;Death penalty laws vs homicide rates&quot; ≠ comparing 2 things. You&#39;re comparing homicide rates BETWEEN states that have vs don&#39;t have death penalty laws.</p>
+<h3>Interpreting SPSS Output</h3>
+<ul>
+<li><strong>T value:</strong> How many SDs away from the mean. Want ≥ 2 (approximately) for significance with moderate samples.</li>
+<li><strong>Sig. (2-tailed):</strong> This is your p-value. Must be &lt; .05 to be significant.</li>
+<li><strong>Cohen&#39;s d (point estimate):</strong> Effect size. Report as positive if you describe which group is larger in plain English.</li>
+<li><strong>Negative T value:</strong> Just means you entered the smaller group first. Flip the sign when reporting if you describe the larger as larger.</li>
+<li>If significance = huge but Cohen&#39;s d is tiny (like 0.02) → possible <strong>Type I error</strong></li>
+<li>If both are proportional → trustworthy finding</li>
+<li><strong>Worry about Type I error when Cohen&#39;s d ≤ 0.10</strong> with a very significant T-value</li>
+</ul>
+<h3>Means and SDs Should Be Proportional</h3>
+<ul>
+<li>In a well-behaved T-test, the mean should be LARGER than the SD for each group</li>
+<li>If SD is much larger than the mean → assumptions of the T-test may be violated</li>
+</ul>
+<h3>Effect Size Names by Test Type</h3>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Effect Size Measure</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T-tests</td>
+<td>Cohen&#39;s d</td>
+</tr>
+<tr>
+<td>One-way ANOVA</td>
+<td>Eta (η)</td>
+</tr>
+<tr>
+<td>Factorial ANOVA</td>
+<td>Eta squared (η²)</td>
+</tr>
+</tbody></table>
+<h3>Exam Notes (from professor)</h3>
+<ul>
+<li>Exam is open to <strong>personal handwritten notes ONLY</strong> — not internet, not AI, not textbooks, not photocopies of others&#39; notes</li>
+<li>Can use Excel and the Z-score calculator tool on computer</li>
+<li>Questions can be open-ended, identifying tests, calculations, or conceptual</li>
+<li>Between &quot;one and a thousand&quot; questions (professor&#39;s joke — but can easily complete in time)</li>
+</ul>
+<hr>
+<h2>Quick Reference &amp; Shortcuts</h2>
+<h3>Test Selection Logic</h3>
+<ul>
+<li><strong>Count the groups.</strong> 1 group vs population = Z or Single Sample T. 2 different groups = Independent T. Same group twice = Dependent T. Just counting stuff = Chi-Square.</li>
+<li><strong>Count the measured variables.</strong> 1 measured variable compared across 2 groups = Independent. 2 measured variables from 1 group = Dependent.</li>
+<li>If the question mentions &quot;nationally,&quot; &quot;US average,&quot; &quot;all states,&quot; &quot;population&quot; = probably <strong>Z-test</strong> (sample vs population)</li>
+</ul>
+<h3>Key Indicators</h3>
+<ul>
+<li>&quot;Is there a difference between X and Y?&quot; with no direction → <strong>two-tailed</strong></li>
+<li>&quot;X is greater/more/higher/faster than Y&quot; → <strong>one-tailed</strong></li>
+<li>Numbers like &quot;1 = yes, 2 = no&quot; in data → that&#39;s your <strong>grouping/independent variable</strong> (nominal)</li>
+<li>Question asks you to &quot;compare frequencies&quot; or &quot;count how many&quot; → <strong>Chi-Square</strong>, not a T-test</li>
+<li>If you get a negative T value → you just entered the smaller group first. Not wrong, just flip the sign when reporting.</li>
+</ul>
+<h3>Excel Shortcuts</h3>
+<ul>
+<li><strong>Fastest SD:</strong> <code>=STDEV.P(range)</code> — skip all the manual steps</li>
+<li><strong>Fastest Z-score for one value:</strong> <code>=(value - AVERAGE(range)) / STDEV.P(range)</code> — does it in one cell</li>
+<li><strong>Fastest variance:</strong> <code>=VAR.P(range)</code> — no manual squaring needed</li>
+<li><strong>Quick area under curve:</strong> <code>=NORM.DIST(upper, mean, sd, TRUE) - NORM.DIST(lower, mean, sd, TRUE)</code></li>
+<li><strong>Check your work:</strong> Squared deviations should NEVER be negative. If they are, you messed up.</li>
+<li><strong>Drag trick:</strong> Always Paste Special → Values for mean and SD before dragging. Otherwise Excel shifts the reference.</li>
+<li><strong>Typing <code>=</code> in a cell</strong> = tells Excel you&#39;re about to enter a formula</li>
+<li><strong>Caret <code>^</code></strong> (Shift+6) = &quot;raised to the power of&quot; → <code>^2</code> = squared, <code>^3</code> = cubed</li>
+<li><strong>Quick median without sorting:</strong> <code>=MEDIAN(range)</code> — Excel sorts for you internally</li>
+<li><strong>Count only numbers (ignore blanks/text):</strong> <code>=COUNT(range)</code> — skips empty cells automatically</li>
+</ul>
+<h3>Common Conceptual Pitfalls</h3>
+<ol>
+<li><strong>&quot;Is this a Z-test?&quot;</strong> If you&#39;re comparing 2 independent groups (boys vs girls, dogs vs cats) → NO, it&#39;s Independent T. Z-test is ONLY sample vs population.</li>
+<li><strong>&quot;Why isn&#39;t this significant?&quot;</strong> T-value close to 1 = only 1 SD from mean = common = not rare enough = P &gt; .05.</li>
+<li><strong>&quot;What&#39;s wrong with this study?&quot;</strong> Look for inflated N (huge sample + tiny effect size = Type I error) or tiny N (couldn&#39;t detect anything = Type II error).</li>
+<li><strong>Ordinal trap:</strong> Rating scales (1-5, Likert) = ordinal, NOT interval. Just because it uses numbers doesn&#39;t make it metric. Exception: 7+ point scales can be treated as metric.</li>
+<li><strong>&quot;Average&quot; trick:</strong> If a hypothesis could be read as counting OR averaging, add &quot;on average&quot; to make it clearly parametric. Without it → might be Chi-Square territory.</li>
+</ol>
+<h3>Key Numbers Reference</h3>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Number</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Two-tailed critical value</td>
+<td>1.96</td>
+</tr>
+<tr>
+<td>One-tailed critical value</td>
+<td>1.645</td>
+</tr>
+<tr>
+<td>% within ±1 SD</td>
+<td>68% (34% each side)</td>
+</tr>
+<tr>
+<td>% within ±2 SD</td>
+<td>95% (13.5% each band)</td>
+</tr>
+<tr>
+<td>% within ±3 SD</td>
+<td>99.7% (2.35% each band)</td>
+</tr>
+<tr>
+<td>% above or below mean</td>
+<td>Always 50%</td>
+</tr>
+<tr>
+<td>P-value threshold</td>
+<td>&lt; .05</td>
+</tr>
+<tr>
+<td>Effect size minimum</td>
+<td>≥ 0.10 (Cohen&#39;s d)</td>
+</tr>
+<tr>
+<td>Cohen&#39;s d small/medium/large</td>
+<td>0.2 / 0.5 / 0.8</td>
+</tr>
+<tr>
+<td>Correlation r small/medium/large</td>
+<td>0.1 / 0.3 / 0.5</td>
+</tr>
+<tr>
+<td>IQ mean / SD</td>
+<td>100 / 15</td>
+</tr>
+<tr>
+<td>IQ cognitively disabled</td>
+<td>≤ 70 (2.5% of pop)</td>
+</tr>
+<tr>
+<td>IQ genius</td>
+<td>≥ 130 (2.5% of pop)</td>
+</tr>
+<tr>
+<td>Z distribution mean / SD</td>
+<td>Always 0 / always 1</td>
+</tr>
+<tr>
+<td>df for dependent T</td>
+<td>N − 1</td>
+</tr>
+<tr>
+<td>df for independent T</td>
+<td>N − 2</td>
+</tr>
+</tbody></table>
+<h3>If You&#39;re Stuck — Quick Decision Path</h3>
+<pre><code>Is it asking you to COUNT things (frequencies)? 
+  → YES → Chi-Square (non-parametric)
+  → NO (it involves averages/means) → continue below
+
+Is it comparing a sample to a whole population?
+  → YES → Know population SD? → Z-test
+         → Don&#39;t know population SD? → Single Sample T-test
+  → NO → continue below
+
+Is it 2 different groups being compared?
+  → YES → Independent T-test
+  → NO → continue below
+
+Is it the same group measured twice or rating 2 things?
+  → YES → Dependent (Paired) T-test
+
+Does it specify a direction (higher/lower/more/less)?
+  → YES → One-tailed
+  → NO (just says &quot;different&quot; or &quot;differ&quot;) → Two-tailed
+</code></pre>
+<hr>
+<h2>P-Values — Problems &amp; Misconceptions</h2>
+<h3>What a P-Value Actually Is</h3>
+<ul>
+<li><strong>Plain English:</strong> The probability of getting results at least as extreme as what you observed, IF the null hypothesis were true (if nothing is really going on).</li>
+<li>P-value does NOT tell you the probability your hypothesis is correct.</li>
+<li>P-value does NOT tell you the probability your result is a false alarm.</li>
+<li>It ONLY summarizes data assuming the null is true. It cannot work backwards to make statements about underlying reality.</li>
+</ul>
+<h3>Common Misinterpretation</h3>
+<ul>
+<li>❌ &quot;P = 0.01 means there&#39;s a 1% chance this is a false alarm&quot; — WRONG</li>
+<li>✅ A P-value of 0.01 actually corresponds to at least an <strong>11% false-alarm probability</strong> (depending on how plausible the hypothesis was beforehand)</li>
+<li>✅ A P-value of 0.05 corresponds to at least a <strong>29% false-alarm probability</strong></li>
+<li>The more implausible the hypothesis, the greater the chance a small P-value is still a false alarm</li>
+</ul>
+<h3>P = 0.05 as &quot;Significant&quot;</h3>
+<ul>
+<li>Introduced by Ronald Fisher in the 1920s as an <em>informal</em> indicator — &quot;worthy of a second look,&quot; NOT a definitive test</li>
+<li>Was never meant to be a rigid cutoff</li>
+<li>The 0.05 threshold became enshrined when non-statisticians wrote textbooks combining Fisher&#39;s P-value with Neyman/Pearson&#39;s decision framework — creating a hybrid system neither camp intended</li>
+</ul>
+<h3>P-Hacking (Data Dredging)</h3>
+<ul>
+<li><strong>Definition:</strong> Trying multiple analyses, dropping conditions, or manipulating data until you get P &lt; 0.05 — even unconsciously</li>
+<li>Also called: data-dredging, snooping, fishing, significance-chasing, double-dipping</li>
+<li>Can increase false-positive rate in a single study to <strong>60%</strong></li>
+<li>Evidence shows many published papers have P-values that cluster suspiciously around 0.05</li>
+<li>Turns exploratory findings into what LOOK like confirmations but vanish on replication</li>
+</ul>
+<h3>The Replication Crisis</h3>
+<ul>
+<li>John Ioannidis (2005): suggested most published findings are <strong>false</strong></li>
+<li>Many high-profile studies fail to replicate</li>
+<li>A P = 0.01 result has only about a <strong>73% probability of replicating</strong> (not 99% as most assume) — or 50% if you want another &quot;very significant&quot; result</li>
+<li>This is why the replication crisis exists</li>
+</ul>
+<h3>Key Problem: P-Values Ignore Effect Size</h3>
+<ul>
+<li>A study of 19,000+ people found meeting spouse online reduces divorce (P &lt; 0.002) — sounds impressive</li>
+<li>But actual effect: divorce went from 7.67% to 5.96%, happiness from 5.48 to 5.64 on a 7-point scale — <strong>tiny, practically meaningless effects</strong></li>
+<li>Small P-values with huge samples can make trivial differences look significant</li>
+<li>Should ask &quot;How much of an effect?&quot; not just &quot;Is there an effect?&quot;</li>
+</ul>
+<h3>Proposed Fixes (from literature)</h3>
+<ul>
+<li>Report effect sizes + confidence intervals alongside p-values</li>
+<li>Pre-registration (declare methods/hypotheses BEFORE data collection)</li>
+<li>Full disclosure of sample size decisions, exclusions, all measures</li>
+<li>Bayesian methods (incorporate prior plausibility)</li>
+<li>Try multiple methods on same data; if they disagree, investigate why</li>
+</ul>
+<h3>Key Takeaway</h3>
+<ul>
+<li>P-values are not as reliable or objective as assumed</li>
+<li>They&#39;re one piece of evidence, not a definitive answer</li>
+<li>&quot;The numbers are where the scientific discussion should start, not end&quot;</li>
+</ul>
+<h3>P-Value Quick Reference</h3>
+<p><strong>Strength guide:</strong> P &lt; 0.001 very strong | P &lt; 0.01 strong | P &lt; 0.05 moderate | P ≥ 0.05 insufficient</p>
+<p><strong>Key rules:</strong></p>
+<ul>
+<li>&quot;Fail to reject H0&quot; ≠ &quot;Accept H0&quot; — just means not enough evidence yet</li>
+<li>One-tailed p = exactly HALF the two-tailed p (why one-tailed is easier)</li>
+<li><strong>Power = 1 − beta</strong> = probability of correctly detecting a real effect. Low power (small N) → Type II error.</li>
+<li><strong>Bonferroni correction:</strong> Running 20 tests at α=.05 → expect ~1 false positive. Fix: α = 0.05 / number of tests</li>
+</ul>
+<h3>Effect Size Rules of Thumb</h3>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Small</th>
+<th>Medium</th>
+<th>Large</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Cohen&#39;s d</strong> (comparing 2 means)</td>
+<td>0.2</td>
+<td>0.5</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td><strong>Correlation r</strong> (relationships)</td>
+<td>0.1</td>
+<td>0.3</td>
+<td>0.5</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Cohen&#39;s d = (Mean1 − Mean2) / pooled SD</li>
+<li>These are independent of sample size — N can&#39;t inflate them</li>
+</ul>
+<h3>Significant Difference vs Significant Relationship</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Significant Difference</th>
+<th>Significant Relationship</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Tests whether</strong></td>
+<td>Groups differ on an outcome</td>
+<td>Two variables move together</td>
+</tr>
+<tr>
+<td><strong>Typical data</strong></td>
+<td>One categorical (groups) + one outcome</td>
+<td>Two continuous variables</td>
+</tr>
+<tr>
+<td><strong>Common tests</strong></td>
+<td>T-test, ANOVA, Chi-square</td>
+<td>Pearson r, Spearman rho, Regression</td>
+</tr>
+<tr>
+<td><strong>Example</strong></td>
+<td>&quot;Men and women differ in job satisfaction&quot;</td>
+<td>&quot;Hours of training correlates with performance&quot;</td>
+</tr>
+</tbody></table>
