@@ -53,7 +53,7 @@ const slidesData = [
     title: "solution",
     subtitle: "The {{turq}}solution{{/turq}} {{turq}}is{{/turq}} {{underline}}automation{{/underline}} with {{turq}}olo{{/turq}}.",
     bullets: [
-      "olo automates routine SMB admin work **end-to-end** — from task detection to validated completion.",
+      "olo acts as the contractor for powerful AI tools — detecting routine SMB admin work, coordinating the right tool for the job, validating the result, and completing the task with you in complete control.",
     ],
     content: "No prompts. No app-switching. No manual coordination.",
     footer: "Most importantly — **no more wasting time and money on work that creates {{red}}headaches{{/red}} instead of {{white}}revenue{{/white}}.**",
