@@ -661,7 +661,7 @@ function MeetOloSection() {
             <Typewriter segments={[{ text: "Meet " }, { text: "olo", className: "bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9] bg-clip-text text-transparent" }]} />
           </h2>
           <p className="mb-16 text-center text-[18px] font-semibold text-white">
-            olo is the contractor for ai tools
+            Autonomous Small Business Automation.
           </p>
 
           <div className="grid gap-8 lg:grid-cols-5 lg:pl-10">
@@ -670,7 +670,7 @@ function MeetOloSection() {
               <RotatingBorder />
               <p className="mb-4 text-[22px] font-semibold text-[#2dd4bf]">The power of automation without any of the complexity.</p>
               <p className="mb-10 text-[16px] leading-[1.8] text-white/55">
-                olo detects admin work, coordinates the right tools, completes the task, validates the result, and logs what happened — asking before acting whenever your rules require approval.
+                olo acts as the contractor for powerful AI tools — detecting admin work, coordinating the right tool for the job, completing the task, validating the result, and logging what happened while asking before acting whenever your rules require approval.
               </p>
               <h3 className="mb-6 text-[12px] font-bold uppercase tracking-[0.2em] text-white/55">What olo handles</h3>
               <FeatureGrid />
