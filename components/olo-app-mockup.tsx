@@ -227,9 +227,8 @@ function OloOnboardingUI() {
 export default function OloAppMockup({ phone1Ref, phone2Ref }: { phone1Ref?: React.RefObject<HTMLDivElement | null>; phone2Ref?: React.RefObject<HTMLDivElement | null> }) {
   return (
     <div className="phone-scene" style={{ gap: '60px' }}>
-      <div ref={phone1Ref} style={{ padding: '40px' }} className="relative">
-        <div className="absolute inset-0 m-auto w-[60%] h-[70%] rounded-full bg-[#2dd4bf] opacity-20 blur-[80px]" />
-        <div className="phone" style={{ boxShadow: '0 0 60px 15px rgba(45, 212, 191, 0.4)' }}>
+      <div ref={phone1Ref} style={{ padding: '20px' }}>
+        <div className="phone">
         <div className="phone-buttons">
           <div className="left">
             <div className="button" />
@@ -256,9 +255,8 @@ export default function OloAppMockup({ phone1Ref, phone2Ref }: { phone1Ref?: Rea
       </div>
       </div>
 
-      <div ref={phone2Ref} style={{ padding: '40px' }} className="relative">
-      <div className="absolute inset-0 m-auto w-[60%] h-[70%] rounded-full bg-[#2dd4bf] opacity-20 blur-[80px]" />
-      <div className="phone" style={{ boxShadow: '0 0 60px 15px rgba(45, 212, 191, 0.4)' }}>
+      <div ref={phone2Ref} style={{ padding: '20px' }}>
+      <div className="phone">
         <div className="phone-buttons">
           <div className="left">
             <div className="button" />

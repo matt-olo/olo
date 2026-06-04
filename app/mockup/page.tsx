@@ -21,7 +21,7 @@ export default function MockupPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#040f10] flex flex-col items-center py-[40px]">
+    <div className="min-h-screen bg-transparent flex flex-col items-center py-[40px]">
       <div className="fixed top-4 right-4 z-50 flex gap-[8px]">
         <button
           onClick={() => handleDownload(phone1Ref, "olo-admin.png")}
