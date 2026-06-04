@@ -275,8 +275,8 @@ function FeatureGrid() {
     { bg: "bg-[#0a3a2a]", border: "border-[#22c55e]/20", icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="1.5" className="mb-2"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 00-4 12.7V17h8v-2.3A7 7 0 0012 2z"/></svg>, label: "Suggests improvements" },
     { bg: "bg-[#0a3d3d]", border: "border-[#2dd4bf]/20", icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6366f1" strokeWidth="1.5" className="mb-2"><polyline points="20 6 9 17 4 12"/></svg>, label: "Finds admin work to delete" },
     { bg: "bg-[#0a2a20]", border: "border-[#10b981]/20", icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" strokeWidth="1.5" className="mb-2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>, label: "Always asks before acting" },
-    { bg: "bg-[#0a1e3a]", border: "border-[#6366f1]/20", icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="1.5" className="mb-2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>, label: "Notates work to worklog" },
-    { bg: "bg-[#0a2535]", border: "border-[#06b6d4]/20", icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="1.5" className="mb-2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>, label: "Protects your businesses data" },
+    { bg: "bg-[#0a1e3a]", border: "border-[#6366f1]/20", icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="1.5" className="mb-2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>, label: "Logs work to your worklog" },
+    { bg: "bg-[#0a2535]", border: "border-[#06b6d4]/20", icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="1.5" className="mb-2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>, label: "Protects your business data" },
   ];
 
   return (
@@ -303,7 +303,6 @@ function Nav({ mobileOpen, setMobileOpen }: { mobileOpen: boolean; setMobileOpen
   const links = [
     { label: "Product", href: "#meet-olo" },
     { label: "Onboarding", href: "#onboarding" },
-    { label: "Testimonials", href: "#testimonials" },
     { label: "Interested?", href: "#apply" },
     { label: "Contact", href: "#contact" },
   ];
@@ -338,7 +337,6 @@ function Nav({ mobileOpen, setMobileOpen }: { mobileOpen: boolean; setMobileOpen
           <a href="#meet-olo" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/60 transition-colors hover:text-[#2dd4bf] py-2">Olo</a>
           <a href="#onboarding" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/60 transition-colors hover:text-[#2dd4bf] py-2">Setup</a>
           <a href="#apply" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/60 transition-colors hover:text-[#2dd4bf] py-2">Interest</a>
-          <a href="#testimonials" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/60 transition-colors hover:text-[#2dd4bf] py-2">Reviews</a>
           <a href="#contact" className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/60 transition-colors hover:text-[#2dd4bf] py-2">Talk</a>
         </div>
       </nav>
@@ -425,7 +423,7 @@ function Hero() {
 
         {/* Sub */}
         <p className={`mb-16 max-w-[600px] text-[15px] sm:text-[18px] font-medium leading-relaxed text-white font-[var(--font-urbanist)] ${!hasPlayed ? "animate-[fadeIn_0.4s_ease-out_2.8s_both]" : ""}`}>
-          Automate work that creates headaches instead of revenue.
+          Automate admin work that creates headaches instead of revenue.
         </p>
 
         {/* CTAs */}
@@ -836,8 +834,6 @@ export default function Page() {
         <MeetOloSection />
         <SectionDivider />
         <OnboardingSection />
-        <SectionDivider />
-        <TestimonialsSection />
         <SectionDivider />
         <ApplySection />
         <SectionDivider />
