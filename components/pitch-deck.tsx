@@ -250,7 +250,7 @@ function drawSlideToCanvas(
       "rgba(4,25,35,0.9)",
       "rgba(0,120,130,0.3)",
       "rgba(8,50,65,0.9)",
-      "rgba(45,212,191,0.15)",
+      "rgba(45,212,191,0.22)",
       "rgba(10,30,55,0.9)",
       "rgba(0,90,100,0.35)",
     ];
@@ -983,7 +983,7 @@ function drawSlideToCanvas(
     const s6Colors = [
       "rgba(6,40,50,0.9)", "rgba(15,80,90,0.5)",
       "rgba(4,25,35,0.9)", "rgba(0,120,130,0.3)",
-      "rgba(8,50,65,0.9)", "rgba(45,212,191,0.15)",
+      "rgba(8,50,65,0.9)", "rgba(45,212,191,0.22)",
       "rgba(10,30,55,0.9)", "rgba(0,90,100,0.35)",
     ];
     const s6Widths = [40, 2, 48, 2, 48, 2, 58, 2];
@@ -1313,7 +1313,7 @@ function drawSlideToCanvas(
     const s9Colors = [
       "rgba(6,40,50,0.9)", "rgba(15,80,90,0.5)",
       "rgba(4,25,35,0.9)", "rgba(0,120,130,0.3)",
-      "rgba(8,50,65,0.9)", "rgba(45,212,191,0.15)",
+      "rgba(8,50,65,0.9)", "rgba(45,212,191,0.22)",
       "rgba(10,30,55,0.9)", "rgba(0,90,100,0.35)",
     ];
     const s9Widths = [40, 2, 48, 2, 48, 2, 58, 2];
@@ -1522,7 +1522,7 @@ function SlideTitle({ slide }: { slide: (typeof slidesData)[0] }) {
             className="absolute inset-0"
             style={{
               backgroundImage:
-                "repeating-linear-gradient(135deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
+                "repeating-linear-gradient(135deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
             }}
           />
           {/* Radial glow to lift the center */}
@@ -1576,28 +1576,11 @@ function SlideTitle({ slide }: { slide: (typeof slidesData)[0] }) {
       {/* Background - grid with slashes like slide 5 but subtle */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[#030d12]" />
-        {/* Horizontal grid */}
         <div
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(45deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
-          }}
-        />
-        {/* Vertical grid */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(150deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
-          }}
-        />
-        {/* Diagonal slash */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(30deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
+              "repeating-linear-gradient(45deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(10,55,55,0.6)_0%,_transparent_50%)]" />
@@ -1764,7 +1747,7 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(135deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
+              "repeating-linear-gradient(135deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,_rgba(10,50,50,0.5)_0%,_transparent_60%)]" />
@@ -1826,7 +1809,7 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(45deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
+              "repeating-linear-gradient(45deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,_rgba(80,10,10,0.12)_0%,_transparent_55%)]" />
@@ -1937,7 +1920,7 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(150deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
+              "repeating-linear-gradient(150deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_70%,_rgba(10,50,50,0.5)_0%,_transparent_60%)]" />
@@ -2038,7 +2021,7 @@ function SlideRoadmap({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(30deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
+              "repeating-linear-gradient(30deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,_rgba(10,50,50,0.65)_0%,_transparent_55%)]" />
@@ -2115,7 +2098,7 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(135deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
+              "repeating-linear-gradient(135deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_60%,_rgba(10,50,50,0.5)_0%,_transparent_55%)]" />
@@ -2192,7 +2175,7 @@ function SlideMarket({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(45deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
+              "repeating-linear-gradient(45deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,_rgba(10,50,50,0.5)_0%,_transparent_60%)]" />
@@ -2267,7 +2250,7 @@ function SlideMeetOlo({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(150deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
+              "repeating-linear-gradient(150deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(10,50,50,0.6)_0%,_transparent_60%)]" />
@@ -2335,7 +2318,7 @@ function SlideSolution2({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(30deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
+              "repeating-linear-gradient(30deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
           }}
         />
         {/* Vertical grid lines */}
@@ -2343,15 +2326,7 @@ function SlideSolution2({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(135deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
-          }}
-        />
-        {/* Diagonal slashes cutting through */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(45deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
+              "repeating-linear-gradient(135deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
           }}
         />
         {/* Center glow */}
@@ -2413,7 +2388,7 @@ function SlideSolution2({ slide }: { slide: (typeof slidesData)[0] }) {
                   <div className="mb-5 flex h-[90px] w-[90px] items-center justify-center rounded-full border-2 border-[#2dd4bf] bg-[#2dd4bf]/20 shadow-[0_0_30px_rgba(45,212,191,0.35)]">
                     <span className="text-[24px] font-black text-[#2dd4bf]">olo</span>
                   </div>
-                  <div className="rounded-xl border border-[#2dd4bf]/40 bg-[#2dd4bf]/10 px-5 py-4 text-center shadow-[0_0_20px_rgba(45,212,191,0.15)]">
+                  <div className="rounded-xl border border-[#2dd4bf]/40 bg-[#2dd4bf]/10 px-5 py-4 text-center shadow-[0_0_20px_rgba(45,212,191,0.22)]">
                     <p className="text-[15px] font-semibold text-[#2dd4bf]">{slide.flow[1]}</p>
                   </div>
                 </div>
@@ -2580,7 +2555,7 @@ function SlideAsk({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(150deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
+              "repeating-linear-gradient(150deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,_rgba(10,55,55,0.4)_0%,_transparent_50%)]" />
@@ -2616,7 +2591,7 @@ function SlideAsk({ slide }: { slide: (typeof slidesData)[0] }) {
                   <span className="text-[17px] font-bold text-[#2dd4bf]">{fund.label}</span>
                   <span className="text-[22px] font-black text-[#2dd4bf]/50">{fund.pct}</span>
                 </div>
-                <p className="text-[34px] font-black text-white mb-3 drop-shadow-[0_0_8px_rgba(45,212,191,0.15)]">{fund.amount}</p>
+                <p className="text-[34px] font-black text-white mb-3 drop-shadow-[0_0_8px_rgba(45,212,191,0.22)]">{fund.amount}</p>
                 <p className="text-[15px] text-white/50 leading-[1.7]">{fund.desc}</p>
                 {/* Progress bar */}
                 <div className="mt-4 h-[4px] w-full rounded-full bg-white/[0.06] overflow-hidden">
@@ -2652,7 +2627,7 @@ function SlideOnboarding({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(30deg, transparent 0px, transparent 38px, rgba(0,90,100,0.25) 38px, rgba(0,90,100,0.25) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.15) 78px, rgba(45,212,191,0.15) 79.5px, transparent 79.5px, transparent 118px, rgba(0,70,80,0.2) 118px, rgba(0,70,80,0.2) 119.5px, transparent 119.5px, transparent 158px, rgba(12,180,170,0.12) 158px, rgba(12,180,170,0.12) 159.5px)",
+              "repeating-linear-gradient(30deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(10,50,50,0.6)_0%,_transparent_60%)]" />
