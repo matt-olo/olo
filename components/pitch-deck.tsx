@@ -1558,7 +1558,7 @@ function SlideTitle({ slide }: { slide: (typeof slidesData)[0] }) {
             </span>
           </span>
           <span className="bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9] bg-clip-text text-transparent">your</span>
-          <span className="text-red-500">overhead</span>
+          <span className="text-red-400">overhead</span>
           <span className="text-[#2dd4bf]/60 font-light text-[40px]">]</span>
         </div>
 
