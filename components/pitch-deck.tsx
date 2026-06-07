@@ -1953,45 +1953,40 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
             </div>
           )}
 
-          {/* Hub-and-spoke diagram: You → olo → functions (radial) */}
-          <div className="mt-8 relative flex items-center justify-center" style={{ height: '320px' }}>
-            {/* You node - top */}
-            <div className="absolute" style={{ top: '0px', left: '50%', transform: 'translateX(-50%)' }}>
-              <div className="flex h-[44px] w-[44px] items-center justify-center rounded-full border-2 border-white/30 bg-white/5">
-                <span className="text-[13px] font-bold text-white/80">You</span>
-              </div>
+          {/* Hub-and-spoke diagram: You → olo → functions */}
+          <div className="mt-8 flex flex-col items-center">
+            {/* You node */}
+            <div className="flex h-[44px] w-[44px] items-center justify-center rounded-full border-2 border-white/30 bg-white/5">
+              <span className="text-[13px] font-bold text-white/80">You</span>
             </div>
-            {/* Line from You to olo */}
-            <div className="absolute" style={{ top: '44px', left: '50%', transform: 'translateX(-50%)', width: '2px', height: '30px', background: 'linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(45,212,191,0.5))' }} />
-            {/* olo node - center hero */}
-            <div className="absolute flex h-[90px] w-[90px] items-center justify-center rounded-full border-[3px] border-[#2dd4bf] bg-[#2dd4bf]/10" style={{ top: '74px', left: '50%', transform: 'translateX(-50%)', boxShadow: '0 0 12px 2px rgba(45,212,191,0.5), 0 0 30px 6px rgba(45,212,191,0.15)' }}>
+            {/* Line You → olo */}
+            <div className="h-[28px] w-[2px] bg-gradient-to-b from-white/30 to-[#2dd4bf]/50" />
+            {/* olo node */}
+            <div className="flex h-[85px] w-[85px] items-center justify-center rounded-full border-[3px] border-[#2dd4bf] bg-[#2dd4bf]/10" style={{ boxShadow: '0 0 12px 2px rgba(45,212,191,0.5), 0 0 30px 6px rgba(45,212,191,0.15)' }}>
               <span className="text-[22px] font-black text-[#2dd4bf]">olo</span>
             </div>
-            {/* Spoke nodes arranged in semicircle below olo */}
-            {[
-              { label: "Payroll", icon: "M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6", angle: -75 },
-              { label: "Invoicing", icon: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6", angle: -50 },
-              { label: "E-Mail", icon: "M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z M22 6l-10 7L2 6", angle: -25 },
-              { label: "Calls", icon: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6", angle: 0 },
-              { label: "Accounting", icon: "M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z M9 22V12 M15 22V12", angle: 25 },
-              { label: "Scheduling", icon: "M3 4h18a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z M16 2v4 M8 2v4", angle: 50 },
-              { label: "CRM", icon: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8z", angle: 75 },
-            ].map((item, idx) => {
-              const rad = (item.angle * Math.PI) / 180;
-              const radius = 140;
-              const cx = Math.sin(rad) * radius;
-              const cy = Math.cos(rad) * radius * 0.6;
-              return (
-                <div key={idx} className="absolute flex flex-col items-center" style={{ top: `${164 + cy}px`, left: `calc(50% + ${cx}px)`, transform: 'translateX(-50%)' }}>
-                  {/* Connector line */}
-                  <div className="h-[16px] w-[1px] bg-[#2dd4bf]/25 mb-1" />
-                  <div className="flex h-[48px] w-[48px] items-center justify-center rounded-xl border border-[#2dd4bf]/25 bg-[#2dd4bf]/5">
-                    <svg viewBox="0 0 24 24" className="h-5 w-5 text-[#2dd4bf]/70" fill="none" stroke="currentColor" strokeWidth="1.5"><path d={item.icon} /></svg>
+            {/* Lines olo → nodes */}
+            <div className="h-[28px] w-[2px] bg-[#2dd4bf]/30" />
+            {/* Function nodes row */}
+            <div className="flex items-start gap-5">
+              {[
+                { label: "Payroll", icon: "M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6", color: "#2dd4bf" },
+                { label: "Invoicing", icon: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6", color: "#06b6d4" },
+                { label: "E-Mail", icon: "M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z M22 6l-10 7L2 6", color: "#14b8a6" },
+                { label: "Calls", icon: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6", color: "#22d3ee" },
+                { label: "Accounting", icon: "M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z M9 22V12 M15 22V12", color: "#0d9488" },
+                { label: "Scheduling", icon: "M3 4h18a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z M16 2v4 M8 2v4", color: "#34d399" },
+                { label: "CRM", icon: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8z", color: "#67e8f9" },
+              ].map((item, idx) => (
+                <div key={idx} className="flex flex-col items-center gap-1.5">
+                  <div className="h-[16px] w-[1px]" style={{ backgroundColor: `${item.color}40` }} />
+                  <div className="flex h-[52px] w-[52px] items-center justify-center rounded-xl border" style={{ borderColor: `${item.color}35`, backgroundColor: `${item.color}08` }}>
+                    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke={item.color} strokeWidth="1.5"><path d={item.icon} /></svg>
                   </div>
-                  <span className="mt-1.5 text-[11px] font-medium text-white/50">{item.label}</span>
+                  <span className="text-[11px] font-medium" style={{ color: `${item.color}cc` }}>{item.label}</span>
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
 
           {/* Body text */}
