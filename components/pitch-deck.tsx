@@ -1763,7 +1763,7 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
         </div>
 
         {/* Main content area */}
-        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.07] px-10 py-8 backdrop-blur-sm">
+        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.04] px-10 py-8 backdrop-blur-sm">
           {/* Main title */}
           <h1 className="mb-14 text-[42px] font-bold leading-tight text-white">
             <RichText text={slide.subtitle} />
@@ -1827,7 +1827,7 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
           </div>
 
           {/* Main content */}
-          <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.07] px-10 py-8 backdrop-blur-sm">
+          <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.04] px-10 py-8 backdrop-blur-sm">
             {/* Big title - Isolation = Inefficiency */}
             <h1 className="mb-14 text-[72px] font-black leading-none tracking-tight">
               <RichText text={slide.subtitle} />
@@ -1936,7 +1936,7 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
         </div>
 
         {/* Main content */}
-        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.07] px-10 py-8 backdrop-blur-sm">
+        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.04] px-10 py-8 backdrop-blur-sm">
           {/* Title statement */}
           <h1 className="mb-14 text-[52px] font-bold leading-tight text-white">
             <RichText text={slide.subtitle} />
@@ -2105,7 +2105,7 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
         </div>
 
         {/* Main */}
-        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.07] px-10 py-6 backdrop-blur-sm">
+        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.04] px-10 py-6 backdrop-blur-sm">
           {/* Title */}
           <h1 className="mb-4 text-[48px] font-bold leading-tight text-white">
             <RichText text={slide.subtitle} />
@@ -2182,7 +2182,7 @@ function SlideMarket({ slide }: { slide: (typeof slidesData)[0] }) {
         </div>
 
         {/* Main */}
-        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.07] px-10 py-8 backdrop-blur-sm">
+        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.04] px-10 py-8 backdrop-blur-sm">
           {/* Big title */}
           <h1 className="mb-14 text-[46px] font-bold leading-tight text-white">
             <RichText text={slide.subtitle} />
@@ -2251,7 +2251,7 @@ function SlideMeetOlo({ slide }: { slide: (typeof slidesData)[0] }) {
       <div className="relative flex h-full px-[80px] py-[35px]">
         {/* Left side - text */}
         <div className="flex w-[58%] flex-col justify-center pr-10">
-          <div className="rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.07] px-10 py-8 backdrop-blur-sm">
+          <div className="rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.04] px-10 py-8 backdrop-blur-sm">
           {/* Heading */}
           <h3 className="mb-4 text-[28px] font-medium uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
             {slide.title}
@@ -2325,7 +2325,7 @@ function SlideSolution2({ slide }: { slide: (typeof slidesData)[0] }) {
         </div>
 
         {/* Main content */}
-        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.07] px-10 py-8 backdrop-blur-sm">
+        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.04] px-10 py-8 backdrop-blur-sm">
           {/* Title */}
           <h1 className="mb-10 text-[56px] font-bold leading-tight text-white">
             <RichText text={slide.subtitle} />
@@ -2553,7 +2553,7 @@ function SlideAsk({ slide }: { slide: (typeof slidesData)[0] }) {
         </div>
 
         {/* Main */}
-        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.07] px-10 py-8 backdrop-blur-sm">
+        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.04] px-10 py-8 backdrop-blur-sm">
           {/* Big CTA headline with glow */}
           <div className="relative mb-10 text-center">
             <div className="absolute inset-0 flex items-center justify-center">
@@ -2619,7 +2619,7 @@ function SlideOnboarding({ slide }: { slide: (typeof slidesData)[0] }) {
       <div className="relative flex h-full px-[80px] py-[50px]">
         {/* Left side - text (bigger) */}
         <div className="flex w-[58%] flex-col justify-center pr-10">
-          <div className="rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.07] px-10 py-8 backdrop-blur-sm">
+          <div className="rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.04] px-10 py-8 backdrop-blur-sm">
             {/* Heading */}
             <h3 className="mb-4 text-[28px] font-medium uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
               {slide.title}
