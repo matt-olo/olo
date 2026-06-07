@@ -1522,7 +1522,7 @@ function SlideTitle({ slide }: { slide: (typeof slidesData)[0] }) {
             className="absolute inset-0"
             style={{
               backgroundImage:
-                "repeating-linear-gradient(135deg, rgba(6,40,50,0.9) 0px, rgba(6,40,50,0.9) 40px, rgba(15,80,90,0.5) 40px, rgba(15,80,90,0.5) 42px, rgba(4,25,35,0.9) 42px, rgba(4,25,35,0.9) 90px, rgba(0,120,130,0.3) 90px, rgba(0,120,130,0.3) 92px, rgba(8,50,65,0.9) 92px, rgba(8,50,65,0.9) 140px, rgba(45,212,191,0.15) 140px, rgba(45,212,191,0.15) 142px, rgba(10,30,55,0.9) 142px, rgba(10,30,55,0.9) 200px, rgba(0,90,100,0.35) 200px, rgba(0,90,100,0.35) 202px)",
+                "repeating-linear-gradient(135deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
             }}
           />
           {/* Radial glow to lift the center */}
@@ -1581,7 +1581,7 @@ function SlideTitle({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(0deg, transparent 0px, transparent 90px, rgba(0,120,130,0.1) 90px, rgba(0,120,130,0.1) 92px)",
+              "repeating-linear-gradient(45deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
           }}
         />
         {/* Vertical grid */}
@@ -1589,7 +1589,7 @@ function SlideTitle({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(90deg, transparent 0px, transparent 90px, rgba(0,120,130,0.1) 90px, rgba(0,120,130,0.1) 92px)",
+              "repeating-linear-gradient(150deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
           }}
         />
         {/* Diagonal slash */}
@@ -1597,7 +1597,7 @@ function SlideTitle({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(135deg, transparent 0px, transparent 62px, rgba(45,212,191,0.07) 62px, rgba(45,212,191,0.07) 64px)",
+              "repeating-linear-gradient(30deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(10,55,55,0.6)_0%,_transparent_50%)]" />
@@ -1764,7 +1764,7 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(90deg, rgba(4,25,35,0.9) 0px, rgba(4,25,35,0.9) 50px, rgba(0,100,110,0.2) 50px, rgba(0,100,110,0.2) 52px, rgba(8,45,55,0.9) 52px, rgba(8,45,55,0.9) 110px, rgba(45,212,191,0.08) 110px, rgba(45,212,191,0.08) 112px, rgba(6,35,45,0.9) 112px, rgba(6,35,45,0.9) 170px, rgba(15,70,80,0.3) 170px, rgba(15,70,80,0.3) 172px)",
+              "repeating-linear-gradient(135deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,_rgba(10,50,50,0.5)_0%,_transparent_60%)]" />
@@ -1826,7 +1826,7 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(225deg, rgba(5,25,35,0.9) 0px, rgba(5,25,35,0.9) 45px, rgba(120,20,20,0.12) 45px, rgba(120,20,20,0.12) 47px, rgba(8,35,45,0.9) 47px, rgba(8,35,45,0.9) 100px, rgba(45,212,191,0.05) 100px, rgba(45,212,191,0.05) 102px, rgba(4,18,28,0.9) 102px, rgba(4,18,28,0.9) 160px, rgba(80,15,15,0.08) 160px, rgba(80,15,15,0.08) 162px)",
+              "repeating-linear-gradient(45deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,_rgba(80,10,10,0.12)_0%,_transparent_55%)]" />
@@ -1937,7 +1937,7 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(180deg, rgba(5,30,40,0.9) 0px, rgba(5,30,40,0.9) 60px, rgba(0,110,120,0.2) 60px, rgba(0,110,120,0.2) 62px, rgba(8,40,55,0.9) 62px, rgba(8,40,55,0.9) 130px, rgba(45,212,191,0.06) 130px, rgba(45,212,191,0.06) 132px, rgba(4,20,30,0.9) 132px, rgba(4,20,30,0.9) 200px, rgba(15,75,85,0.25) 200px, rgba(15,75,85,0.25) 202px)",
+              "repeating-linear-gradient(150deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_70%,_rgba(10,50,50,0.5)_0%,_transparent_60%)]" />
@@ -2038,7 +2038,7 @@ function SlideRoadmap({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(135deg, rgba(6,40,50,0.9) 0px, rgba(6,40,50,0.9) 40px, rgba(15,80,90,0.5) 40px, rgba(15,80,90,0.5) 42px, rgba(4,25,35,0.9) 42px, rgba(4,25,35,0.9) 90px, rgba(0,120,130,0.3) 90px, rgba(0,120,130,0.3) 92px, rgba(8,50,65,0.9) 92px, rgba(8,50,65,0.9) 140px, rgba(45,212,191,0.15) 140px, rgba(45,212,191,0.15) 142px, rgba(10,30,55,0.9) 142px, rgba(10,30,55,0.9) 200px, rgba(0,90,100,0.35) 200px, rgba(0,90,100,0.35) 202px)",
+              "repeating-linear-gradient(30deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,_rgba(10,50,50,0.65)_0%,_transparent_55%)]" />
@@ -2115,7 +2115,7 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(180deg, rgba(5,30,40,0.9) 0px, rgba(5,30,40,0.9) 60px, rgba(0,110,120,0.2) 60px, rgba(0,110,120,0.2) 62px, rgba(8,40,55,0.9) 62px, rgba(8,40,55,0.9) 130px, rgba(45,212,191,0.06) 130px, rgba(45,212,191,0.06) 132px, rgba(4,20,30,0.9) 132px, rgba(4,20,30,0.9) 200px, rgba(15,75,85,0.25) 200px, rgba(15,75,85,0.25) 202px)",
+              "repeating-linear-gradient(135deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_60%,_rgba(10,50,50,0.5)_0%,_transparent_55%)]" />
@@ -2192,7 +2192,7 @@ function SlideMarket({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(90deg, rgba(4,25,35,0.9) 0px, rgba(4,25,35,0.9) 50px, rgba(0,100,110,0.2) 50px, rgba(0,100,110,0.2) 52px, rgba(8,45,55,0.9) 52px, rgba(8,45,55,0.9) 110px, rgba(45,212,191,0.08) 110px, rgba(45,212,191,0.08) 112px, rgba(6,35,45,0.9) 112px, rgba(6,35,45,0.9) 170px, rgba(15,70,80,0.3) 170px, rgba(15,70,80,0.3) 172px)",
+              "repeating-linear-gradient(45deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,_rgba(10,50,50,0.5)_0%,_transparent_60%)]" />
@@ -2267,7 +2267,7 @@ function SlideMeetOlo({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(135deg, rgba(6,40,50,0.9) 0px, rgba(6,40,50,0.9) 40px, rgba(15,80,90,0.5) 40px, rgba(15,80,90,0.5) 42px, rgba(4,25,35,0.9) 42px, rgba(4,25,35,0.9) 90px, rgba(0,120,130,0.3) 90px, rgba(0,120,130,0.3) 92px, rgba(8,50,65,0.9) 92px, rgba(8,50,65,0.9) 140px, rgba(45,212,191,0.15) 140px, rgba(45,212,191,0.15) 142px, rgba(10,30,55,0.9) 142px, rgba(10,30,55,0.9) 200px, rgba(0,90,100,0.35) 200px, rgba(0,90,100,0.35) 202px)",
+              "repeating-linear-gradient(150deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(10,50,50,0.6)_0%,_transparent_60%)]" />
@@ -2335,7 +2335,7 @@ function SlideSolution2({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(0deg, transparent 0px, transparent 78px, rgba(0,130,140,0.12) 78px, rgba(0,130,140,0.12) 80px)",
+              "repeating-linear-gradient(30deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
           }}
         />
         {/* Vertical grid lines */}
@@ -2343,7 +2343,7 @@ function SlideSolution2({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(90deg, transparent 0px, transparent 78px, rgba(0,130,140,0.12) 78px, rgba(0,130,140,0.12) 80px)",
+              "repeating-linear-gradient(135deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
           }}
         />
         {/* Diagonal slashes cutting through */}
@@ -2351,7 +2351,7 @@ function SlideSolution2({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(135deg, transparent 0px, transparent 54px, rgba(45,212,191,0.1) 54px, rgba(45,212,191,0.1) 56px)",
+              "repeating-linear-gradient(45deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
           }}
         />
         {/* Center glow */}
@@ -2580,7 +2580,7 @@ function SlideAsk({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(0deg, transparent 0px, transparent 78px, rgba(0,130,140,0.12) 78px, rgba(0,130,140,0.12) 80px), repeating-linear-gradient(90deg, transparent 0px, transparent 78px, rgba(0,130,140,0.12) 78px, rgba(0,130,140,0.12) 80px), repeating-linear-gradient(135deg, transparent 0px, transparent 54px, rgba(45,212,191,0.1) 54px, rgba(45,212,191,0.1) 56px)",
+              "repeating-linear-gradient(150deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,_rgba(10,55,55,0.4)_0%,_transparent_50%)]" />
@@ -2652,7 +2652,7 @@ function SlideOnboarding({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(45deg, rgba(6,40,50,0.9) 0px, rgba(6,40,50,0.9) 40px, rgba(15,80,90,0.5) 40px, rgba(15,80,90,0.5) 42px, rgba(4,25,35,0.9) 42px, rgba(4,25,35,0.9) 90px, rgba(0,120,130,0.3) 90px, rgba(0,120,130,0.3) 92px, rgba(8,50,65,0.9) 92px, rgba(8,50,65,0.9) 140px, rgba(45,212,191,0.15) 140px, rgba(45,212,191,0.15) 142px, rgba(10,30,55,0.9) 142px, rgba(10,30,55,0.9) 200px, rgba(0,90,100,0.35) 200px, rgba(0,90,100,0.35) 202px)",
+              "repeating-linear-gradient(135deg, transparent 0px, transparent 90px, rgba(45,212,191,0.07) 90px, rgba(45,212,191,0.07) 91px, transparent 91px, transparent 180px, rgba(0,120,130,0.05) 180px, rgba(0,120,130,0.05) 181px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(10,50,50,0.6)_0%,_transparent_60%)]" />
