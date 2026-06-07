@@ -1953,40 +1953,42 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
             </div>
           )}
 
-          {/* Hub-and-spoke diagram: You → olo → functions */}
-          <div className="mt-8 flex flex-col items-center">
-            {/* You node */}
-            <div className="flex h-[44px] w-[44px] items-center justify-center rounded-full border-2 border-white/30 bg-white/5">
-              <span className="text-[13px] font-bold text-white/80">You</span>
-            </div>
-            {/* Line You → olo */}
-            <div className="h-[28px] w-[2px] bg-gradient-to-b from-white/30 to-[#2dd4bf]/50" />
-            {/* olo node */}
-            <div className="flex h-[85px] w-[85px] items-center justify-center rounded-full border-[3px] border-[#2dd4bf] bg-[#2dd4bf]/10" style={{ boxShadow: '0 0 12px 2px rgba(45,212,191,0.5), 0 0 30px 6px rgba(45,212,191,0.15)' }}>
-              <span className="text-[22px] font-black text-[#2dd4bf]">olo</span>
-            </div>
-            {/* Lines olo → nodes */}
-            <div className="h-[28px] w-[2px] bg-[#2dd4bf]/30" />
-            {/* Function nodes row */}
-            <div className="flex items-start gap-5">
-              {[
-                { label: "Payroll", icon: "M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6", color: "#2dd4bf" },
-                { label: "Invoicing", icon: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6", color: "#06b6d4" },
-                { label: "E-Mail", icon: "M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z M22 6l-10 7L2 6", color: "#14b8a6" },
-                { label: "Calls", icon: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6", color: "#22d3ee" },
-                { label: "Accounting", icon: "M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z M9 22V12 M15 22V12", color: "#0d9488" },
-                { label: "Scheduling", icon: "M3 4h18a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z M16 2v4 M8 2v4", color: "#34d399" },
-                { label: "CRM", icon: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8z", color: "#67e8f9" },
-              ].map((item, idx) => (
-                <div key={idx} className="flex flex-col items-center gap-1.5">
-                  <div className="h-[16px] w-[1px]" style={{ backgroundColor: `${item.color}40` }} />
-                  <div className="flex h-[52px] w-[52px] items-center justify-center rounded-xl border" style={{ borderColor: `${item.color}35`, backgroundColor: `${item.color}08` }}>
-                    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke={item.color} strokeWidth="1.5"><path d={item.icon} /></svg>
-                  </div>
-                  <span className="text-[11px] font-medium" style={{ color: `${item.color}cc` }}>{item.label}</span>
-                </div>
+          {/* Hub-and-spoke diagram */}
+          <div className="mt-6 relative w-[700px] mx-auto" style={{ height: '260px' }}>
+            {/* SVG spoke lines */}
+            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 700 260" fill="none">
+              {/* You → olo */}
+              <line x1="350" y1="35" x2="350" y2="68" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" />
+              {/* olo → each spoke */}
+              {[50, 150, 225, 300, 375, 450, 550].map((x, i) => (
+                <line key={i} x1="350" y1="145" x2={x} y2="195" stroke={['#2dd4bf','#06b6d4','#14b8a6','#22d3ee','#0d9488','#34d399','#67e8f9'][i]} strokeWidth="1.2" opacity="0.4" />
               ))}
+            </svg>
+            {/* You node */}
+            <div className="absolute flex h-[36px] w-[36px] items-center justify-center rounded-full border-2 border-white/30 bg-white/5" style={{ top: '0px', left: '50%', transform: 'translateX(-50%)' }}>
+              <span className="text-[11px] font-bold text-white/80">You</span>
             </div>
+            {/* olo node */}
+            <div className="absolute flex h-[72px] w-[72px] items-center justify-center rounded-full border-[3px] border-[#2dd4bf] bg-[#2dd4bf]/10" style={{ top: '68px', left: '50%', transform: 'translateX(-50%)', boxShadow: '0 0 10px 2px rgba(45,212,191,0.5), 0 0 25px 5px rgba(45,212,191,0.12)' }}>
+              <span className="text-[18px] font-black text-[#2dd4bf]">olo</span>
+            </div>
+            {/* Spoke nodes */}
+            {[
+              { label: "Payroll", icon: "M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6", color: "#2dd4bf", x: 50 },
+              { label: "Invoicing", icon: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6", color: "#06b6d4", x: 150 },
+              { label: "E-Mail", icon: "M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z M22 6l-10 7L2 6", color: "#14b8a6", x: 225 },
+              { label: "Calls", icon: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6", color: "#22d3ee", x: 300 },
+              { label: "Accounting", icon: "M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z M9 22V12 M15 22V12", color: "#0d9488", x: 375 },
+              { label: "Scheduling", icon: "M3 4h18a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z M16 2v4 M8 2v4", color: "#34d399", x: 450 },
+              { label: "CRM", icon: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8z", color: "#67e8f9", x: 550 },
+            ].map((item, idx) => (
+              <div key={idx} className="absolute flex flex-col items-center" style={{ top: '190px', left: `${item.x}px`, transform: 'translateX(-50%)' }}>
+                <div className="flex h-[44px] w-[44px] items-center justify-center rounded-xl border" style={{ borderColor: `${item.color}40`, backgroundColor: `${item.color}0a` }}>
+                  <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke={item.color} strokeWidth="1.5"><path d={item.icon} /></svg>
+                </div>
+                <span className="mt-1 text-[10px] font-semibold" style={{ color: `${item.color}bb` }}>{item.label}</span>
+              </div>
+            ))}
           </div>
 
           {/* Body text */}
