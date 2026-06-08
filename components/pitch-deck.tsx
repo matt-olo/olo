@@ -44,7 +44,7 @@ const slidesData = [
       "AI can fix this, but today\u2019s automation tools are too {{red}}high-friction{{/red}} for the businesses that need them most. Business owners are not going to research tools, learn how to manage prompts, agents, and dashboards, and coordinate disconnected apps just to get routine work done.",
       "Entrepreneurs spend {{turq}}36% of their workweek{{/turq}} [1] on non-revenue-generating administrative work. Meanwhile, {{turq}}1 in 3 SMBs{{/turq}} [2] {{red}}still lacked a basic website in 2025{{/red}}, showing how far the market remains from adopting current automation tools.",
     ],
-    content: "{{white}}The{{/white}} {{red}}blocker{{/red}} {{white}}is{{/white}} {{turq}}usability{{/turq}}. {{white}}The{{/white}} {{red}}burden{{/red}} {{white}}is{{/white}} {{turq}}administrative{{/turq}}. {{white}}The{{/white}} {{red}}cost{{/red}} {{white}}is{{/white}} {{turqunderline}}real{{/turqunderline}}.",
+    content: "{{white}}The{{/white}} {{red}}blocker{{/red}} {{turq}}is{{/turq}} {{turq}}usability{{/turq}}. {{white}}The{{/white}} {{red}}burden{{/red}} {{turq}}is{{/turq}} {{turq}}administrative{{/turq}}. {{white}}The{{/white}} {{red}}cost{{/red}} {{turq}}is{{/turq}} {{turqunderline}}real{{/turqunderline}}.",
     bgColor: "bg-[#040e14]",
     footer: "Source: [1] Time Etc Survey, [2] Visual Objects Survey",
   },
@@ -1791,12 +1791,12 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
           {/* Stat cards */}
           <div className="flex gap-8 mb-10 mt-14">
             <div className="flex-1 rounded-2xl border-2 border-[#0ea5e9]/25 px-10 py-10" style={{ background: 'linear-gradient(145deg, rgba(4,20,30,0.6) 0%, rgba(6,25,35,0.5) 100%)', boxShadow: '0 6px 28px rgba(14,165,233,0.12), 0 2px 8px rgba(0,0,0,0.3)' }}>
-              <p className="text-[56px] font-black mb-3 bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4] bg-clip-text text-transparent">36%</p>
-              <p className="text-[24px] text-white/70 leading-[1.6]">of entrepreneurs&apos; workweek spent on non-revenue admin work</p>
+              <p className="text-[56px] font-black mb-3" style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>36%</p>
+              <p className="text-[24px] text-white leading-[1.6]">of entrepreneurs&apos; workweek spent on non-revenue admin work</p>
             </div>
             <div className="flex-1 rounded-2xl border-2 border-[#34d399]/30 px-10 py-10" style={{ background: 'linear-gradient(145deg, rgba(5,30,20,0.6) 0%, rgba(8,35,22,0.5) 100%)', boxShadow: '0 6px 28px rgba(52,211,153,0.1), 0 2px 8px rgba(0,0,0,0.3)' }}>
-              <p className="text-[56px] font-black mb-3 text-[#34d399]">1 in 3</p>
-              <p className="text-[24px] text-white/70 leading-[1.6]">SMBs still lacked a basic website in 2025</p>
+              <p className="text-[56px] font-black mb-3" style={{ background: 'linear-gradient(135deg, #6ee7b7, #34d399, #10b981)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>1 in 3</p>
+              <p className="text-[24px] text-white leading-[1.6]">SMBs still lacked a basic website in 2025</p>
             </div>
           </div>
 
