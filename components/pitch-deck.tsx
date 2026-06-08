@@ -1969,7 +1969,7 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
 
           {/* Winding serpentine road */}
           <div className="mt-8 relative w-full flex justify-center">
-            <svg width="100%" height="280" viewBox="0 0 1100 280" fill="none" preserveAspectRatio="xMidYMid meet">
+            <svg width="100%" height="320" viewBox="-20 -30 1140 340" fill="none" preserveAspectRatio="xMidYMid meet">
               {/* Road body */}
               <path d="M 0 140 H 80 V 85 A 85 85 0 0 1 250 85 V 195 A 85 85 0 0 0 420 195 V 85 A 85 85 0 0 1 590 85 V 195 A 85 85 0 0 0 760 195 V 85 A 85 85 0 0 1 930 85 V 140 H 1100" stroke="rgba(45,212,191,0.18)" strokeWidth="38" strokeLinecap="round" strokeLinejoin="round" />
               {/* Center dashed */}
