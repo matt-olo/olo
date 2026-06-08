@@ -1976,9 +1976,14 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
                   <stop offset="50%" stopColor="rgba(45,212,191,0.22)" />
                   <stop offset="100%" stopColor="rgba(6,182,212,0.2)" />
                 </linearGradient>
+                <filter id="roadShadow">
+                  <feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="rgba(4,20,25,0.7)" />
+                </filter>
               </defs>
               {/* Road body */}
-              <path d="M -90 140 H 80 V 85 A 85 85 0 0 1 250 85 V 195 A 85 85 0 0 0 420 195 V 85 A 85 85 0 0 1 590 85 V 195 A 85 85 0 0 0 760 195 V 85 A 85 85 0 0 1 930 85 V 140 H 1100" stroke="url(#roadGrad)" strokeWidth="38" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M -90 140 H 80 V 85 A 85 85 0 0 1 250 85 V 195 A 85 85 0 0 0 420 195 V 85 A 85 85 0 0 1 590 85 V 195 A 85 85 0 0 0 760 195 V 85 A 85 85 0 0 1 930 85 V 140 H 1100" stroke="url(#roadGrad)" strokeWidth="38" strokeLinecap="round" strokeLinejoin="round" filter="url(#roadShadow)" />
+              {/* Top/left edge highlight */}
+              <path d="M -90 140 H 80 V 85 A 85 85 0 0 1 250 85 V 195 A 85 85 0 0 0 420 195 V 85 A 85 85 0 0 1 590 85 V 195 A 85 85 0 0 0 760 195 V 85 A 85 85 0 0 1 930 85 V 140 H 1100" stroke="rgba(45,212,191,0.08)" strokeWidth="40" strokeLinecap="round" strokeLinejoin="round" style={{ transform: 'translate(-1px, -1px)' }} />
               {/* Center dashed */}
               <path d="M -90 140 H 80 V 85 A 85 85 0 0 1 250 85 V 195 A 85 85 0 0 0 420 195 V 85 A 85 85 0 0 1 590 85 V 195 A 85 85 0 0 0 760 195 V 85 A 85 85 0 0 1 930 85 V 140 H 1100" stroke="rgba(45,212,191,0.35)" strokeWidth="2" strokeDasharray="10 7" fill="none" />
             </svg>
