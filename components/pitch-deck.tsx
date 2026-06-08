@@ -1790,11 +1790,11 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
 
           {/* Stat cards */}
           <div className="flex gap-8 mb-10">
-            <div className="flex-1 rounded-2xl border-2 border-[#0ea5e9]/30 bg-[#0a1e3a] px-10 py-10" style={{ boxShadow: '0 4px 20px rgba(14,165,233,0.15)' }}>
+            <div className="flex-1 rounded-2xl border-2 border-[#0ea5e9]/30 px-10 py-10" style={{ background: 'linear-gradient(145deg, rgba(10,30,58,0.85) 0%, rgba(6,25,45,0.7) 100%)', boxShadow: '0 6px 28px rgba(14,165,233,0.15), 0 2px 8px rgba(0,0,0,0.3)' }}>
               <p className="text-[56px] font-black text-[#0ea5e9] mb-3">36%</p>
               <p className="text-[20px] text-white/70 leading-[1.6]">of entrepreneurs&apos; workweek spent on non-revenue admin work</p>
             </div>
-            <div className="flex-1 rounded-2xl border-2 border-red-500/30 bg-[#2a0f0f] px-10 py-10" style={{ boxShadow: '0 4px 20px rgba(239,68,68,0.12)' }}>
+            <div className="flex-1 rounded-2xl border-2 border-red-500/30 px-10 py-10" style={{ background: 'linear-gradient(145deg, rgba(42,15,15,0.85) 0%, rgba(30,10,10,0.7) 100%)', boxShadow: '0 6px 28px rgba(239,68,68,0.12), 0 2px 8px rgba(0,0,0,0.3)' }}>
               <p className="text-[56px] font-black text-red-400 mb-3">1 in 3</p>
               <p className="text-[20px] text-white/70 leading-[1.6]">SMBs still lacked a basic website in 2025</p>
             </div>
