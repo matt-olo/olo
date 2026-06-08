@@ -1967,34 +1967,27 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
             </div>
           )}
 
-          {/* olo center + 7 tiles in circle */}
-          <div className="mt-6 relative" style={{ width: '480px', height: '480px', margin: '0 auto' }}>
-            {/* Center olo */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-[90px] w-[90px] items-center justify-center rounded-full border-[3px] border-[#2dd4bf] bg-[#0a2020]" style={{ boxShadow: '0 0 12px 2px rgba(45,212,191,0.5), 0 0 30px 6px rgba(45,212,191,0.12)' }}>
-              <span className="text-[22px] font-black text-[#2dd4bf]">olo</span>
-            </div>
-            {/* Tiles */}
+          {/* Process flow: Task → olo → AI Tool → Validation → Your Approval */}
+          <div className="mt-8 flex items-center justify-center gap-0">
             {[
-              { label: "Calls", color: "#22d3ee" },
-              { label: "Email", color: "#2dd4bf" },
-              { label: "Scheduling", color: "#14b8a6" },
-              { label: "Invoicing", color: "#06b6d4" },
-              { label: "Accounting", color: "#0d9488" },
-              { label: "Payroll", color: "#34d399" },
-              { label: "CRM", color: "#67e8f9" },
-            ].map((item, i) => {
-              const angle = (i * 360) / 7 - 90;
-              const rad = (angle * Math.PI) / 180;
-              const x = Math.cos(rad) * 180;
-              const y = Math.sin(rad) * 180;
-              return (
-                <div key={item.label} className="absolute flex items-center justify-center" style={{ top: `calc(50% + ${y}px)`, left: `calc(50% + ${x}px)`, transform: 'translate(-50%, -50%)' }}>
-                  <div className="rounded-xl px-4 py-2.5 border text-[13px] font-bold" style={{ borderColor: `${item.color}50`, backgroundColor: `${item.color}12`, color: item.color }}>
-                    {item.label}
-                  </div>
+              { label: "Task", color: "#67e8f9" },
+              { label: "olo", color: "#2dd4bf", hero: true },
+              { label: "AI Tool", color: "#06b6d4" },
+              { label: "Validation", color: "#14b8a6" },
+              { label: "Your Approval", color: "#34d399" },
+            ].map((step, idx, arr) => (
+              <div key={idx} className="flex items-center">
+                <div className={`flex items-center justify-center rounded-xl border px-5 ${step.hero ? 'py-4' : 'py-3'}`} style={{ borderColor: `${step.color}50`, backgroundColor: `${step.color}10` }}>
+                  <span className={`font-bold ${step.hero ? 'text-[18px]' : 'text-[14px]'}`} style={{ color: step.color }}>{step.label}</span>
                 </div>
-              );
-            })}
+                {idx < arr.length - 1 && (
+                  <div className="flex items-center mx-2">
+                    <div className="w-[24px] h-[2px] bg-[#2dd4bf]/30" />
+                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1l5 5-5 5" stroke="rgba(45,212,191,0.4)" strokeWidth="1.5" strokeLinecap="round" /></svg>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
 
           {/* Body text */}
