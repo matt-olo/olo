@@ -42,7 +42,7 @@ const slidesData = [
     subtitle: "Small to medium businesses (SMBs) are {{red}}drowning{{/red}} in administrative overhead.",
     bullets: [
       "AI can fix this, but today\u2019s automation tools are too {{red}}high-friction{{/red}} for the businesses that need them most. Business owners are not going to research tools, learn how to manage prompts, agents, and dashboards, and coordinate disconnected apps just to get routine work done.",
-      "Entrepreneurs spend **36% of their workweek** [1] on non-revenue-generating administrative work. Meanwhile, **1 in 3 SMBs** [2] {{red}}still lacked a basic website in 2025{{/red}}, showing how far the market remains from adopting current automation tools.",
+      "Entrepreneurs spend {{turq}}36% of their workweek{{/turq}} [1] on non-revenue-generating administrative work. Meanwhile, {{turq}}1 in 3 SMBs{{/turq}} [2] {{red}}still lacked a basic website in 2025{{/red}}, showing how far the market remains from adopting current automation tools.",
     ],
     content: "{{white}}The{{/white}} {{red}}blocker{{/red}} {{white}}is{{/white}} {{turq}}usability{{/turq}}. {{white}}The{{/white}} {{red}}burden{{/red}} {{white}}is{{/white}} {{turq}}administrative{{/turq}}. {{white}}The{{/white}} {{red}}cost{{/red}} {{white}}is{{/white}} {{turqunderline}}real{{/turqunderline}}.",
     bgColor: "bg-[#040e14]",
@@ -1786,7 +1786,7 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
           {/* Body paragraphs */}
           <div className="space-y-10 max-w-[1500px]">
             {slide.bullets?.map((bullet, idx) => (
-              <p key={idx} className="text-[28px] leading-relaxed text-white/80">
+              <p key={idx} className="text-[30px] leading-relaxed text-white/80">
                 <RichText text={bullet} />
               </p>
             ))}
