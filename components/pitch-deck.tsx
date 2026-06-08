@@ -1967,34 +1967,13 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
             </div>
           )}
 
-          {/* Winding serpentine road */}
+          {/* Winding serpentine road - just the road */}
           <div className="mt-8 relative w-full flex justify-center">
-            <svg width="550" height="250" viewBox="0 0 550 250" fill="none">
-              {/* Road path - serpentine with tight U-turns */}
-              <path d="M 0 125 H 70 V 30 Q 70 10 90 10 H 150 Q 170 10 170 30 V 220 Q 170 240 190 240 H 280 Q 300 240 300 220 V 30 Q 300 10 320 10 H 410 Q 430 10 430 30 V 125 H 550" stroke="rgba(45,212,191,0.12)" strokeWidth="38" strokeLinejoin="round" />
-              {/* Dashed center */}
-              <path d="M 0 125 H 70 V 30 Q 70 10 90 10 H 150 Q 170 10 170 30 V 220 Q 170 240 190 240 H 280 Q 300 240 300 220 V 30 Q 300 10 320 10 H 410 Q 430 10 430 30 V 125 H 550" stroke="rgba(45,212,191,0.25)" strokeWidth="2" strokeDasharray="8 6" fill="none" />
-              {/* Node 1 - top of first column */}
-              <circle cx="120" cy="10" r="18" fill="#0a1e1e" stroke="#67e8f9" strokeWidth="2.5" />
-              <text x="120" y="15" textAnchor="middle" fill="#67e8f9" fontSize="12" fontWeight="bold">1</text>
-              {/* Node 2 - bottom of U-turn */}
-              <circle cx="235" cy="240" r="20" fill="#0a1e1e" stroke="#2dd4bf" strokeWidth="3" />
-              <text x="235" y="245" textAnchor="middle" fill="#2dd4bf" fontSize="13" fontWeight="bold">2</text>
-              {/* Node 3 - top of second column */}
-              <circle cx="365" cy="10" r="18" fill="#0a1e1e" stroke="#06b6d4" strokeWidth="2.5" />
-              <text x="365" y="15" textAnchor="middle" fill="#06b6d4" fontSize="12" fontWeight="bold">3</text>
-              {/* Node 4 - mid exit */}
-              <circle cx="430" cy="80" r="18" fill="#0a1e1e" stroke="#14b8a6" strokeWidth="2.5" />
-              <text x="430" y="85" textAnchor="middle" fill="#14b8a6" fontSize="12" fontWeight="bold">4</text>
-              {/* Node 5 - end */}
-              <circle cx="510" cy="125" r="18" fill="#0a1e1e" stroke="#34d399" strokeWidth="2.5" />
-              <text x="510" y="130" textAnchor="middle" fill="#34d399" fontSize="12" fontWeight="bold">5</text>
-              {/* Labels below nodes */}
-              <text x="120" y="46" textAnchor="middle" fill="#67e8f9" fontSize="11" fontWeight="600">Task</text>
-              <text x="235" y="218" textAnchor="middle" fill="#2dd4bf" fontSize="12" fontWeight="700">olo</text>
-              <text x="365" y="46" textAnchor="middle" fill="#06b6d4" fontSize="11" fontWeight="600">AI Tool</text>
-              <text x="460" y="85" textAnchor="middle" fill="#14b8a6" fontSize="11" fontWeight="600">Validation</text>
-              <text x="510" y="155" textAnchor="middle" fill="#34d399" fontSize="11" fontWeight="600">Approval</text>
+            <svg width="600" height="220" viewBox="0 0 600 220" fill="none">
+              {/* Road body */}
+              <path d="M 0 110 H 60 C 80 110 80 110 80 90 V 30 C 80 10 100 10 100 10 H 140 C 160 10 160 30 160 30 V 190 C 160 210 180 210 180 210 H 260 C 280 210 280 190 280 190 V 30 C 280 10 300 10 300 10 H 340 C 360 10 360 30 360 30 V 190 C 360 210 380 210 380 210 H 460 C 480 210 480 190 480 190 V 110 H 600" stroke="rgba(45,212,191,0.15)" strokeWidth="42" strokeLinecap="round" strokeLinejoin="round" />
+              {/* Center dashed line */}
+              <path d="M 0 110 H 60 C 80 110 80 110 80 90 V 30 C 80 10 100 10 100 10 H 140 C 160 10 160 30 160 30 V 190 C 160 210 180 210 180 210 H 260 C 280 210 280 190 280 190 V 30 C 280 10 300 10 300 10 H 340 C 360 10 360 30 360 30 V 190 C 360 210 380 210 380 210 H 460 C 480 210 480 190 480 190 V 110 H 600" stroke="rgba(45,212,191,0.3)" strokeWidth="2" strokeDasharray="10 7" fill="none" />
             </svg>
           </div>
 
