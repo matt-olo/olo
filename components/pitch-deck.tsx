@@ -1791,18 +1791,20 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
           {/* Stat cards */}
           <div className="flex gap-8 mb-10 mt-14">
             <div className="flex-1 rounded-2xl border-2 border-[#0ea5e9]/25 px-10 py-10" style={{ background: 'linear-gradient(145deg, rgba(4,20,30,0.6) 0%, rgba(6,25,35,0.5) 100%)', boxShadow: '0 6px 28px rgba(14,165,233,0.12), 0 2px 8px rgba(0,0,0,0.3)', position: 'relative' }}>
-              <svg style={{ position: 'absolute', top: '30px', right: '16px', opacity: 0.25 }} width="80" height="55" viewBox="0 0 40 28" fill="none" stroke="#0ea5e9" strokeWidth="0.7" strokeLinecap="round" strokeLinejoin="round">
-                {/* Top strip */}
-                <rect x="2" y="1" width="36" height="5" rx="1" />
-                {/* Middle strip - offset slightly */}
-                <rect x="3" y="8" width="36" height="5" rx="1" />
-                <circle cx="21" cy="10.5" r="2.5" />
-                <text x="21" y="12" textAnchor="middle" fontSize="4" fill="none" stroke="#0ea5e9" strokeWidth="0.6">$</text>
-                {/* Bottom strip - offset other way */}
-                <rect x="1" y="15" width="36" height="5" rx="1" />
-                {/* Tiny fragment */}
-                <rect x="5" y="22" width="8" height="4" rx="1" />
-                <rect x="16" y="23" width="10" height="3" rx="1" />
+              <svg style={{ position: 'absolute', top: '25px', right: '16px', opacity: 0.25 }} width="70" height="70" viewBox="0 0 32 36" fill="none" stroke="#0ea5e9" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round">
+                {/* Bill sticking out top */}
+                <rect x="12" y="0" width="8" height="12" rx="1" />
+                <circle cx="16" cy="7" r="2.5" />
+                <text x="16" y="8.5" textAnchor="middle" fontSize="3.5" fill="none" stroke="#0ea5e9" strokeWidth="0.6">$</text>
+                {/* Shredder body */}
+                <rect x="4" y="12" width="24" height="10" rx="2" />
+                <line x1="6" y1="18" x2="26" y2="18" />
+                {/* Shredded strips coming out */}
+                <line x1="10" y1="22" x2="10" y2="32" />
+                <line x1="13" y1="22" x2="13" y2="34" />
+                <line x1="16" y1="22" x2="16" y2="33" />
+                <line x1="19" y1="22" x2="19" y2="35" />
+                <line x1="22" y1="22" x2="22" y2="31" />
               </svg>
               <p className="text-[56px] font-black mb-3" style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>36%</p>
               <p className="text-[24px] text-white leading-[1.6]">of entrepreneurs&apos; workweek spent on non-revenue admin work</p>
