@@ -44,7 +44,7 @@ const slidesData = [
       "AI can fix this, but today\u2019s automation tools are too {{red}}high-friction{{/red}} for the businesses that need them most. Business owners are not going to research tools, learn how to manage prompts, agents, and dashboards, and coordinate disconnected apps just to get routine work done.",
       "Entrepreneurs spend {{turq}}36% of their workweek{{/turq}} [1] on non-revenue-generating administrative work. Meanwhile, {{turq}}1 in 3 SMBs{{/turq}} [2] {{red}}still lacked a basic website in 2025{{/red}}, showing how far the market remains from adopting current automation tools.",
     ],
-    content: "{{white}}The{{/white}} {{red}}blocker{{/red}} {{turq}}is{{/turq}} {{turq}}usability{{/turq}}. {{white}}The{{/white}} {{red}}burden{{/red}} {{turq}}is{{/turq}} {{turq}}administrative{{/turq}}. {{white}}The{{/white}} {{red}}cost{{/red}} {{turq}}is{{/turq}} {{turqunderline}}real{{/turqunderline}}.",
+    content: "{{turq}}The{{/turq}} {{red}}blocker{{/red}} {{turq}}is{{/turq}} {{turq}}usability{{/turq}}. {{turq}}The{{/turq}} {{red}}burden{{/red}} {{turq}}is{{/turq}} {{turq}}administrative{{/turq}}. {{turq}}The{{/turq}} {{red}}cost{{/red}} {{turq}}is{{/turq}} {{turqunderline}}real{{/turqunderline}}.",
     bgColor: "bg-[#040e14]",
     footer: "Source: [1] Time Etc Survey, [2] Visual Objects Survey",
   },
