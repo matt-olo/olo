@@ -41,7 +41,7 @@ const slidesData = [
     title: "problem",
     subtitle: "Small to medium businesses (SMBs) are {{red}}drowning{{/red}} in administrative overhead.",
     bullets: [
-      "AI can fix this, but today\u2019s automation tools are too {{red}}high-friction{{/red}} for the businesses that need them most. Business owners are not going to research tools, manage multiple prompts, agents, and dashboards just to get routine work done.",
+      "AI can fix this, but today\u2019s automation tools are too {{red}}high-friction{{/red}} for the businesses that need them most. Business owners are not going to research tools, learn how to manage prompts, agents, and dashboards, and coordinate disconnected apps just to get routine work done.",
       "Entrepreneurs spend **36% of their workweek** [1] on non-revenue-generating administrative work. Meanwhile, **1 in 3 SMBs** [2] still lacked a basic website in 2025, showing how far the market remains from adopting current automation tools.",
     ],
     content: "{{white}}The{{/white}} {{red}}blocker{{/red}} {{white}}is{{/white}} {{turq}}usability{{/turq}}. {{white}}The{{/white}} {{red}}burden{{/red}} {{white}}is{{/white}} {{turq}}administrative{{/turq}}. {{white}}The{{/white}} {{red}}cost{{/red}} {{white}}is{{/white}} {{turqunderline}}real{{/turqunderline}}.",
@@ -1771,7 +1771,7 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
       <div className="relative flex h-full flex-col justify-between px-[120px] py-[80px]">
         {/* Top left heading */}
         <div>
-          <h3 className="mb-2 text-[28px] font-medium uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
+          <h3 className="mb-2 text-[36px] font-bold uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
             {slide.title}
           </h3>
         </div>
