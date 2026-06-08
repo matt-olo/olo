@@ -1780,7 +1780,7 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
         <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8 mt-4">
           {/* Main title */}
           <h1 className="mb-6 text-[42px] font-bold leading-tight text-white">
-            <RichText text="SMBs are {{red}}drowning{{/red}} in administrative overhead." />
+            SMBs are <span className="font-black" style={{ background: 'linear-gradient(135deg, #fca5a5, #ef4444, #dc2626)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>drowning</span> in administrative overhead.
           </h1>
 
           {/* Body paragraph */}
