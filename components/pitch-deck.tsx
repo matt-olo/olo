@@ -39,10 +39,10 @@ const slidesData = [
   {
     id: 2,
     title: "problem",
-    subtitle: "Small to medium businesses (SMBs) are {{red}}drowning{{/red}} in overhead. AI can fix it, but today's tools are too {{red}}high-friction{{/red}} for SMBs to adopt.",
+    subtitle: "Small to medium businesses (SMBs) are {{red}}drowning{{/red}} in administrative overhead.",
     bullets: [
-      "Entrepreneurs spend an average of **36% of their workweek** [1] on non-revenue-generating administrative work.",
-      "At the same time, the market remains under-digitized: **1 out of every 3 SMBs** [2] still lacked even a basic website in 2025 — let alone the capacity to adopt AI automation.",
+      "AI can fix this, but today\u2019s automation tools are too {{red}}high-friction{{/red}} for the businesses that need them most. Business owners are not going to research tools, manage multiple prompts, agents, and dashboards just to get routine work done.",
+      "Entrepreneurs spend **36% of their workweek** [1] on non-revenue-generating administrative work. Meanwhile, **1 in 3 SMBs** [2] still lacked a basic website in 2025, showing how far the market remains from adopting current automation tools.",
     ],
     content: "The blocker is usability. The burden is administrative. The cost is {{underline}}real{{/underline}}.",
     bgColor: "bg-[#040e14]",
