@@ -1779,25 +1779,31 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
         {/* Main content area */}
         <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8 mt-4">
           {/* Main title */}
-          <h1 className="mb-12 text-[42px] font-bold leading-tight text-white">
-            <RichText text={slide.subtitle} />
+          <h1 className="mb-6 text-[42px] font-bold leading-tight text-white">
+            <RichText text="SMBs are {{red}}drowning{{/red}} in administrative overhead." />
           </h1>
 
-          {/* Body paragraphs */}
-          <div className="space-y-10 max-w-[1500px]">
-            {slide.bullets?.map((bullet, idx) => (
-              <p key={idx} className="text-[30px] leading-relaxed text-white/80">
-                <RichText text={bullet} />
-              </p>
-            ))}
+          {/* Body paragraph */}
+          <p className="mb-10 text-[24px] leading-relaxed text-white/60 max-w-[1400px]">
+            AI can fix this, but today&apos;s automation tools are too <span className="text-red-500 font-bold">high-friction</span> for the businesses that need them most. Business owners are not going to research tools, learn how to manage prompts, agents, and dashboards, and coordinate disconnected apps just to get routine work done.
+          </p>
+
+          {/* Stat cards */}
+          <div className="flex gap-6 mb-10">
+            <div className="flex-1 rounded-xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.05] px-8 py-6">
+              <p className="text-[36px] font-black text-[#2dd4bf] mb-2">36%</p>
+              <p className="text-[18px] text-white/70">of entrepreneurs&apos; workweek spent on non-revenue admin work</p>
+            </div>
+            <div className="flex-1 rounded-xl border border-red-500/20 bg-red-500/[0.05] px-8 py-6">
+              <p className="text-[36px] font-black text-red-400 mb-2">1 in 3</p>
+              <p className="text-[18px] text-white/70">SMBs still lacked a basic website in 2025</p>
+            </div>
           </div>
 
-          {/* Big turquoise statement */}
-          {slide.content && (
-            <h2 className="mt-auto pt-8 text-[38px] font-bold text-[#2dd4bf]">
-              <RichText text={slide.content} />
-            </h2>
-          )}
+          {/* Big thesis statement */}
+          <h2 className="mt-auto pt-4 text-[34px] font-bold text-[#2dd4bf]">
+            <RichText text={slide.content || ""} />
+          </h2>
         </div>
 
         {/* Source footer */}
