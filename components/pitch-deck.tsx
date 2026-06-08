@@ -1791,7 +1791,7 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
           {/* Stat cards */}
           <div className="flex gap-8 mb-10 mt-14">
             <div className="flex-1 rounded-2xl border-2 border-[#0ea5e9]/25 px-10 py-10" style={{ background: 'linear-gradient(145deg, rgba(4,20,30,0.6) 0%, rgba(6,25,35,0.5) 100%)', boxShadow: '0 6px 28px rgba(14,165,233,0.12), 0 2px 8px rgba(0,0,0,0.3)', position: 'relative' }}>
-              <svg style={{ position: 'absolute', top: '20px', right: '14px', opacity: 0.25 }} width="90" height="90" viewBox="0 0 32 36" fill="none" stroke="#0ea5e9" strokeWidth="0.7" strokeLinecap="round" strokeLinejoin="round">
+              <svg style={{ position: 'absolute', top: '15px', right: '12px', opacity: 0.25 }} width="120" height="120" viewBox="0 0 32 36" fill="none" stroke="#0ea5e9" strokeWidth="0.7" strokeLinecap="round" strokeLinejoin="round">
                 {/* Bill sticking out top */}
                 <rect x="12" y="0" width="8" height="12" rx="1" />
                 <circle cx="16" cy="7" r="2.5" />
@@ -1807,10 +1807,10 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
                 <line x1="21" y1="22" x2="21" y2="31" />
               </svg>
               <p className="text-[56px] font-black mb-3" style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>36%</p>
-              <p className="text-[24px] text-white leading-[1.6]">of entrepreneurs&apos; workweek spent on non-revenue admin work</p>
+              <p className="text-[24px] text-white leading-[1.6]">of owners&apos; workweek spent on admin work</p>
             </div>
             <div className="flex-1 rounded-2xl border-2 border-[#34d399]/30 px-10 py-10" style={{ background: 'linear-gradient(145deg, rgba(5,30,20,0.6) 0%, rgba(8,35,22,0.5) 100%)', boxShadow: '0 6px 28px rgba(52,211,153,0.1), 0 2px 8px rgba(0,0,0,0.3)', position: 'relative' }}>
-              <svg style={{ position: 'absolute', top: '35px', right: '20px', opacity: 0.2 }} width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="9" y1="7" x2="15" y2="13"/><line x1="15" y1="7" x2="9" y2="13"/></svg>
+              <svg style={{ position: 'absolute', top: '15px', right: '12px', opacity: 0.2 }} width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="9" y1="7" x2="15" y2="13"/><line x1="15" y1="7" x2="9" y2="13"/></svg>
               <p className="text-[56px] font-black mb-3" style={{ background: 'linear-gradient(135deg, #6ee7b7, #34d399, #10b981)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>1 in 3</p>
               <p className="text-[24px] text-white leading-[1.6]">SMBs still lacked a basic website in 2025</p>
             </div>
