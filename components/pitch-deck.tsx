@@ -1967,32 +1967,45 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
             </div>
           )}
 
-          {/* Winding road process flow */}
+          {/* Winding road process flow - vertical serpentine */}
           <div className="mt-8 relative w-full flex justify-center">
-            <svg width="700" height="220" viewBox="0 0 700 220" fill="none">
-              {/* Road path - winding S-curve */}
-              <path d="M 50 110 C 150 110, 150 30, 250 30 C 350 30, 350 190, 450 190 C 550 190, 550 110, 650 110" stroke="rgba(45,212,191,0.2)" strokeWidth="28" strokeLinecap="round" />
+            <svg width="600" height="280" viewBox="0 0 600 280" fill="none">
+              {/* Road - thick dark stroke */}
+              <path d="M 0 140 L 80 140 C 80 140, 130 140, 130 60 C 130 60, 130 20, 170 20 L 230 20 C 270 20, 270 60, 270 60 C 270 140, 270 260, 270 260 C 270 260, 270 260, 330 260 L 370 260 C 410 260, 410 220, 410 220 C 410 140, 410 20, 410 20 C 410 20, 410 20, 450 20 L 510 20 C 550 20, 550 60, 550 60 L 550 140 L 600 140" stroke="rgba(45,212,191,0.15)" strokeWidth="36" strokeLinecap="round" strokeLinejoin="round" />
               {/* Dashed center line */}
-              <path d="M 50 110 C 150 110, 150 30, 250 30 C 350 30, 350 190, 450 190 C 550 190, 550 110, 650 110" stroke="rgba(45,212,191,0.15)" strokeWidth="2" strokeDasharray="8 6" strokeLinecap="round" />
-              {/* Node circles */}
-              <circle cx="50" cy="110" r="20" fill="#0a2020" stroke="#67e8f9" strokeWidth="2.5" />
-              <circle cx="200" cy="50" r="22" fill="#0a2020" stroke="#2dd4bf" strokeWidth="3" />
-              <circle cx="350" cy="110" r="20" fill="#0a2020" stroke="#06b6d4" strokeWidth="2.5" />
-              <circle cx="500" cy="170" r="20" fill="#0a2020" stroke="#14b8a6" strokeWidth="2.5" />
-              <circle cx="650" cy="110" r="20" fill="#0a2020" stroke="#34d399" strokeWidth="2.5" />
-              {/* Node numbers */}
-              <text x="50" y="115" textAnchor="middle" fill="#67e8f9" fontSize="12" fontWeight="bold">1</text>
-              <text x="200" y="55" textAnchor="middle" fill="#2dd4bf" fontSize="13" fontWeight="bold">2</text>
-              <text x="350" y="115" textAnchor="middle" fill="#06b6d4" fontSize="12" fontWeight="bold">3</text>
-              <text x="500" y="175" textAnchor="middle" fill="#14b8a6" fontSize="12" fontWeight="bold">4</text>
-              <text x="650" y="115" textAnchor="middle" fill="#34d399" fontSize="12" fontWeight="bold">5</text>
-              {/* Labels */}
-              <text x="50" y="150" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="13" fontWeight="600">Task</text>
-              <text x="200" y="90" textAnchor="middle" fill="rgba(45,212,191,1)" fontSize="14" fontWeight="800">olo</text>
-              <text x="350" y="150" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="13" fontWeight="600">AI Tool</text>
-              <text x="500" y="208" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="13" fontWeight="600">Validation</text>
-              <text x="650" y="150" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="13" fontWeight="600">Your Approval</text>
+              <path d="M 0 140 L 80 140 C 80 140, 130 140, 130 60 C 130 60, 130 20, 170 20 L 230 20 C 270 20, 270 60, 270 60 C 270 140, 270 260, 270 260 C 270 260, 270 260, 330 260 L 370 260 C 410 260, 410 220, 410 220 C 410 140, 410 20, 410 20 C 410 20, 410 20, 450 20 L 510 20 C 550 20, 550 60, 550 60 L 550 140 L 600 140" stroke="rgba(45,212,191,0.3)" strokeWidth="2" strokeDasharray="8 6" strokeLinecap="round" />
+              {/* Node 1 - top left turn */}
+              <circle cx="170" cy="20" r="22" fill="#0a1e1e" stroke="#67e8f9" strokeWidth="3" />
+              <text x="170" y="26" textAnchor="middle" fill="#67e8f9" fontSize="14" fontWeight="bold">1</text>
+              {/* Node 2 - bottom */}
+              <circle cx="300" cy="260" r="22" fill="#0a1e1e" stroke="#2dd4bf" strokeWidth="3" />
+              <text x="300" y="266" textAnchor="middle" fill="#2dd4bf" fontSize="14" fontWeight="bold">2</text>
+              {/* Node 3 - top middle */}
+              <circle cx="430" cy="20" r="22" fill="#0a1e1e" stroke="#06b6d4" strokeWidth="3" />
+              <text x="430" y="26" textAnchor="middle" fill="#06b6d4" fontSize="14" fontWeight="bold">3</text>
+              {/* Node 4 - not needed for 5 steps, use exit */}
+              <circle cx="550" cy="140" r="22" fill="#0a1e1e" stroke="#14b8a6" strokeWidth="3" />
+              <text x="550" y="146" textAnchor="middle" fill="#14b8a6" fontSize="14" fontWeight="bold">4</text>
+              {/* Node 5 - entry */}
+              <circle cx="50" cy="140" r="22" fill="#0a1e1e" stroke="#34d399" strokeWidth="3" />
+              <text x="50" y="146" textAnchor="middle" fill="#34d399" fontSize="14" fontWeight="bold">5</text>
             </svg>
+            {/* Labels positioned below/above nodes */}
+            <div className="absolute text-center" style={{ top: '48px', left: 'calc(50% - 180px)' }}>
+              <p className="text-[13px] font-bold text-[#67e8f9]">Task</p>
+            </div>
+            <div className="absolute text-center" style={{ bottom: '0px', left: 'calc(50% - 20px)' }}>
+              <p className="text-[13px] font-bold text-[#2dd4bf]">olo</p>
+            </div>
+            <div className="absolute text-center" style={{ top: '48px', left: 'calc(50% + 115px)' }}>
+              <p className="text-[13px] font-bold text-[#06b6d4]">AI Tool</p>
+            </div>
+            <div className="absolute text-center" style={{ top: '50%', right: '10px', transform: 'translateY(-50%)' }}>
+              <p className="text-[13px] font-bold text-[#14b8a6]">Validation</p>
+            </div>
+            <div className="absolute text-center" style={{ top: '50%', left: '10px', transform: 'translateY(-50%)' }}>
+              <p className="text-[13px] font-bold text-[#34d399]">Approval</p>
+            </div>
           </div>
 
           {/* Body text */}
