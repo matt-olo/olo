@@ -44,7 +44,7 @@ const slidesData = [
       "AI can fix this, but today\u2019s automation tools are too {{red}}high-friction{{/red}} for the businesses that need them most. Business owners are not going to research tools, manage multiple prompts, agents, and dashboards just to get routine work done.",
       "Entrepreneurs spend **36% of their workweek** [1] on non-revenue-generating administrative work. Meanwhile, **1 in 3 SMBs** [2] still lacked a basic website in 2025, showing how far the market remains from adopting current automation tools.",
     ],
-    content: "{{white}}The{{/white}} {{red}}blocker{{/red}} {{white}}is{{/white}} {{turq}}usability{{/turq}}. {{white}}The{{/white}} {{red}}burden{{/red}} {{white}}is{{/white}} {{turq}}administrative{{/turq}}. {{underlinewhite}}The{{/underlinewhite}} {{red}}cost{{/red}} {{underlinewhite}}is{{/underlinewhite}} {{turq}}real{{/turq}}.",
+    content: "{{white}}The{{/white}} {{red}}blocker{{/red}} {{white}}is{{/white}} {{turq}}usability{{/turq}}. {{white}}The{{/white}} {{red}}burden{{/red}} {{white}}is{{/white}} {{turq}}administrative{{/turq}}. {{underlinewhite}}The cost is real{{/underlinewhite}}.",
     bgColor: "bg-[#040e14]",
     footer: "Source: [1] Time Etc Survey, [2] Visual Objects Survey",
   },
@@ -1773,7 +1773,7 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
           <div className="space-y-8 max-w-[1500px]">
             {slide.bullets?.map((bullet, idx) => (
               <p key={idx} className="text-[28px] leading-relaxed text-white/80">
-                <BoldText text={bullet} />
+                <RichText text={bullet} />
               </p>
             ))}
           </div>
