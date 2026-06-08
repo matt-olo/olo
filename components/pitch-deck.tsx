@@ -1784,12 +1784,12 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
           </h1>
 
           {/* Body paragraph */}
-          <p className="mb-10 text-[24px] leading-relaxed text-white/60 max-w-[1400px]">
+          <p className="mt-4 mb-10 text-[24px] leading-relaxed text-white/60 max-w-[1400px]">
             AI can fix this, but today&apos;s automation tools are too <span className="text-red-500 font-bold">high-friction</span> for the businesses that need them most. Business owners are not going to research tools, learn how to manage prompts, agents, and dashboards, and coordinate disconnected apps just to get routine work done.
           </p>
 
           {/* Stat cards */}
-          <div className="flex gap-8 mb-10 mt-6">
+          <div className="flex gap-8 mb-10 mt-10">
             <div className="flex-1 rounded-2xl border-2 border-[#0ea5e9]/25 px-10 py-10" style={{ background: 'linear-gradient(145deg, rgba(4,20,30,0.6) 0%, rgba(6,25,35,0.5) 100%)', boxShadow: '0 6px 28px rgba(14,165,233,0.12), 0 2px 8px rgba(0,0,0,0.3)' }}>
               <p className="text-[56px] font-black mb-3 bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4] bg-clip-text text-transparent">36%</p>
               <p className="text-[24px] text-white/70 leading-[1.6]">of entrepreneurs&apos; workweek spent on non-revenue admin work</p>
