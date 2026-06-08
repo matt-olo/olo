@@ -1784,7 +1784,7 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
           </h1>
 
           {/* Body paragraph */}
-          <p className="mt-8 mb-10 text-[24px] leading-relaxed text-white/60 max-w-[1400px]">
+          <p className="mt-8 mb-10 text-[26px] leading-relaxed text-white/60 max-w-[1400px]">
             AI can fix this, but today&apos;s automation tools are too <span className="text-red-500 font-bold">high-friction</span> for the businesses that need them most. Business owners are not going to research tools, learn how to manage prompts, agents, and dashboards, and coordinate disconnected apps just to get routine work done.
           </p>
 
