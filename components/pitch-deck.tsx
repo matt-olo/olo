@@ -1967,13 +1967,13 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
             </div>
           )}
 
-          {/* Winding serpentine road - just the road */}
+          {/* Winding serpentine road */}
           <div className="mt-8 relative w-full flex justify-center">
-            <svg width="600" height="220" viewBox="0 0 600 220" fill="none">
+            <svg width="520" height="220" viewBox="0 0 520 220" fill="none">
               {/* Road body */}
-              <path d="M 0 110 H 60 C 80 110 80 110 80 90 V 30 C 80 10 100 10 100 10 H 140 C 160 10 160 30 160 30 V 190 C 160 210 180 210 180 210 H 260 C 280 210 280 190 280 190 V 30 C 280 10 300 10 300 10 H 340 C 360 10 360 30 360 30 V 190 C 360 210 380 210 380 210 H 460 C 480 210 480 190 480 190 V 110 H 600" stroke="rgba(45,212,191,0.15)" strokeWidth="42" strokeLinecap="round" strokeLinejoin="round" />
-              {/* Center dashed line */}
-              <path d="M 0 110 H 60 C 80 110 80 110 80 90 V 30 C 80 10 100 10 100 10 H 140 C 160 10 160 30 160 30 V 190 C 160 210 180 210 180 210 H 260 C 280 210 280 190 280 190 V 30 C 280 10 300 10 300 10 H 340 C 360 10 360 30 360 30 V 190 C 360 210 380 210 380 210 H 460 C 480 210 480 190 480 190 V 110 H 600" stroke="rgba(45,212,191,0.3)" strokeWidth="2" strokeDasharray="10 7" fill="none" />
+              <path d="M 0 130 H 40 V 40 C 40 20 60 20 60 20 H 80 C 100 20 100 40 100 40 V 180 C 100 200 120 200 120 200 H 140 C 160 200 160 180 160 180 V 40 C 160 20 180 20 180 20 H 200 C 220 20 220 40 220 40 V 180 C 220 200 240 200 240 200 H 260 C 280 200 280 180 280 180 V 40 C 280 20 300 20 300 20 H 320 C 340 20 340 40 340 40 V 130 H 520" stroke="rgba(45,212,191,0.18)" strokeWidth="38" strokeLinecap="round" strokeLinejoin="round" />
+              {/* Center dashed */}
+              <path d="M 0 130 H 40 V 40 C 40 20 60 20 60 20 H 80 C 100 20 100 40 100 40 V 180 C 100 200 120 200 120 200 H 140 C 160 200 160 180 160 180 V 40 C 160 20 180 20 180 20 H 200 C 220 20 220 40 220 40 V 180 C 220 200 240 200 240 200 H 260 C 280 200 280 180 280 180 V 40 C 280 20 300 20 300 20 H 320 C 340 20 340 40 340 40 V 130 H 520" stroke="rgba(45,212,191,0.35)" strokeWidth="2" strokeDasharray="10 7" fill="none" />
             </svg>
           </div>
 
