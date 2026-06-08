@@ -42,7 +42,7 @@ const slidesData = [
     subtitle: "Small to medium businesses (SMBs) are {{red}}drowning{{/red}} in administrative overhead.",
     bullets: [
       "AI can fix this, but today\u2019s automation tools are too {{red}}high-friction{{/red}} for the businesses that need them most. Business owners are not going to research tools, learn how to manage prompts, agents, and dashboards, and coordinate disconnected apps just to get routine work done.",
-      "Entrepreneurs spend **36% of their workweek** [1] on non-revenue-generating administrative work. Meanwhile, **1 in 3 SMBs** [2] still lacked a basic website in 2025, showing how far the market remains from adopting current automation tools.",
+      "Entrepreneurs spend **36% of their workweek** [1] on non-revenue-generating administrative work. Meanwhile, **1 in 3 SMBs** [2] {{red}}still lacked a basic website in 2025{{/red}}, showing how far the market remains from adopting current automation tools.",
     ],
     content: "{{white}}The{{/white}} {{red}}blocker{{/red}} {{white}}is{{/white}} {{turq}}usability{{/turq}}. {{white}}The{{/white}} {{red}}burden{{/red}} {{white}}is{{/white}} {{turq}}administrative{{/turq}}. {{white}}The{{/white}} {{red}}cost{{/red}} {{white}}is{{/white}} {{turqunderline}}real{{/turqunderline}}.",
     bgColor: "bg-[#040e14]",
@@ -1970,8 +1970,15 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
           {/* Winding serpentine road */}
           <div className="mt-8 relative w-full flex justify-center">
             <svg width="100%" height="320" viewBox="-110 -30 1240 340" fill="none" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <linearGradient id="roadGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="rgba(13,148,136,0.2)" />
+                  <stop offset="50%" stopColor="rgba(45,212,191,0.22)" />
+                  <stop offset="100%" stopColor="rgba(6,182,212,0.2)" />
+                </linearGradient>
+              </defs>
               {/* Road body */}
-              <path d="M -90 140 H 80 V 85 A 85 85 0 0 1 250 85 V 195 A 85 85 0 0 0 420 195 V 85 A 85 85 0 0 1 590 85 V 195 A 85 85 0 0 0 760 195 V 85 A 85 85 0 0 1 930 85 V 140 H 1100" stroke="rgba(45,212,191,0.18)" strokeWidth="38" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M -90 140 H 80 V 85 A 85 85 0 0 1 250 85 V 195 A 85 85 0 0 0 420 195 V 85 A 85 85 0 0 1 590 85 V 195 A 85 85 0 0 0 760 195 V 85 A 85 85 0 0 1 930 85 V 140 H 1100" stroke="url(#roadGrad)" strokeWidth="38" strokeLinecap="round" strokeLinejoin="round" />
               {/* Center dashed */}
               <path d="M -90 140 H 80 V 85 A 85 85 0 0 1 250 85 V 195 A 85 85 0 0 0 420 195 V 85 A 85 85 0 0 1 590 85 V 195 A 85 85 0 0 0 760 195 V 85 A 85 85 0 0 1 930 85 V 140 H 1100" stroke="rgba(45,212,191,0.35)" strokeWidth="2" strokeDasharray="10 7" fill="none" />
             </svg>
