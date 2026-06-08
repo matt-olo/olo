@@ -55,7 +55,7 @@ const slidesData = [
     bullets: [
       "olo acts as a contractor for powerful AI tools \u2014 it detects routine admin work \u2014 calls, emails, invoicing, payroll, CRM, scheduling, coordinates with the right automation tool for the job, and validates the output \u2014 completing the task from start to finish with the owner in complete control.",
     ],
-    content: "No prompts. No app-switching. No manual coordination.",
+    content: "{{red}}No{{/red}} prompts. {{red}}No{{/red}} app-switching. {{red}}No{{/red}} manual coordination.",
     footer: "",
     bgColor: "bg-[#040e14]",
   },
@@ -1992,7 +1992,7 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
           {/* Body text */}
           {slide.content && (
             <p className="mt-auto max-w-[1400px] text-[32px] font-semibold leading-relaxed text-white">
-              {slide.content}
+              <RichText text={slide.content} />
             </p>
           )}
 
