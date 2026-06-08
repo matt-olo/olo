@@ -44,7 +44,7 @@ const slidesData = [
       "AI can fix this, but today\u2019s automation tools are too {{red}}high-friction{{/red}} for the businesses that need them most. Business owners are not going to research tools, manage multiple prompts, agents, and dashboards just to get routine work done.",
       "Entrepreneurs spend **36% of their workweek** [1] on non-revenue-generating administrative work. Meanwhile, **1 in 3 SMBs** [2] still lacked a basic website in 2025, showing how far the market remains from adopting current automation tools.",
     ],
-    content: "{{white}}The{{/white}} {{red}}blocker{{/red}} {{white}}is{{/white}} {{turq}}usability{{/turq}}. {{white}}The{{/white}} {{red}}burden{{/red}} {{white}}is{{/white}} {{turq}}administrative{{/turq}}. {{white}}The{{/white}} {{red}}cost{{/red}} {{white}}is{{/white}} {{turq}}real{{/turq}}.",
+    content: "{{white}}The{{/white}} {{red}}blocker{{/red}} {{white}}is{{/white}} {{turq}}usability{{/turq}}. {{white}}The{{/white}} {{red}}burden{{/red}} {{white}}is{{/white}} {{turq}}administrative{{/turq}}. {{underlinewhite}}The{{/underlinewhite}} {{redunderline}}cost{{/redunderline}} {{underlinewhite}}is{{/underlinewhite}} {{turqunderline}}real{{/turqunderline}}.",
     bgColor: "bg-[#040e14]",
     footer: "Source: [1] Time Etc Survey, [2] Visual Objects Survey",
   },
@@ -1678,10 +1678,24 @@ function BoldText({ text, className }: { text: string; className?: string }) {
 
 function RichText({ text, className }: { text: string; className?: string }) {
   // Parse {{red}}, {{underline}}, {{turq}}, {{white}}, {{strike}}, {{underlinewhite}}, and **bold**
-  const parts = text.split(/((?:\{\{red\}\}.*?\{\{\/red\}\})|(?:\{\{underlinewhite\}\}.*?\{\{\/underlinewhite\}\})|(?:\{\{underline\}\}.*?\{\{\/underline\}\})|(?:\{\{turq\}\}.*?\{\{\/turq\}\})|(?:\{\{white\}\}.*?\{\{\/white\}\})|(?:\{\{strike\}\}.*?\{\{\/strike\}\})|(?:\*\*.*?\*\*))/g);
+  const parts = text.split(/((?:\{\{redunderline\}\}.*?\{\{\/redunderline\}\})|(?:\{\{turqunderline\}\}.*?\{\{\/turqunderline\}\})|(?:\{\{red\}\}.*?\{\{\/red\}\})|(?:\{\{underlinewhite\}\}.*?\{\{\/underlinewhite\}\})|(?:\{\{underline\}\}.*?\{\{\/underline\}\})|(?:\{\{turq\}\}.*?\{\{\/turq\}\})|(?:\{\{white\}\}.*?\{\{\/white\}\})|(?:\{\{strike\}\}.*?\{\{\/strike\}\})|(?:\*\*.*?\*\*))/g);
   return (
     <span className={className}>
       {parts.map((part, i) => {
+        if (part.startsWith("{{redunderline}}") && part.endsWith("{{/redunderline}}")) {
+          return (
+            <span key={i} className="text-red-500 font-bold underline decoration-red-500 underline-offset-4">
+              {part.slice(16, -17)}
+            </span>
+          );
+        }
+        if (part.startsWith("{{turqunderline}}") && part.endsWith("{{/turqunderline}}")) {
+          return (
+            <span key={i} className="font-bold text-[#2dd4bf] underline decoration-[#2dd4bf] underline-offset-4 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
+              {part.slice(17, -18)}
+            </span>
+          );
+        }
         if (part.startsWith("{{red}}") && part.endsWith("{{/red}}")) {
           return (
             <span key={i} className="text-red-500 font-bold">
