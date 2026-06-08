@@ -1991,7 +1991,7 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
 
           {/* Body text */}
           {slide.content && (
-            <p className="mt-10 max-w-[1400px] text-[32px] font-semibold leading-relaxed text-white">
+            <p className="mt-auto max-w-[1400px] text-[32px] font-semibold leading-relaxed text-white">
               {slide.content}
             </p>
           )}
