@@ -1967,45 +1967,35 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
             </div>
           )}
 
-          {/* Winding road process flow - vertical serpentine */}
+          {/* Winding serpentine road */}
           <div className="mt-8 relative w-full flex justify-center">
-            <svg width="600" height="280" viewBox="0 0 600 280" fill="none">
-              {/* Road - thick dark stroke */}
-              <path d="M 0 140 L 80 140 C 80 140, 130 140, 130 60 C 130 60, 130 20, 170 20 L 230 20 C 270 20, 270 60, 270 60 C 270 140, 270 260, 270 260 C 270 260, 270 260, 330 260 L 370 260 C 410 260, 410 220, 410 220 C 410 140, 410 20, 410 20 C 410 20, 410 20, 450 20 L 510 20 C 550 20, 550 60, 550 60 L 550 140 L 600 140" stroke="rgba(45,212,191,0.15)" strokeWidth="36" strokeLinecap="round" strokeLinejoin="round" />
-              {/* Dashed center line */}
-              <path d="M 0 140 L 80 140 C 80 140, 130 140, 130 60 C 130 60, 130 20, 170 20 L 230 20 C 270 20, 270 60, 270 60 C 270 140, 270 260, 270 260 C 270 260, 270 260, 330 260 L 370 260 C 410 260, 410 220, 410 220 C 410 140, 410 20, 410 20 C 410 20, 410 20, 450 20 L 510 20 C 550 20, 550 60, 550 60 L 550 140 L 600 140" stroke="rgba(45,212,191,0.3)" strokeWidth="2" strokeDasharray="8 6" strokeLinecap="round" />
-              {/* Node 1 - top left turn */}
-              <circle cx="170" cy="20" r="22" fill="#0a1e1e" stroke="#67e8f9" strokeWidth="3" />
-              <text x="170" y="26" textAnchor="middle" fill="#67e8f9" fontSize="14" fontWeight="bold">1</text>
-              {/* Node 2 - bottom */}
-              <circle cx="300" cy="260" r="22" fill="#0a1e1e" stroke="#2dd4bf" strokeWidth="3" />
-              <text x="300" y="266" textAnchor="middle" fill="#2dd4bf" fontSize="14" fontWeight="bold">2</text>
-              {/* Node 3 - top middle */}
-              <circle cx="430" cy="20" r="22" fill="#0a1e1e" stroke="#06b6d4" strokeWidth="3" />
-              <text x="430" y="26" textAnchor="middle" fill="#06b6d4" fontSize="14" fontWeight="bold">3</text>
-              {/* Node 4 - not needed for 5 steps, use exit */}
-              <circle cx="550" cy="140" r="22" fill="#0a1e1e" stroke="#14b8a6" strokeWidth="3" />
-              <text x="550" y="146" textAnchor="middle" fill="#14b8a6" fontSize="14" fontWeight="bold">4</text>
-              {/* Node 5 - entry */}
-              <circle cx="50" cy="140" r="22" fill="#0a1e1e" stroke="#34d399" strokeWidth="3" />
-              <text x="50" y="146" textAnchor="middle" fill="#34d399" fontSize="14" fontWeight="bold">5</text>
+            <svg width="550" height="250" viewBox="0 0 550 250" fill="none">
+              {/* Road path - serpentine with tight U-turns */}
+              <path d="M 0 125 H 70 V 30 Q 70 10 90 10 H 150 Q 170 10 170 30 V 220 Q 170 240 190 240 H 280 Q 300 240 300 220 V 30 Q 300 10 320 10 H 410 Q 430 10 430 30 V 125 H 550" stroke="rgba(45,212,191,0.12)" strokeWidth="38" strokeLinejoin="round" />
+              {/* Dashed center */}
+              <path d="M 0 125 H 70 V 30 Q 70 10 90 10 H 150 Q 170 10 170 30 V 220 Q 170 240 190 240 H 280 Q 300 240 300 220 V 30 Q 300 10 320 10 H 410 Q 430 10 430 30 V 125 H 550" stroke="rgba(45,212,191,0.25)" strokeWidth="2" strokeDasharray="8 6" fill="none" />
+              {/* Node 1 - top of first column */}
+              <circle cx="120" cy="10" r="18" fill="#0a1e1e" stroke="#67e8f9" strokeWidth="2.5" />
+              <text x="120" y="15" textAnchor="middle" fill="#67e8f9" fontSize="12" fontWeight="bold">1</text>
+              {/* Node 2 - bottom of U-turn */}
+              <circle cx="235" cy="240" r="20" fill="#0a1e1e" stroke="#2dd4bf" strokeWidth="3" />
+              <text x="235" y="245" textAnchor="middle" fill="#2dd4bf" fontSize="13" fontWeight="bold">2</text>
+              {/* Node 3 - top of second column */}
+              <circle cx="365" cy="10" r="18" fill="#0a1e1e" stroke="#06b6d4" strokeWidth="2.5" />
+              <text x="365" y="15" textAnchor="middle" fill="#06b6d4" fontSize="12" fontWeight="bold">3</text>
+              {/* Node 4 - mid exit */}
+              <circle cx="430" cy="80" r="18" fill="#0a1e1e" stroke="#14b8a6" strokeWidth="2.5" />
+              <text x="430" y="85" textAnchor="middle" fill="#14b8a6" fontSize="12" fontWeight="bold">4</text>
+              {/* Node 5 - end */}
+              <circle cx="510" cy="125" r="18" fill="#0a1e1e" stroke="#34d399" strokeWidth="2.5" />
+              <text x="510" y="130" textAnchor="middle" fill="#34d399" fontSize="12" fontWeight="bold">5</text>
+              {/* Labels below nodes */}
+              <text x="120" y="46" textAnchor="middle" fill="#67e8f9" fontSize="11" fontWeight="600">Task</text>
+              <text x="235" y="218" textAnchor="middle" fill="#2dd4bf" fontSize="12" fontWeight="700">olo</text>
+              <text x="365" y="46" textAnchor="middle" fill="#06b6d4" fontSize="11" fontWeight="600">AI Tool</text>
+              <text x="460" y="85" textAnchor="middle" fill="#14b8a6" fontSize="11" fontWeight="600">Validation</text>
+              <text x="510" y="155" textAnchor="middle" fill="#34d399" fontSize="11" fontWeight="600">Approval</text>
             </svg>
-            {/* Labels positioned below/above nodes */}
-            <div className="absolute text-center" style={{ top: '48px', left: 'calc(50% - 180px)' }}>
-              <p className="text-[13px] font-bold text-[#67e8f9]">Task</p>
-            </div>
-            <div className="absolute text-center" style={{ bottom: '0px', left: 'calc(50% - 20px)' }}>
-              <p className="text-[13px] font-bold text-[#2dd4bf]">olo</p>
-            </div>
-            <div className="absolute text-center" style={{ top: '48px', left: 'calc(50% + 115px)' }}>
-              <p className="text-[13px] font-bold text-[#06b6d4]">AI Tool</p>
-            </div>
-            <div className="absolute text-center" style={{ top: '50%', right: '10px', transform: 'translateY(-50%)' }}>
-              <p className="text-[13px] font-bold text-[#14b8a6]">Validation</p>
-            </div>
-            <div className="absolute text-center" style={{ top: '50%', left: '10px', transform: 'translateY(-50%)' }}>
-              <p className="text-[13px] font-bold text-[#34d399]">Approval</p>
-            </div>
           </div>
 
           {/* Body text */}
