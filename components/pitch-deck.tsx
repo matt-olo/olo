@@ -51,9 +51,9 @@ const slidesData = [
   {
     id: 3,
     title: "solution",
-    subtitle: "The {{turq}}solution{{/turq}} {{turq}}is{{/turq}} {{underline}}automation{{/underline}} with {{turq}}olo{{/turq}}.",
+    subtitle: "The {{turq}}solution{{/turq}} is {{turq}}automation{{/turq}} with {{turq}}olo{{/turq}}.",
     bullets: [
-      "olo acts as the contractor for powerful AI tools — detecting routine SMB admin work, coordinating the right tool for the job, validating the result, and completing the task with you in complete control.",
+      "olo acts as a contractor for powerful AI tools \u2014 it detects routine admin work \u2014 calls, emails, invoicing, payroll, CRM, scheduling, coordinates with the right automation tool for the job, and validates the output \u2014 completing the task from start to finish with the owner in complete control.",
     ],
     content: "No prompts. No app-switching. No manual coordination.",
     footer: "",
@@ -1944,7 +1944,7 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
       <div className="relative flex h-full flex-col justify-between px-[120px] py-[80px]">
         {/* Top left heading */}
         <div>
-          <h3 className="mb-2 text-[28px] font-medium uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
+          <h3 className="mb-2 text-[36px] font-bold uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
             {slide.title}
           </h3>
         </div>
