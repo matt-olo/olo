@@ -1789,14 +1789,14 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
           </p>
 
           {/* Stat cards */}
-          <div className="flex gap-8 mb-10">
+          <div className="flex gap-8 mb-10 mt-4">
             <div className="flex-1 rounded-2xl border-2 border-[#0ea5e9]/25 px-10 py-10" style={{ background: 'linear-gradient(145deg, rgba(4,20,30,0.6) 0%, rgba(6,25,35,0.5) 100%)', boxShadow: '0 6px 28px rgba(14,165,233,0.12), 0 2px 8px rgba(0,0,0,0.3)' }}>
               <p className="text-[56px] font-black mb-3 bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4] bg-clip-text text-transparent">36%</p>
-              <p className="text-[20px] text-white/70 leading-[1.6]">of entrepreneurs&apos; workweek spent on non-revenue admin work</p>
+              <p className="text-[24px] text-white/70 leading-[1.6]">of entrepreneurs&apos; workweek spent on non-revenue admin work</p>
             </div>
             <div className="flex-1 rounded-2xl border-2 border-red-500/25 px-10 py-10" style={{ background: 'linear-gradient(145deg, rgba(20,8,8,0.6) 0%, rgba(25,10,10,0.5) 100%)', boxShadow: '0 6px 28px rgba(239,68,68,0.1), 0 2px 8px rgba(0,0,0,0.3)' }}>
               <p className="text-[56px] font-black mb-3 bg-gradient-to-r from-[#f87171] to-[#ef4444] bg-clip-text text-transparent">1 in 3</p>
-              <p className="text-[20px] text-white/70 leading-[1.6]">SMBs still lacked a basic website in 2025</p>
+              <p className="text-[24px] text-white/70 leading-[1.6]">SMBs still lacked a basic website in 2025</p>
             </div>
           </div>
 
