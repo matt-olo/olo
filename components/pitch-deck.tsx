@@ -1777,14 +1777,14 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
         </div>
 
         {/* Main content area */}
-        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
+        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8 mt-4">
           {/* Main title */}
-          <h1 className="mb-8 text-[42px] font-bold leading-tight text-white">
+          <h1 className="mb-12 text-[42px] font-bold leading-tight text-white">
             <RichText text={slide.subtitle} />
           </h1>
 
           {/* Body paragraphs */}
-          <div className="space-y-6 max-w-[1500px]">
+          <div className="space-y-10 max-w-[1500px]">
             {slide.bullets?.map((bullet, idx) => (
               <p key={idx} className="text-[28px] leading-relaxed text-white/80">
                 <RichText text={bullet} />
