@@ -1969,11 +1969,11 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
 
           {/* Winding serpentine road */}
           <div className="mt-8 relative w-full flex justify-center">
-            <svg width="900" height="220" viewBox="0 0 900 220" fill="none">
+            <svg width="1000" height="220" viewBox="0 0 1000 220" fill="none">
               {/* Road body */}
-              <path d="M 0 130 H 150 V 40 C 150 20 170 20 170 20 H 280 C 300 20 300 40 300 40 V 180 C 300 200 320 200 320 200 H 380 C 400 200 400 180 400 180 V 40 C 400 20 420 20 420 20 H 530 C 550 20 550 40 550 40 V 180 C 550 200 570 200 570 200 H 630 C 650 200 650 180 650 180 V 40 C 650 20 670 20 670 20 H 780 C 800 20 800 40 800 40 V 130 H 900" stroke="rgba(45,212,191,0.18)" strokeWidth="38" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M 0 130 H 120 V 40 C 120 20 140 20 140 20 H 250 C 270 20 270 40 270 40 V 180 C 270 200 290 200 290 200 H 400 C 420 200 420 180 420 180 V 40 C 420 20 440 20 440 20 H 550 C 570 20 570 40 570 40 V 180 C 570 200 590 200 590 200 H 700 C 720 200 720 180 720 180 V 40 C 720 20 740 20 740 20 H 850 C 870 20 870 40 870 40 V 130 H 1000" stroke="rgba(45,212,191,0.18)" strokeWidth="38" strokeLinecap="round" strokeLinejoin="round" />
               {/* Center dashed */}
-              <path d="M 0 130 H 150 V 40 C 150 20 170 20 170 20 H 280 C 300 20 300 40 300 40 V 180 C 300 200 320 200 320 200 H 380 C 400 200 400 180 400 180 V 40 C 400 20 420 20 420 20 H 530 C 550 20 550 40 550 40 V 180 C 550 200 570 200 570 200 H 630 C 650 200 650 180 650 180 V 40 C 650 20 670 20 670 20 H 780 C 800 20 800 40 800 40 V 130 H 900" stroke="rgba(45,212,191,0.35)" strokeWidth="2" strokeDasharray="10 7" fill="none" />
+              <path d="M 0 130 H 120 V 40 C 120 20 140 20 140 20 H 250 C 270 20 270 40 270 40 V 180 C 270 200 290 200 290 200 H 400 C 420 200 420 180 420 180 V 40 C 420 20 440 20 440 20 H 550 C 570 20 570 40 570 40 V 180 C 570 200 590 200 590 200 H 700 C 720 200 720 180 720 180 V 40 C 720 20 740 20 740 20 H 850 C 870 20 870 40 870 40 V 130 H 1000" stroke="rgba(45,212,191,0.35)" strokeWidth="2" strokeDasharray="10 7" fill="none" />
             </svg>
           </div>
 
