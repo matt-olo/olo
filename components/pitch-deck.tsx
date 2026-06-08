@@ -1971,9 +1971,9 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
           <div className="mt-8 relative w-full flex justify-center">
             <svg width="100%" height="240" viewBox="0 0 1250 240" fill="none" preserveAspectRatio="xMidYMid meet">
               {/* Road body */}
-              <path d="M 0 140 H 100 V 40 C 100 20 120 20 120 20 H 290 C 310 20 310 40 310 40 V 200 C 310 220 330 220 330 220 H 500 C 520 220 520 200 520 200 V 40 C 520 20 540 20 540 20 H 710 C 730 20 730 40 730 40 V 200 C 730 220 750 220 750 220 H 920 C 940 220 940 200 940 200 V 40 C 940 20 960 20 960 20 H 1130 C 1150 20 1150 40 1150 40 V 140 H 1250" stroke="rgba(45,212,191,0.18)" strokeWidth="38" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M 0 140 H 100 V 80 C 100 20 100 20 160 20 H 250 C 310 20 310 20 310 80 V 160 C 310 220 310 220 370 220 H 460 C 520 220 520 220 520 160 V 80 C 520 20 520 20 580 20 H 670 C 730 20 730 20 730 80 V 160 C 730 220 730 220 790 220 H 880 C 940 220 940 220 940 160 V 80 C 940 20 940 20 1000 20 H 1090 C 1150 20 1150 20 1150 80 V 140 H 1250" stroke="rgba(45,212,191,0.18)" strokeWidth="38" strokeLinecap="round" strokeLinejoin="round" />
               {/* Center dashed */}
-              <path d="M 0 140 H 100 V 40 C 100 20 120 20 120 20 H 290 C 310 20 310 40 310 40 V 200 C 310 220 330 220 330 220 H 500 C 520 220 520 200 520 200 V 40 C 520 20 540 20 540 20 H 710 C 730 20 730 40 730 40 V 200 C 730 220 750 220 750 220 H 920 C 940 220 940 200 940 200 V 40 C 940 20 960 20 960 20 H 1130 C 1150 20 1150 40 1150 40 V 140 H 1250" stroke="rgba(45,212,191,0.35)" strokeWidth="2" strokeDasharray="10 7" fill="none" />
+              <path d="M 0 140 H 100 V 80 C 100 20 100 20 160 20 H 250 C 310 20 310 20 310 80 V 160 C 310 220 310 220 370 220 H 460 C 520 220 520 220 520 160 V 80 C 520 20 520 20 580 20 H 670 C 730 20 730 20 730 80 V 160 C 730 220 730 220 790 220 H 880 C 940 220 940 220 940 160 V 80 C 940 20 940 20 1000 20 H 1090 C 1150 20 1150 20 1150 80 V 140 H 1250" stroke="rgba(45,212,191,0.35)" strokeWidth="2" strokeDasharray="10 7" fill="none" />
             </svg>
           </div>
 
