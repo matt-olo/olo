@@ -51,7 +51,7 @@ const slidesData = [
   {
     id: 3,
     title: "solution",
-    subtitle: "The {{turq}}solution{{/turq}} is {{turq}}automation{{/turq}} with {{turq}}olo{{/turq}}.",
+    subtitle: "The {{white}}solution{{/white}} is {{turq}}automation{{/turq}} with {{turq}}olo{{/turq}}.",
     bullets: [
       "olo acts as a contractor for powerful AI tools \u2014 it detects routine admin work \u2014 calls, emails, invoicing, payroll, CRM, scheduling, coordinates with the right automation tool for the job, and validates the output \u2014 completing the task from start to finish with the owner in complete control.",
     ],
@@ -1960,7 +1960,7 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
           {slide.bullets && (
             <div className="mb-12">
               {slide.bullets.map((bullet, idx) => (
-                <p key={idx} className="text-[34px] leading-relaxed text-white/85">
+                <p key={idx} className="text-[28px] leading-relaxed text-white/85">
                   <RichText text={bullet} />
                 </p>
               ))}
