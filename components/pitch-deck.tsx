@@ -53,7 +53,7 @@ const slidesData = [
     title: "solution",
     subtitle: "The {{white}}solution{{/white}} is {{turq}}automation{{/turq}} with {{turq}}olo{{/turq}}.",
     bullets: [
-      "olo acts as a contractor for powerful AI tools \u2014 it detects routine admin work \u2014 {{turq}}calls{{/turq}}, {{turq}}emails{{/turq}}, {{turq}}invoicing{{/turq}}, {{turq}}payroll{{/turq}}, {{turq}}CRM{{/turq}}, and {{turq}}scheduling{{/turq}}, coordinates with the right automation tool for the job, and validates the output \u2014 completing the task from start to finish with the owner in complete control.",
+      "olo acts as a **contractor** for powerful AI tools \u2014 it detects routine admin work \u2014 {{turq}}calls{{/turq}}, {{turq}}emails{{/turq}}, {{turq}}invoicing{{/turq}}, {{turq}}payroll{{/turq}}, {{turq}}CRM{{/turq}}, and {{turq}}scheduling{{/turq}}, coordinates with the right automation tool for the job, and validates the output \u2014 completing the task from start to finish with **you in complete control**.",
     ],
     content: "{{red}}No{{/red}} prompts. {{red}}No{{/red}} app-switching. {{red}}No{{/red}} manual coordination.",
     footer: "",
