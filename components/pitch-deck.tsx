@@ -1789,14 +1789,14 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
           </p>
 
           {/* Stat cards */}
-          <div className="flex gap-6 mb-10">
-            <div className="flex-1 rounded-xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.05] px-8 py-6">
-              <p className="text-[36px] font-black text-[#2dd4bf] mb-2">36%</p>
-              <p className="text-[18px] text-white/70">of entrepreneurs&apos; workweek spent on non-revenue admin work</p>
+          <div className="flex gap-8 mb-10">
+            <div className="flex-1 rounded-2xl border-2 border-[#2dd4bf]/30 bg-[#2dd4bf]/[0.06] px-10 py-10" style={{ boxShadow: '0 0 20px rgba(45,212,191,0.1)' }}>
+              <p className="text-[52px] font-black text-[#2dd4bf] mb-3">36%</p>
+              <p className="text-[20px] text-white/70 leading-[1.6]">of entrepreneurs&apos; workweek spent on non-revenue admin work</p>
             </div>
-            <div className="flex-1 rounded-xl border border-red-500/20 bg-red-500/[0.05] px-8 py-6">
-              <p className="text-[36px] font-black text-red-400 mb-2">1 in 3</p>
-              <p className="text-[18px] text-white/70">SMBs still lacked a basic website in 2025</p>
+            <div className="flex-1 rounded-2xl border-2 border-red-500/30 bg-red-500/[0.06] px-10 py-10" style={{ boxShadow: '0 0 20px rgba(239,68,68,0.08)' }}>
+              <p className="text-[52px] font-black text-red-400 mb-3">1 in 3</p>
+              <p className="text-[20px] text-white/70 leading-[1.6]">SMBs still lacked a basic website in 2025</p>
             </div>
           </div>
 
