@@ -1967,27 +1967,32 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
             </div>
           )}
 
-          {/* Process flow: Task → olo → AI Tool → Validation → Your Approval */}
-          <div className="mt-8 flex items-center justify-center gap-0">
-            {[
-              { label: "Task", color: "#67e8f9" },
-              { label: "olo", color: "#2dd4bf", hero: true },
-              { label: "AI Tool", color: "#06b6d4" },
-              { label: "Validation", color: "#14b8a6" },
-              { label: "Your Approval", color: "#34d399" },
-            ].map((step, idx, arr) => (
-              <div key={idx} className="flex items-center">
-                <div className={`flex items-center justify-center rounded-xl border px-5 ${step.hero ? 'py-4' : 'py-3'}`} style={{ borderColor: `${step.color}50`, backgroundColor: `${step.color}10` }}>
-                  <span className={`font-bold ${step.hero ? 'text-[18px]' : 'text-[14px]'}`} style={{ color: step.color }}>{step.label}</span>
-                </div>
-                {idx < arr.length - 1 && (
-                  <div className="flex items-center mx-2">
-                    <div className="w-[24px] h-[2px] bg-[#2dd4bf]/30" />
-                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1l5 5-5 5" stroke="rgba(45,212,191,0.4)" strokeWidth="1.5" strokeLinecap="round" /></svg>
-                  </div>
-                )}
-              </div>
-            ))}
+          {/* Winding road process flow */}
+          <div className="mt-8 relative w-full flex justify-center">
+            <svg width="700" height="220" viewBox="0 0 700 220" fill="none">
+              {/* Road path - winding S-curve */}
+              <path d="M 50 110 C 150 110, 150 30, 250 30 C 350 30, 350 190, 450 190 C 550 190, 550 110, 650 110" stroke="rgba(45,212,191,0.2)" strokeWidth="28" strokeLinecap="round" />
+              {/* Dashed center line */}
+              <path d="M 50 110 C 150 110, 150 30, 250 30 C 350 30, 350 190, 450 190 C 550 190, 550 110, 650 110" stroke="rgba(45,212,191,0.15)" strokeWidth="2" strokeDasharray="8 6" strokeLinecap="round" />
+              {/* Node circles */}
+              <circle cx="50" cy="110" r="20" fill="#0a2020" stroke="#67e8f9" strokeWidth="2.5" />
+              <circle cx="200" cy="50" r="22" fill="#0a2020" stroke="#2dd4bf" strokeWidth="3" />
+              <circle cx="350" cy="110" r="20" fill="#0a2020" stroke="#06b6d4" strokeWidth="2.5" />
+              <circle cx="500" cy="170" r="20" fill="#0a2020" stroke="#14b8a6" strokeWidth="2.5" />
+              <circle cx="650" cy="110" r="20" fill="#0a2020" stroke="#34d399" strokeWidth="2.5" />
+              {/* Node numbers */}
+              <text x="50" y="115" textAnchor="middle" fill="#67e8f9" fontSize="12" fontWeight="bold">1</text>
+              <text x="200" y="55" textAnchor="middle" fill="#2dd4bf" fontSize="13" fontWeight="bold">2</text>
+              <text x="350" y="115" textAnchor="middle" fill="#06b6d4" fontSize="12" fontWeight="bold">3</text>
+              <text x="500" y="175" textAnchor="middle" fill="#14b8a6" fontSize="12" fontWeight="bold">4</text>
+              <text x="650" y="115" textAnchor="middle" fill="#34d399" fontSize="12" fontWeight="bold">5</text>
+              {/* Labels */}
+              <text x="50" y="150" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="13" fontWeight="600">Task</text>
+              <text x="200" y="90" textAnchor="middle" fill="rgba(45,212,191,1)" fontSize="14" fontWeight="800">olo</text>
+              <text x="350" y="150" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="13" fontWeight="600">AI Tool</text>
+              <text x="500" y="208" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="13" fontWeight="600">Validation</text>
+              <text x="650" y="150" textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="13" fontWeight="600">Your Approval</text>
+            </svg>
           </div>
 
           {/* Body text */}
