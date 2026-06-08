@@ -1941,7 +1941,7 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
       </div>
 
       {/* Content */}
-      <div className="relative flex h-full flex-col justify-between px-[120px] py-[80px]">
+      <div className="relative flex h-full flex-col px-[120px] py-[80px]">
         {/* Top left heading */}
         <div>
           <h3 className="mb-2 text-[36px] font-bold uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
@@ -1950,7 +1950,7 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
         </div>
 
         {/* Main content */}
-        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
+        <div className="mt-auto rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
           {/* Title statement */}
           <h1 className="mb-14 text-[52px] font-bold leading-tight text-white">
             <RichText text={slide.subtitle} />
