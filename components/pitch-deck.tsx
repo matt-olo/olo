@@ -51,7 +51,7 @@ const slidesData = [
   {
     id: 3,
     title: "solution",
-    subtitle: "The {{white}}solution{{/white}} is {{turq}}automation{{/turq}} with {{turq}}olo{{/turq}}.",
+    subtitle: "The {{turq}}solution{{/turq}} {{turq}}is{{/turq}} {{white}}automation{{/white}} with {{turq}}olo{{/turq}}.",
     bullets: [
       "olo acts as a **contractor** for powerful AI tools \u2014 it detects routine admin work \u2014 {{turq}}calls{{/turq}}, {{turq}}emails{{/turq}}, {{turq}}invoicing{{/turq}}, {{turq}}payroll{{/turq}}, {{turq}}CRM{{/turq}}, and {{turq}}scheduling{{/turq}}, coordinates with the right automation tool for the job, and validates the output \u2014 completing the task from start to finish with **you in complete control**.",
     ],
@@ -2029,8 +2029,7 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
 
               <circle cx="1050" cy="215" r="36" fill="#0a1e1e" stroke="#0d9488" strokeWidth="3" style={{ filter: 'drop-shadow(0 0 12px rgba(13,148,136,0.5))' }} />
               <text x="1050" y="225" textAnchor="middle" fill="#0d9488" fontSize="28" fontWeight="bold">5</text>
-              <text x="1050" y="275" textAnchor="middle" fill="#0d9488" fontSize="22" fontWeight="700" style={{ filter: 'drop-shadow(0 0 6px rgba(13,148,136,0.4))' }}>Your</text>
-              <text x="1050" y="293" textAnchor="middle" fill="#0d9488" fontSize="22" fontWeight="700" style={{ filter: 'drop-shadow(0 0 6px rgba(13,148,136,0.4))' }}>Approval</text>
+              <text x="1050" y="275" textAnchor="middle" fill="#0d9488" fontSize="22" fontWeight="700" style={{ filter: 'drop-shadow(0 0 6px rgba(13,148,136,0.4))' }}>Approval</text>
             </svg>
           </div>
 
