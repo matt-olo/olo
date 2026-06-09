@@ -1800,8 +1800,8 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
                   <path d="M-2 -1.2c0-.7.9-1 2-1s2 .3 2 1-.9 1-2 1-2 .3-2 1 .9 1 2 1 2-.3 2-1" />
                 </g>
                 {/* Shredder body */}
-                <rect x="8" y="12" width="24" height="8" rx="2" />
-                <line x1="10" y1="17" x2="30" y2="17" />
+                <rect x="10" y="12" width="20" height="10" rx="2" />
+                <line x1="12" y1="18" x2="28" y2="18" />
                 {/* 4 shredded strips */}
                 <line x1="12" y1="20" x2="12" y2="33" />
                 <line x1="17" y1="20" x2="17" y2="35" />
