@@ -2180,9 +2180,11 @@ function SlideMarketGap({ slide }: { slide: (typeof slidesData)[0] }) {
         {/* Main */}
         <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
           {/* Big title */}
-          <h1 className="mb-12 text-[48px] font-bold leading-tight text-white">
+          <h1 className="mb-4 text-[48px] font-bold leading-tight text-white">
             SMBs <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>know AI is useful</span>. They <span style={{ background: 'linear-gradient(135deg, #ef4444, #dc2626, #991b1b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>do not know what to do with it</span>.
           </h1>
+
+          <p className="mb-12 text-[24px] italic text-[#2dd4bf]">82% of SMBs think adopting AI is essential to stay competitive in today&apos;s business environment. [1]</p>
 
           {/* Body paragraphs */}
           <div className="space-y-8 max-w-[1400px] mb-12">
@@ -2201,6 +2203,13 @@ function SlideMarketGap({ slide }: { slide: (typeof slidesData)[0] }) {
               </p>
             </div>
           )}
+        </div>
+
+        {/* Source footer */}
+        <div className="pt-4">
+          <p className="text-[16px] tracking-wide text-white/30">
+            Source: [1] Reimagine Main Street Survey
+          </p>
         </div>
       </div>
     </div>
