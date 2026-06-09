@@ -2189,9 +2189,14 @@ function SlideMarketGap({ slide }: { slide: (typeof slidesData)[0] }) {
           {/* Body paragraphs */}
           <div className="space-y-8 max-w-[1400px] mb-12">
             {slide.bullets?.map((bullet, idx) => (
-              <p key={idx} className="text-[26px] leading-relaxed text-white">
-                <RichText text={bullet} />
-              </p>
+              <div key={idx}>
+                <p className="text-[26px] leading-relaxed text-white">
+                  <RichText text={bullet} />
+                </p>
+                {idx === 0 && (
+                  <p className="mt-4 text-[24px] italic text-[#2dd4bf]">70% of SMBs want to use AI, but haven&apos;t moved past ambition. [2]</p>
+                )}
+              </div>
             ))}
           </div>
 
@@ -2208,7 +2213,7 @@ function SlideMarketGap({ slide }: { slide: (typeof slidesData)[0] }) {
         {/* Source footer */}
         <div className="pt-4">
           <p className="text-[16px] tracking-wide text-white/30">
-            Source: [1] Reimagine Main Street Survey
+            Source: [1] Reimagine Main Street Survey, [2] SAS Survey
           </p>
         </div>
       </div>
