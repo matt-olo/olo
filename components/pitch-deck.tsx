@@ -2011,16 +2011,16 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
               {/* Center dashed */}
               <path d="M -90 140 H 80 V 85 A 85 85 0 0 1 250 85 V 195 A 85 85 0 0 0 420 195 V 85 A 85 85 0 0 1 590 85 V 195 A 85 85 0 0 0 760 195 V 85 A 85 85 0 0 1 930 85 V 140 H 1100" stroke="rgba(45,212,191,0.35)" strokeWidth="2" strokeDasharray="10 7" fill="none" />
               {/* Numbered circles */}
-              <circle cx="-50" cy="200" r="36" fill="#0a1e1e" stroke="#0ea5e9" strokeWidth="3" style={{ filter: 'drop-shadow(0 0 12px rgba(14,165,233,0.5))' }} />
-              <text x="-50" y="210" textAnchor="middle" fill="#0ea5e9" fontSize="28" fontWeight="bold">1</text>
-              <circle cx="165" cy="55" r="36" fill="#0a1e1e" stroke="#2dd4bf" strokeWidth="3" style={{ filter: 'drop-shadow(0 0 12px rgba(45,212,191,0.5))' }} />
-              <text x="165" y="65" textAnchor="middle" fill="#2dd4bf" fontSize="28" fontWeight="bold">2</text>
-              <circle cx="505" cy="55" r="36" fill="#0a1e1e" stroke="#06b6d4" strokeWidth="3" style={{ filter: 'drop-shadow(0 0 12px rgba(6,182,212,0.5))' }} />
-              <text x="505" y="65" textAnchor="middle" fill="#06b6d4" fontSize="28" fontWeight="bold">3</text>
-              <circle cx="845" cy="55" r="36" fill="#0a1e1e" stroke="#34d399" strokeWidth="3" style={{ filter: 'drop-shadow(0 0 12px rgba(52,211,153,0.5))' }} />
-              <text x="845" y="65" textAnchor="middle" fill="#34d399" fontSize="28" fontWeight="bold">4</text>
-              <circle cx="1050" cy="200" r="36" fill="#0a1e1e" stroke="#0d9488" strokeWidth="3" style={{ filter: 'drop-shadow(0 0 12px rgba(13,148,136,0.5))' }} />
-              <text x="1050" y="210" textAnchor="middle" fill="#0d9488" fontSize="28" fontWeight="bold">5</text>
+              <circle cx="-50" cy="215" r="36" fill="#0a1e1e" stroke="#0ea5e9" strokeWidth="3" style={{ filter: 'drop-shadow(0 0 12px rgba(14,165,233,0.5))' }} />
+              <text x="-50" y="225" textAnchor="middle" fill="#0ea5e9" fontSize="28" fontWeight="bold">1</text>
+              <circle cx="165" cy="70" r="36" fill="#0a1e1e" stroke="#2dd4bf" strokeWidth="3" style={{ filter: 'drop-shadow(0 0 12px rgba(45,212,191,0.5))' }} />
+              <text x="165" y="80" textAnchor="middle" fill="#2dd4bf" fontSize="28" fontWeight="bold">2</text>
+              <circle cx="505" cy="70" r="36" fill="#0a1e1e" stroke="#06b6d4" strokeWidth="3" style={{ filter: 'drop-shadow(0 0 12px rgba(6,182,212,0.5))' }} />
+              <text x="505" y="80" textAnchor="middle" fill="#06b6d4" fontSize="28" fontWeight="bold">3</text>
+              <circle cx="845" cy="70" r="36" fill="#0a1e1e" stroke="#34d399" strokeWidth="3" style={{ filter: 'drop-shadow(0 0 12px rgba(52,211,153,0.5))' }} />
+              <text x="845" y="80" textAnchor="middle" fill="#34d399" fontSize="28" fontWeight="bold">4</text>
+              <circle cx="1050" cy="215" r="36" fill="#0a1e1e" stroke="#0d9488" strokeWidth="3" style={{ filter: 'drop-shadow(0 0 12px rgba(13,148,136,0.5))' }} />
+              <text x="1050" y="225" textAnchor="middle" fill="#0d9488" fontSize="28" fontWeight="bold">5</text>
             </svg>
           </div>
 
