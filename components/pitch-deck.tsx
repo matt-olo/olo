@@ -2102,9 +2102,10 @@ function SlideRoadmap({ slide }: { slide: (typeof slidesData)[0] }) {
                 <div className={`mb-4 text-[22px] font-semibold uppercase tracking-wider ${idx === 0 ? 'text-[#2dd4bf]' : idx === 1 ? 'text-[#0ea5e9]' : 'text-[#34d399]'}`}>
                   {phase.label}
                 </div>
-                <h2 className="mb-7 text-[28px] font-bold text-white leading-tight">
+                <h2 className="mb-3 text-[28px] font-bold text-white leading-tight">
                   {phase.name}
                 </h2>
+                <div className={`mb-7 h-[2px] w-[60px] ${idx === 0 ? 'bg-[#2dd4bf]' : idx === 1 ? 'bg-[#0ea5e9]' : 'bg-[#34d399]'}`} />
                 {phase.highlight && (
                   <p className="mb-6 text-[20px] leading-relaxed text-white/85">
                     <RichText text={phase.highlight} />
