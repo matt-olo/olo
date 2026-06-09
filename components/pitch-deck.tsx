@@ -1803,10 +1803,10 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
                 <rect x="10" y="12" width="20" height="10" rx="2" />
                 <line x1="12" y1="18" x2="28" y2="18" />
                 {/* 4 shredded strips */}
-                <line x1="12" y1="20" x2="12" y2="33" />
-                <line x1="17" y1="20" x2="17" y2="35" />
-                <line x1="23" y1="20" x2="23" y2="34" />
-                <line x1="28" y1="20" x2="28" y2="32" />
+                <line x1="12" y1="23" x2="12" y2="33" />
+                <line x1="17" y1="23" x2="17" y2="35" />
+                <line x1="23" y1="23" x2="23" y2="34" />
+                <line x1="28" y1="23" x2="28" y2="32" />
               </svg>
               <p className="text-[56px] font-black mb-3" style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>36%</p>
               <p className="text-[24px] text-white leading-[1.6]">of owners&apos; workweek spent on admin work</p>
