@@ -1894,12 +1894,10 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
 
         {/* Right side - isolated tools graphic */}
         <div className="relative flex w-[45%] items-center justify-center">
-          {/* Red X overlay - contained */}
-          <svg className="absolute inset-0 w-full h-full z-10 pointer-events-none flex items-center justify-center" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-            <circle cx="50" cy="50" r="28" fill="none" stroke="rgba(239,68,68,0.5)" strokeWidth="3" />
-            <line x1="35" y1="35" x2="65" y2="65" stroke="rgba(239,68,68,0.6)" strokeWidth="3.5" strokeLinecap="round" />
-            <line x1="65" y1="35" x2="35" y2="65" stroke="rgba(239,68,68,0.6)" strokeWidth="3.5" strokeLinecap="round" />
-          </svg>
+          {/* Red X overlay */}
+          <div className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center">
+            <span className="text-[200px] font-black text-red-500/40 leading-none select-none">✕</span>
+          </div>
           {/* SMB Desktop - outer frame */}
           <div className="relative w-[580px] rounded-xl bg-[#0f3d3d] p-5 shadow-[0_0_40px_rgba(0,0,0,0.6)]">
             {/* Desktop title bar with mac buttons + bottom line */}
