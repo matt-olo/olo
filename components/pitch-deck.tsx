@@ -1791,7 +1791,7 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
           {/* Stat cards */}
           <div className="flex gap-8 mb-10 mt-14">
             <div className="flex-1 rounded-2xl border-2 border-[#0ea5e9]/25 px-10 py-10" style={{ background: 'linear-gradient(145deg, rgba(4,20,30,0.6) 0%, rgba(6,25,35,0.5) 100%)', boxShadow: '0 6px 28px rgba(14,165,233,0.12), 0 2px 8px rgba(0,0,0,0.3)', position: 'relative' }}>
-              <svg style={{ position: 'absolute', top: '22px', right: '12px', opacity: 0.25 }} width="120" height="120" viewBox="0 0 32 36" fill="none" stroke="#0ea5e9" strokeWidth="0.7" strokeLinecap="round" strokeLinejoin="round">
+              <svg style={{ position: 'absolute', top: '22px', right: '12px', opacity: 0.25 }} width="140" height="140" viewBox="0 0 32 36" fill="none" stroke="#0ea5e9" strokeWidth="0.7" strokeLinecap="round" strokeLinejoin="round">
                 {/* Bill sticking out top */}
                 <rect x="12" y="0" width="8" height="12" rx="1" />
                 <g transform="translate(16,6) rotate(90) scale(-1,1)">
