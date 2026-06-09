@@ -2164,7 +2164,7 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
         <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-6">
           {/* Title */}
           <h1 className="mb-4 text-[48px] font-bold leading-tight text-white">
-            <RichText text={slide.subtitle} />
+            <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>High-touch bespoke pilot</span> → <span style={{ background: 'linear-gradient(135deg, #34d399, #059669, #047857)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>scalable subscription model</span>
           </h1>
 
           {/* Description */}
@@ -2191,7 +2191,7 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
             </div>
 
             {/* Full Release */}
-            <div className="flex-1 rounded-xl border border-white/15 bg-white/[0.03] p-9">
+            <div className="flex-1 rounded-xl border border-[#0ea5e9]/25 p-9" style={{ background: 'linear-gradient(145deg, rgba(14,165,233,0.15) 0%, rgba(6,182,212,0.08) 100%)' }}>
               <h2 className="mb-6 text-[30px] font-bold text-white">Full release</h2>
               <ul className="mb-6 space-y-4">
                 {slide.fullRelease?.items.map((item, idx) => (
