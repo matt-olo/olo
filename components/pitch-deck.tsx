@@ -1719,7 +1719,7 @@ function RichText({ text, className }: { text: string; className?: string }) {
         }
         if (part.startsWith("{{turq}}") && part.endsWith("{{/turq}}")) {
           return (
-            <span key={i} className="font-bold text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
+            <span key={i} className="font-bold text-[#2dd4bf] drop-shadow-[0_0_4px_rgba(45,212,191,0.2)]">
               {part.slice(8, -9)}
             </span>
           );
@@ -1784,14 +1784,14 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
           </h1>
 
           {/* Body paragraph */}
-          <p className="mt-8 mb-10 text-[26px] leading-relaxed text-white/60 max-w-[1400px]">
+          <p className="mt-8 mb-10 text-[26px] leading-relaxed text-white/70 max-w-[1400px]">
             AI can fix this, but today&apos;s automation tools are too <span className="text-red-500 font-bold">high-friction</span> for the businesses that need them most. Business owners are not going to research tools, learn how to manage prompts, agents, and dashboards, and coordinate disconnected apps just to get routine work done.
           </p>
 
           {/* Stat cards */}
           <div className="flex gap-8 mb-10 mt-14">
             <div className="flex-1 rounded-2xl border-2 border-[#0ea5e9]/25 px-10 py-10" style={{ background: 'linear-gradient(145deg, rgba(4,20,30,0.6) 0%, rgba(6,25,35,0.5) 100%)', boxShadow: '0 6px 28px rgba(14,165,233,0.12), 0 2px 8px rgba(0,0,0,0.3)', position: 'relative' }}>
-              <svg style={{ position: 'absolute', top: '22px', right: '12px', opacity: 0.25 }} width="140" height="120" viewBox="0 0 40 36" fill="none" stroke="#0ea5e9" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round">
+              <svg style={{ position: 'absolute', top: '22px', right: '6px', opacity: 0.25 }} width="155" height="135" viewBox="0 0 40 36" fill="none" stroke="#0ea5e9" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round">
                 {/* Bill sticking out top */}
                 <rect x="14" y="0" width="12" height="12" rx="1" strokeWidth="1.1" />
                 <g transform="translate(20,6) rotate(90) scale(-1,1)">
