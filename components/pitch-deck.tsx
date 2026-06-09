@@ -54,7 +54,7 @@ const slidesData = [
     title: "solution",
     subtitle: "The {{turq}}solution{{/turq}} {{turq}}is{{/turq}} {{white}}automation{{/white}} with {{turq}}olo{{/turq}}.",
     bullets: [
-      "olo acts as a **contractor** for powerful AI tools \u2014 it detects routine admin work \u2014 {{turq}}calls{{/turq}}, {{turq}}emails{{/turq}}, {{turq}}invoicing{{/turq}}, {{turq}}payroll{{/turq}}, {{turq}}CRM{{/turq}}, and {{turq}}scheduling{{/turq}}, coordinates with the right automation tool for the job, and validates the output \u2014 completing the task from start to finish with **you in complete control**.",
+      "{{turq}}olo{{/turq}} acts as a **contractor** for powerful AI tools \u2014 it detects routine admin work \u2014 {{turq}}calls{{/turq}}, {{turq}}emails{{/turq}}, {{turq}}invoicing{{/turq}}, {{turq}}payroll{{/turq}}, {{turq}}CRM{{/turq}}, and {{turq}}scheduling{{/turq}}, coordinates with the right automation tool for the job, and validates the output \u2014 completing the task from start to finish with **you in complete control**.",
     ],
     content: "{{red}}No{{/red}} prompts. {{red}}No{{/red}} app-switching. {{red}}No{{/red}} manual coordination.",
     footer: "",
@@ -77,7 +77,7 @@ const slidesData = [
     title: "solution",
     subtitle: "{{turq}}olo{{/turq}} manages the tools to {{red}}delete{{/red}} admin work.",
     bullets: [
-      "Instead of trading legacy overhead for AI overhead, olo delivers true SMB automation. One call can trigger an entire workflow \u2014 schedule updates, email confirmations, invoice creation, CRM updates, and more \u2014 without the owner lifting a finger.",
+      "Instead of trading legacy overhead for AI overhead, {{turq}}olo{{/turq}} delivers true SMB automation. One call can trigger an entire workflow \u2014 schedule updates, email confirmations, invoice creation, CRM updates, and more \u2014 without the owner lifting a finger.",
     ],
     content: "{{turq}}olo{{/turq}} handles the work, {{turq}}you{{/turq}} stay in control.",
     bgColor: "bg-[#040e14]",
@@ -109,14 +109,14 @@ const slidesData = [
     id: 11,
     title: "onboarding",
     subtitle: "Keep your software. Nix the overhead.",
-    content: "olo works with the software your business already uses — QuickBooks, Google, phone, email, calendar, and more. Your software stays in place. olo connects to it, coordinates the work, and starts with you in complete control.",
+    content: "{{turq}}olo{{/turq}} works with the software your business already uses — QuickBooks, Google, phone, email, calendar, and more. Your software stays in place. {{turq}}olo{{/turq}} connects to it, coordinates the work, and starts with you in complete control.",
     onboardingSteps: [
       "**Create olo Account** — Create your business workspace and owner profile.",
-      "**Billing** — Add payment for the connected tooling olo will configure and run.",
-      "**Google Login** — A single login connects all the tools olo needs.",
-      "**Connect QuickBooks** — Your QuickBooks stays in place. olo simply connects to it and automates payroll, accounting, and more.",
-      "**Phone Setup** — olo configures a phone agent to answer calls, capture requests, and escalate when needed.",
-      "**Meet with olo** — olo learns your business and expectations in a guided interview.",
+      "**Billing** — Add payment for the connected tooling {{turq}}olo{{/turq}} will configure and run.",
+      "**Google Login** — A single login connects all the tools {{turq}}olo{{/turq}} needs.",
+      "**Connect QuickBooks** — Your QuickBooks stays in place. {{turq}}olo{{/turq}} simply connects to it and automates payroll, accounting, and more.",
+      "**Phone Setup** — {{turq}}olo{{/turq}} configures a phone agent to answer calls, capture requests, and escalate when needed.",
+      "**Meet with olo** — {{turq}}olo{{/turq}} learns your business and expectations in a guided interview.",
     ],
     footer: "",
     bgColor: "bg-[#040e14]",
@@ -150,7 +150,7 @@ const slidesData = [
     id: 8,
     title: "business model",
     subtitle: "{{turq}}High-touch bespoke pilot{{/turq}} → {{turq}}scalable subscription model{{/turq}}",
-    content: "olo begins with hands-on pilot relationships that test, tune, and shape the release candidate while producing the pricing, onboarding, and workflow patterns needed for full release.",
+    content: "{{turq}}olo{{/turq}} begins with hands-on pilot relationships that test, tune, and shape the release candidate while producing the pricing, onboarding, and workflow patterns needed for full release.",
     pilotRelease: {
       items: [
         "**100** service-focused SMBs",
@@ -199,7 +199,7 @@ const slidesData = [
         label: "Phase 1",
         name: "Bootstrap & MVP Development",
         highlight: "Raise **$375,000** at a **$7.5M** post-money cap.",
-        desc: "Funds build the olo MVP: an agentic automation runtime with scheduled workflows, persistent memory, reusable skills, parallel subagents, permissioned access to four SMB tool connectors, an isolated validation agent, and the olo iOS Admin app for trust controls, worklog, approvals, and interview-based onboarding.",
+        desc: "Funds build the {{turq}}olo{{/turq}} MVP: an agentic automation runtime with scheduled workflows, persistent memory, reusable skills, parallel subagents, permissioned access to four SMB tool connectors, an isolated validation agent, and the {{turq}}olo{{/turq}} iOS Admin app for trust controls, worklog, approvals, and interview-based onboarding.",
       },
       {
         label: "Phase 2",
@@ -2417,10 +2417,10 @@ function SlideMeetOlo({ slide }: { slide: (typeof slidesData)[0] }) {
 
           {/* Description paragraphs */}
           <p className="mb-4 text-[22px] leading-relaxed text-white/70">
-            olo is the AI that gets things done for your business. It works in the background, learning how your business operates and watching for routine admin work.
+            <span className="text-[#2dd4bf] font-bold">olo</span> is the AI that gets things done for your business. It works in the background, learning how your business operates and watching for routine admin work.
           </p>
           <p className="mb-10 text-[22px] leading-relaxed text-white/70">
-            When olo spots a task from a signal — like an incoming call, email, or scheduled workflow — it builds the workflow, manages the tools, validates the output, and brings it to you for review or approval.
+            When <span className="text-[#2dd4bf] font-bold">olo</span> spots a task from a signal — like an incoming call, email, or scheduled workflow — it builds the workflow, manages the tools, validates the output, and brings it to you for review or approval.
           </p>
 
           {/* Keyword rows */}
