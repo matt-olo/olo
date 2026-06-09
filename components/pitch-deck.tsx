@@ -1869,7 +1869,7 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
             {/* Big title */}
             <h1 className="mb-14 text-[72px] font-black leading-none tracking-tight">
               <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Powerful AI tools exist.</span>{" "}
-              <span style={{ background: 'linear-gradient(90deg, #f87171, #ef4444, #f87171)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>SMB automation does not.</span>
+              <span className="text-red-400">SMB automation does not.</span>
             </h1>
 
             {/* Body paragraphs */}
