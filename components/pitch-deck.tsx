@@ -2328,7 +2328,7 @@ function SlideMeetOlo({ slide }: { slide: (typeof slidesData)[0] }) {
             olo is the AI that gets things done for your business. It works in the background, learning how your business operates and watching for routine admin work.
           </p>
           <p className="mb-10 text-[22px] leading-relaxed text-white/70">
-            When olo spots a task from a signal — like an incoming call, email, or scheduled workflow — it builds the workflow, manages the tools, validates the output, and brings it to you for approval.
+            When olo spots a task from a signal — like an incoming call, email, or scheduled workflow — it builds the workflow, manages the tools, validates the output, and brings it to you for review or approval.
           </p>
 
           {/* Keyword rows */}
