@@ -3088,8 +3088,7 @@ export default function PitchDeck() {
             style={{
               width: "1920px",
               height: "1080px",
-              transform: `scale(${Math.min(0.9 * viewportWidth / 1920, 0.5)})`,
-              transformOrigin: "top left",
+              zoom: Math.min(0.9 * viewportWidth / 1920, 0.5),
             }}
           >
             <div
