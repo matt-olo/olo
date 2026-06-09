@@ -220,7 +220,7 @@ const slidesData = [
     id: 10,
     title: "the olo team",
     subtitle: "Two founders. **$22M raised** across prior ventures.",
-    content: "Building olo to attack one clear, expensive SMB pain point at the center of the AI automation wave.",
+    content: "Building {{turq}}olo{{/turq}} to attack one clear, expensive SMB pain point at the center of the AI automation wave.",
     founders: [
       { name: "Josh Edward" },
       { name: "Matt Martin" },
@@ -1613,7 +1613,7 @@ function SlideTitle({ slide }: { slide: (typeof slidesData)[0] }) {
 
         {/* Mission */}
         <p className="mb-20 max-w-[1100px] text-[28px] leading-relaxed text-white/70">
-          {slide.content}
+          <RichText text={slide.content || ""} />
         </p>
 
         {/* Founders */}
