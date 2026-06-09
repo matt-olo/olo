@@ -1779,7 +1779,7 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
         {/* Main content area */}
         <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8 mt-4">
           {/* Main title */}
-          <h1 className="mb-6 text-[42px] font-bold leading-tight text-white">
+          <h1 className="mb-6 text-[48px] font-bold leading-tight text-white">
             Small-to-medium businesses are <span className="font-black" style={{ background: 'linear-gradient(135deg, #fca5a5, #ef4444, #dc2626)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>drowning</span> in administrative overhead.
           </h1>
 
@@ -1977,7 +1977,7 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
         {/* Main content */}
         <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
           {/* Title statement */}
-          <h1 className="mb-14 text-[52px] font-bold leading-tight text-white">
+          <h1 className="mb-14 text-[58px] font-bold leading-tight text-white">
             The <span style={{ background: 'linear-gradient(135deg, #2dd4bf, #06b6d4, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>solution is</span> automation with <span style={{ background: 'linear-gradient(135deg, #2dd4bf, #06b6d4, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>olo</span>.
           </h1>
 
