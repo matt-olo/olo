@@ -2245,7 +2245,7 @@ function SlideMarket({ slide }: { slide: (typeof slidesData)[0] }) {
           </h1>
 
           {/* Stats / data points */}
-          <div className="mb-12 flex gap-12">
+          <div className="mb-16 mt-4 flex gap-12">
             {/* Big number cards */}
             <div className="flex-1 rounded-xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/5 p-8">
               <div className="mb-2 text-[56px] font-black text-[#2dd4bf]">36.2M</div>
@@ -2262,7 +2262,7 @@ function SlideMarket({ slide }: { slide: (typeof slidesData)[0] }) {
           </div>
 
           {/* Bottom statement */}
-          <div className="border-l-4 border-[#2dd4bf]/40 pl-8">
+          <div className="border-l-4 border-[#2dd4bf]/40 pl-8 mt-4">
             <h2 className="mb-3 text-[30px] font-bold text-[#2dd4bf]">
               {slide.content}
             </h2>
