@@ -2324,10 +2324,10 @@ function SlideMeetOlo({ slide }: { slide: (typeof slidesData)[0] }) {
           <p className="mb-6 text-[32px] font-medium text-[#2dd4bf]">The power of AI without the complexity.</p>
 
           {/* Description paragraphs */}
-          <p className="mb-4 text-[20px] leading-relaxed text-white/70">
+          <p className="mb-4 text-[22px] leading-relaxed text-white/70">
             olo is the AI that gets things done for your business. It works in the background, learning how your business operates and watching for routine admin work.
           </p>
-          <p className="mb-10 text-[20px] leading-relaxed text-white/70">
+          <p className="mb-10 text-[22px] leading-relaxed text-white/70">
             When olo spots a task from a signal — like an incoming call, email, or scheduled workflow — it builds the workflow, manages the tools, validates the output, and brings it to you for approval.
           </p>
 
@@ -2335,19 +2335,19 @@ function SlideMeetOlo({ slide }: { slide: (typeof slidesData)[0] }) {
           <div className="space-y-5">
             <div className="flex items-baseline gap-6">
               <span className="text-[38px] font-black w-[260px] flex-shrink-0" style={{ background: 'linear-gradient(135deg, #2dd4bf, #06b6d4, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>DETECT</span>
-              <span className="text-[22px] text-white/75">Finds admin work the moment it shows up.</span>
+              <span className="text-[22px] text-white">Finds admin work the moment it shows up.</span>
             </div>
             <div className="flex items-baseline gap-6">
               <span className="text-[38px] font-black w-[260px] flex-shrink-0" style={{ background: 'linear-gradient(135deg, #2dd4bf, #06b6d4, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>COORDINATE</span>
-              <span className="text-[22px] text-white/75">Turns business tasks into completed workflows.</span>
+              <span className="text-[22px] text-white">Turns business tasks into completed workflows.</span>
             </div>
             <div className="flex items-baseline gap-6">
               <span className="text-[38px] font-black w-[260px] flex-shrink-0" style={{ background: 'linear-gradient(135deg, #2dd4bf, #06b6d4, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>VALIDATE</span>
-              <span className="text-[22px] text-white/75">Checks the work before action.</span>
+              <span className="text-[22px] text-white">Checks the work before action.</span>
             </div>
             <div className="flex items-baseline gap-6">
               <span className="text-[38px] font-black w-[260px] flex-shrink-0" style={{ background: 'linear-gradient(135deg, #2dd4bf, #06b6d4, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>LEARN</span>
-              <span className="text-[22px] text-white/75">Improves with every rule, approval, correction, and outcome.</span>
+              <span className="text-[22px] text-white">Improves with every rule, approval, correction, and outcome.</span>
             </div>
           </div>
           </div>
