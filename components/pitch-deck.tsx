@@ -2321,7 +2321,7 @@ function SlideMeetOlo({ slide }: { slide: (typeof slidesData)[0] }) {
           <div className="rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
 
           {/* Subheadline */}
-          <p className="mb-6 text-[34px] font-medium text-[#2dd4bf]">The power of AI without the complexity.</p>
+          <p className="mb-6 text-[34px] font-medium italic text-[#2dd4bf]">The power of AI without the complexity.</p>
 
           {/* Description paragraphs */}
           <p className="mb-4 text-[22px] leading-relaxed text-white/70">
