@@ -2078,7 +2078,7 @@ function SlideRoadmap({ slide }: { slide: (typeof slidesData)[0] }) {
       <div className="relative flex h-full flex-col px-[120px] py-[70px]">
         {/* Top heading */}
         <div className="mb-8">
-          <h3 className="text-[28px] font-medium uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
+          <h3 className="text-[36px] font-bold uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
             {slide.title}
           </h3>
         </div>
@@ -2098,19 +2098,19 @@ function SlideRoadmap({ slide }: { slide: (typeof slidesData)[0] }) {
               </div>
 
               {/* Card */}
-              <div className="flex-1 rounded-2xl border border-[#2dd4bf]/20 bg-[#0a2020]/60 p-8 backdrop-blur-sm">
-                <div className="mb-2 text-[16px] font-semibold uppercase tracking-wider text-[#2dd4bf]/60">
+              <div className={`flex-1 rounded-2xl border p-8 backdrop-blur-sm ${idx === 0 ? 'border-[#2dd4bf]/20 bg-[#0a2020]/60' : idx === 1 ? 'border-[#0ea5e9]/25 bg-[#0a1828]/80' : 'border-[#34d399]/25 bg-[#0a2818]/80'}`}>
+                <div className={`mb-2 text-[18px] font-semibold uppercase tracking-wider ${idx === 0 ? 'text-[#2dd4bf]/60' : idx === 1 ? 'text-[#0ea5e9]/60' : 'text-[#34d399]/60'}`}>
                   {phase.label}
                 </div>
-                <h2 className="mb-5 text-[26px] font-bold text-white leading-tight">
+                <h2 className="mb-5 text-[28px] font-bold text-white leading-tight">
                   {phase.name}
                 </h2>
                 {phase.highlight && (
-                  <p className="mb-4 text-[18px] leading-relaxed text-white/85">
+                  <p className="mb-4 text-[20px] leading-relaxed text-white/85">
                     <RichText text={phase.highlight} />
                   </p>
                 )}
-                <p className="text-[17px] leading-relaxed text-[#2dd4bf]/80">
+                <p className={`text-[19px] leading-relaxed ${idx === 0 ? 'text-[#2dd4bf]/80' : idx === 1 ? 'text-[#0ea5e9]/80' : 'text-[#34d399]/80'}`}>
                   {phase.desc}
                 </p>
               </div>
