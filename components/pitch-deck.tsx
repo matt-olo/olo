@@ -2241,7 +2241,7 @@ function SlideMarket({ slide }: { slide: (typeof slidesData)[0] }) {
         <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
           {/* Big title */}
           <h1 className="mb-14 text-[46px] font-bold leading-tight text-white">
-            There is <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>$940B/year</span> in SMB admin overhead we built olo to <span className="text-red-500 font-black">delete</span>
+            There is <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>$940B/year</span> in SMB admin overhead we built olo to <span className="font-black" style={{ background: 'linear-gradient(135deg, #ef4444, #dc2626, #991b1b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>delete</span>
           </h1>
 
           {/* Stats / data points */}
