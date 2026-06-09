@@ -78,7 +78,7 @@ const slidesData = [
     bullets: [
       "Instead of trading legacy overhead for AI overhead, olo delivers true SMB automation. One call can trigger an entire workflow \u2014 schedule updates, email confirmations, invoice creation, CRM updates, and more \u2014 without the owner lifting a finger.",
     ],
-    content: "{{turq}}olo{{/turq}} handles the work, {{turq}}You{{/turq}} stay in control.",
+    content: "{{turq}}olo{{/turq}} handles the work, {{turq}}you{{/turq}} stay in control.",
     bgColor: "bg-[#040e14]",
     flow: [
       "Customer calls to reschedule",
@@ -2488,7 +2488,7 @@ function SlideSolution2({ slide }: { slide: (typeof slidesData)[0] }) {
 
           {/* Bottom statement */}
           {slide.content && (
-            <div className="mt-14">
+            <div className="mt-20">
               <p className="text-[36px] font-bold text-white">
                 <RichText text={slide.content} />
               </p>
