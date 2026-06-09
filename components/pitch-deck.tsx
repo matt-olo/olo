@@ -66,7 +66,8 @@ const slidesData = [
     bullets: [
       "SMB admin work cannot happen in AI chatboxes. It never fails to appear every day through incoming {{turq}}calls{{/turq}}, outgoing {{turq}}invoices{{/turq}}, {{turq}}scheduling{{/turq}} changes, and more.",
       "When that work waits, leads (and dollars) are {{red}}lost{{/red}}. Customers move to competitors who respond faster and operate with better tools.",
-      "If AI still requires the owner to constantly operate it, it is not automation. It is just more {{red}}overhead{{/red}}.",
+      "If AI still requires the owner to constantly operate it, it is not automation.",
+      "It is just more {{red}}overhead{{/red}}.",
     ],
     content: "",
     bgColor: "bg-[#040e14]",
