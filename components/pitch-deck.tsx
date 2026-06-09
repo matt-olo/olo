@@ -24,6 +24,7 @@ const slideGradients: { start: string; end: string }[] = [
   { start: "#040e14", end: "#0a2a2a" },
   { start: "#040e14", end: "#0a2a2a" },
   { start: "#040e14", end: "#0a2a2a" },
+  { start: "#040e14", end: "#0a2a2a" },
   { start: "#030d12", end: "#040e14" },
 ];
 
@@ -131,6 +132,18 @@ const slidesData = [
     content: "Capture a fraction of the overhead olo deletes",
     footer: "At 1% U.S. SMB penetration, with recurring subscription pricing modeled at 10% of estimated admin labor value saved, olo represents a **~$940M ARR** opportunity.",
     source: "Sources: [1] SBA Office of Advocacy Data, [2] Glassdoor",
+    bgColor: "bg-[#040e14]",
+  },
+  {
+    id: 13,
+    title: "market gap",
+    subtitle: "SMBs know AI is useful. They do not know what to do with it.",
+    bullets: [
+      "\u201CBoring\u201D brick-and-mortar and service-based businesses are watching AI from the sidelines. They do not have the time, technical confidence, or automation know-how to implement it themselves.",
+      "They know AI can automate a large share of their administrative overhead. They also worry their competitors will figure it out first.",
+      "They do not want to understand the tech. They want the work identified, automated, and handled for them.",
+    ],
+    content: "This is where {{turq}}olo{{/turq}} comes in.",
     bgColor: "bg-[#040e14]",
   },
   {
@@ -2139,6 +2152,61 @@ function SlideRoadmap({ slide }: { slide: (typeof slidesData)[0] }) {
   );
 }
 
+function SlideMarketGap({ slide }: { slide: (typeof slidesData)[0] }) {
+  return (
+    <div className="relative flex h-full w-full flex-col overflow-hidden font-[var(--font-montserrat)]">
+      {/* Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[#040e14]" />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(165deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
+          }}
+        />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,_rgba(10,50,50,0.5)_0%,_transparent_60%)]" />
+      </div>
+
+      {/* Content */}
+      <div className="relative flex h-full flex-col justify-between px-[120px] py-[80px]">
+        {/* Top heading */}
+        <div>
+          <h3 className="mb-2 text-[36px] font-bold uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
+            {slide.title}
+          </h3>
+        </div>
+
+        {/* Main */}
+        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
+          {/* Big title */}
+          <h1 className="mb-12 text-[48px] font-bold leading-tight text-white">
+            <RichText text={slide.subtitle} />
+          </h1>
+
+          {/* Body paragraphs */}
+          <div className="space-y-8 max-w-[1400px] mb-12">
+            {slide.bullets?.map((bullet, idx) => (
+              <p key={idx} className="text-[26px] leading-relaxed text-white/80">
+                <RichText text={bullet} />
+              </p>
+            ))}
+          </div>
+
+          {/* Bottom punch */}
+          {slide.content && (
+            <div className="border-l-4 border-[#2dd4bf]/60 pl-8">
+              <p className="text-[36px] font-bold text-white">
+                <RichText text={slide.content} />
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
   return (
     <div className="relative flex h-full w-full flex-col overflow-hidden font-[var(--font-montserrat)]">
@@ -2763,6 +2831,9 @@ function SlideContent({ slide }: { slide: (typeof slidesData)[0] }) {
   }
   if (slide.id === 7) {
     return <SlideMarket slide={slide} />;
+  }
+  if (slide.id === 13) {
+    return <SlideMarketGap slide={slide} />;
   }
   if (slide.id === 8) {
     return <SlideBusinessModel slide={slide} />;
