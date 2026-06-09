@@ -1794,9 +1794,11 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
               <svg style={{ position: 'absolute', top: '22px', right: '12px', opacity: 0.25 }} width="120" height="120" viewBox="0 0 32 36" fill="none" stroke="#0ea5e9" strokeWidth="0.7" strokeLinecap="round" strokeLinejoin="round">
                 {/* Bill sticking out top */}
                 <rect x="12" y="0" width="8" height="12" rx="1" />
-                <circle cx="16" cy="6" r="3" />
-                <line x1="16" y1="4" x2="16" y2="8" />
-                <path d="M14.5 5c0-.8.7-1 1.5-1s1.5.2 1.5 1-.7 1-1.5 1-1.5.2-1.5 1 .7 1 1.5 1 1.5-.2 1.5-1" />
+                <g transform="translate(16,6) rotate(90)">
+                  <circle cx="0" cy="0" r="3" />
+                  <line x1="0" y1="-2" x2="0" y2="2" />
+                  <path d="M-1.5 -1c0-.6.7-.8 1.5-.8s1.5.2 1.5.8-.7.8-1.5.8-1.5.2-1.5.8.7.8 1.5.8 1.5-.2 1.5-.8" />
+                </g>
                 {/* Shredder body */}
                 <rect x="6" y="12" width="20" height="10" rx="2" />
                 <line x1="8" y1="18" x2="24" y2="18" />
