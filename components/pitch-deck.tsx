@@ -2201,7 +2201,7 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
                   </li>
                 ))}
               </ul>
-              <p className="text-[24px] font-bold text-[#2dd4bf] border-t border-white/10 pt-5">
+              <p className="text-[24px] font-bold text-[#0ea5e9] border-t border-white/10 pt-5">
                 {slide.fullRelease?.footer}
               </p>
             </div>
