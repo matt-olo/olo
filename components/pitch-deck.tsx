@@ -1791,22 +1791,22 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
           {/* Stat cards */}
           <div className="flex gap-8 mb-10 mt-14">
             <div className="flex-1 rounded-2xl border-2 border-[#0ea5e9]/25 px-10 py-10" style={{ background: 'linear-gradient(145deg, rgba(4,20,30,0.6) 0%, rgba(6,25,35,0.5) 100%)', boxShadow: '0 6px 28px rgba(14,165,233,0.12), 0 2px 8px rgba(0,0,0,0.3)', position: 'relative' }}>
-              <svg style={{ position: 'absolute', top: '22px', right: '12px', opacity: 0.25 }} width="140" height="120" viewBox="0 0 40 36" fill="none" stroke="#0ea5e9" strokeWidth="0.7" strokeLinecap="round" strokeLinejoin="round">
+              <svg style={{ position: 'absolute', top: '22px', right: '12px', opacity: 0.25 }} width="140" height="120" viewBox="0 0 40 36" fill="none" stroke="#0ea5e9" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round">
                 {/* Bill sticking out top */}
                 <rect x="14" y="0" width="12" height="12" rx="1" />
                 <g transform="translate(20,6) rotate(90) scale(-1,1)">
-                  <circle cx="0" cy="0" r="3" />
-                  <line x1="0" y1="-2" x2="0" y2="2" />
-                  <path d="M-1.5 -1c0-.6.7-.8 1.5-.8s1.5.2 1.5.8-.7.8-1.5.8-1.5.2-1.5.8.7.8 1.5.8 1.5-.2 1.5-.8" />
+                  <circle cx="0" cy="0" r="4" />
+                  <line x1="0" y1="-2.5" x2="0" y2="2.5" />
+                  <path d="M-2 -1.2c0-.7.9-1 2-1s2 .3 2 1-.9 1-2 1-2 .3-2 1 .9 1 2 1 2-.3 2-1" />
                 </g>
                 {/* Shredder body */}
-                <rect x="4" y="12" width="32" height="10" rx="2" />
-                <line x1="6" y1="18" x2="34" y2="18" />
+                <rect x="6" y="12" width="28" height="8" rx="2" />
+                <line x1="8" y1="17" x2="32" y2="17" />
                 {/* 4 shredded strips */}
-                <line x1="12" y1="22" x2="12" y2="33" />
-                <line x1="17" y1="22" x2="17" y2="35" />
-                <line x1="23" y1="22" x2="23" y2="34" />
-                <line x1="28" y1="22" x2="28" y2="32" />
+                <line x1="12" y1="20" x2="12" y2="33" />
+                <line x1="17" y1="20" x2="17" y2="35" />
+                <line x1="23" y1="20" x2="23" y2="34" />
+                <line x1="28" y1="20" x2="28" y2="32" />
               </svg>
               <p className="text-[56px] font-black mb-3" style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>36%</p>
               <p className="text-[24px] text-white leading-[1.6]">of owners&apos; workweek spent on admin work</p>
