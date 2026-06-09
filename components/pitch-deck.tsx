@@ -2355,7 +2355,7 @@ function SlideMeetOlo({ slide }: { slide: (typeof slidesData)[0] }) {
 
         {/* Right side - admin phone PNG */}
         <div className="flex w-[42%] items-center justify-center">
-          <img src="/pics/olo-admin (1).png" alt="olo admin" className="h-[900px] object-contain" />
+          <img src="/pics/olo-admin (1).png" alt="olo admin" className="h-[900px] object-contain" style={{ filter: 'drop-shadow(0 0 30px rgba(45,212,191,0.3))' }} />
         </div>
       </div>
     </div>
