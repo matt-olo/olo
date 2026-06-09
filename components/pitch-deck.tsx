@@ -1794,7 +1794,7 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
               <svg style={{ position: 'absolute', top: '22px', right: '12px', opacity: 0.25 }} width="120" height="120" viewBox="0 0 32 36" fill="none" stroke="#0ea5e9" strokeWidth="0.7" strokeLinecap="round" strokeLinejoin="round">
                 {/* Bill sticking out top */}
                 <rect x="12" y="0" width="8" height="12" rx="1" />
-                <g transform="translate(16,6) rotate(90)">
+                <g transform="translate(16,6) rotate(90) scale(-1,1)">
                   <circle cx="0" cy="0" r="3" />
                   <line x1="0" y1="-2" x2="0" y2="2" />
                   <path d="M-1.5 -1c0-.6.7-.8 1.5-.8s1.5.2 1.5.8-.7.8-1.5.8-1.5.2-1.5.8.7.8 1.5.8 1.5-.2 1.5-.8" />
