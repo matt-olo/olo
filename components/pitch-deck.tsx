@@ -186,7 +186,7 @@ const slidesData = [
         label: "Phase 1",
         name: "Bootstrap & MVP Development",
         highlight: "Raise **$375,000** at a **$7.5M** post-money cap.",
-        desc: "Funds will be used to develop the core orchestration layer, initial connectors, validation loop, and olo Admin app for trust controls and interview-based setup.",
+        desc: "Funds build the olo MVP: an agentic automation runtime with scheduled workflows, persistent memory, reusable skills, parallel subagents, permissioned access to four SMB tool connectors, an isolated validation agent, and the olo iOS Admin app for trust controls, worklog, approvals, and interview-based onboarding.",
       },
       {
         label: "Phase 2",
@@ -197,8 +197,8 @@ const slidesData = [
       {
         label: "Phase 3",
         name: "Standardize & Finalize RC",
-        highlight: "Turn MVP and pilot learnings into a release candidate by expanding connectors for broader SMB workflows, automating onboarding from proven implementation patterns, and finalizing repeatable pricing, support, and tooling partnerships.",
-        desc: "",
+        highlight: "",
+        desc: "Turn pilot learnings into a release-ready product: expand SMB workflow coverage, automate onboarding from proven implementation patterns, and lock in repeatable pricing, support, and tooling partnerships.",
       },
     ],
     bgColor: "bg-[#040e14]",
