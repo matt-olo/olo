@@ -2627,22 +2627,22 @@ function SlideAsk({ slide }: { slide: (typeof slidesData)[0] }) {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="h-[80px] w-[600px] rounded-full bg-[#2dd4bf]/[0.08] blur-[40px]" />
             </div>
-            <h1 className="relative text-[52px] font-black text-white">
+            <h1 className="relative text-[60px] font-black text-white">
               Raising <span className="bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9] bg-clip-text text-transparent">$375K</span> on a <span className="bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9] bg-clip-text text-transparent">$7.5M</span> SAFE
             </h1>
           </div>
 
           {/* Use of Funds */}
-          <h2 className="mb-6 text-[18px] font-bold uppercase tracking-[0.15em] text-[#2dd4bf]/60">Use of Funds</h2>
+          <h2 className="mb-6 text-[20px] font-bold uppercase tracking-[0.15em] text-[#2dd4bf]/60">Use of Funds</h2>
           <div className="flex gap-5 mb-10">
             {slide.funds?.map((fund, idx) => (
               <div key={idx} className="flex-1 rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.08] p-6 shadow-[0_4px_20px_rgba(0,0,0,0.2)]">
                 <div className="flex items-baseline justify-between mb-3">
-                  <span className="text-[17px] font-bold text-[#2dd4bf]">{fund.label}</span>
-                  <span className="text-[22px] font-black text-[#2dd4bf]/50">{fund.pct}</span>
+                  <span className="text-[19px] font-bold text-[#2dd4bf]">{fund.label}</span>
+                  <span className="text-[24px] font-black text-[#2dd4bf]/50">{fund.pct}</span>
                 </div>
-                <p className="text-[34px] font-black text-white mb-3 drop-shadow-[0_0_8px_rgba(45,212,191,0.22)]">{fund.amount}</p>
-                <p className="text-[15px] text-white/50 leading-[1.7]">{fund.desc}</p>
+                <p className="text-[38px] font-black text-white mb-3 drop-shadow-[0_0_8px_rgba(45,212,191,0.22)]">{fund.amount}</p>
+                <p className="text-[17px] text-white/50 leading-[1.7]">{fund.desc}</p>
                 {/* Progress bar */}
                 <div className="mt-4 h-[4px] w-full rounded-full bg-white/[0.06] overflow-hidden">
                   <div className="h-full rounded-full bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9]" style={{ width: fund.pct }} />
@@ -2652,12 +2652,12 @@ function SlideAsk({ slide }: { slide: (typeof slidesData)[0] }) {
           </div>
 
           {/* Milestones */}
-          <h2 className="mb-5 text-[18px] font-bold uppercase tracking-[0.15em] text-[#2dd4bf]/60">Milestones This Round Funds</h2>
+          <h2 className="mb-5 text-[20px] font-bold uppercase tracking-[0.15em] text-[#2dd4bf]/60">Milestones This Round Funds</h2>
           <div className="flex flex-wrap gap-3">
             {slide.milestones?.map((m, idx) => (
               <div key={idx} className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#2dd4bf]/[0.1] to-[#0ea5e9]/[0.08] border border-[#2dd4bf]/20 px-5 py-3.5 shadow-[0_0_15px_rgba(45,212,191,0.06)]">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" strokeWidth="3" className="shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
-                <span className="text-[16px] font-bold text-white/90 whitespace-nowrap">{m}</span>
+                <span className="text-[18px] font-bold text-white/90 whitespace-nowrap">{m}</span>
               </div>
             ))}
           </div>
