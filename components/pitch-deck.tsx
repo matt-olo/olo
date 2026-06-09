@@ -74,17 +74,17 @@ const slidesData = [
   {
     id: 5,
     title: "solution",
-    subtitle: "{{strike}}the user{{/strike}} {{turq}}olo{{/turq}} manages the **automation layer**",
+    subtitle: "{{turq}}olo{{/turq}} manages the tools to {{red}}delete{{/red}} admin work.",
     bullets: [
-      "olo manages the automation layer — connecting isolated tools to share context, coordinate actions, and log outcomes so the user stays in control without doing any of the coordination.",
+      "Instead of trading legacy overhead for AI overhead, olo delivers true SMB automation. One call can trigger an entire workflow \u2014 schedule updates, email confirmations, invoice creation, CRM updates, and more \u2014 without the owner lifting a finger.",
     ],
-    content: "One call becomes a completed workflow. {{underlinewhite}}Coordination is the multiplier.{{/underlinewhite}}",
+    content: "{{turq}}olo{{/turq}} handles the work. **You** stay in control.",
     bgColor: "bg-[#040e14]",
     flow: [
       "Customer calls to reschedule",
       "olo answers & coordinates tools",
       "Schedule & invoice updated + Email confirmation sent",
-      "Task notated in olo\u2019s work log for user [\u2713]",
+      "One event becomes a completed workflow.",
     ],
   },
   {
@@ -1869,7 +1869,8 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
             {/* Big title */}
             <h1 className="mb-14 text-[72px] font-black leading-none tracking-tight">
               <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Powerful AI tools exist.</span>{" "}
-              <span className="text-red-400">SMB automation does not.</span>
+              <span style={{ background: 'linear-gradient(135deg, #ef4444, #dc2626)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>SMB automation</span>{" "}
+              <span style={{ background: 'linear-gradient(135deg, #dc2626, #991b1b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>does not.</span>
             </h1>
 
             {/* Body paragraphs */}
@@ -1896,10 +1897,7 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
         <div className="relative flex w-[45%] items-center justify-center">
           {/* Red X overlay */}
           <div className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center">
-            <div className="relative w-[400px] h-[400px]">
-              <div className="absolute top-1/2 left-1/2 w-[90%] h-[12px] rounded-full" style={{ background: 'rgba(239, 68, 68, 0.55)', transform: 'translate(-50%, -50%) rotate(45deg)' }} />
-              <div className="absolute top-1/2 left-1/2 w-[90%] h-[12px] rounded-full" style={{ background: 'rgba(239, 68, 68, 0.55)', transform: 'translate(-50%, -50%) rotate(-45deg)' }} />
-            </div>
+            <span className="font-black leading-none select-none" style={{ color: 'rgba(239, 68, 68, 0.5)', fontSize: '500px' }}>✕</span>
           </div>
           {/* SMB Desktop - outer frame */}
           <div className="relative w-[580px] rounded-xl bg-[#0f3d3d] p-5 shadow-[0_0_40px_rgba(0,0,0,0.6)]">
@@ -2377,7 +2375,7 @@ function SlideSolution2({ slide }: { slide: (typeof slidesData)[0] }) {
       <div className="relative flex h-full flex-col justify-between px-[120px] py-[80px]">
         {/* Top left heading */}
         <div>
-          <h3 className="mb-2 text-[28px] font-medium uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
+          <h3 className="mb-2 text-[36px] font-bold uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
             {slide.title}
           </h3>
         </div>
@@ -2459,7 +2457,7 @@ function SlideSolution2({ slide }: { slide: (typeof slidesData)[0] }) {
                 {/* Arrow 3 */}
                 <div className="flex items-center px-8 self-center -mt-8">
                   <div className="flex flex-col items-center gap-1">
-                    <span className="text-[11px] font-medium tracking-wider text-[#2dd4bf]/50">notify</span>
+                    <span className="text-[11px] font-medium tracking-wider text-[#2dd4bf]/50">done</span>
                     <div className="flex items-center">
                       <div className="h-[2px] w-[70px] bg-gradient-to-r from-[#2dd4bf]/60 to-[#2dd4bf]/30" />
                       <span className="text-[16px] text-[#2dd4bf]/60">›</span>
@@ -2482,10 +2480,10 @@ function SlideSolution2({ slide }: { slide: (typeof slidesData)[0] }) {
             </div>
           )}
 
-          {/* Bottom title */}
+          {/* Bottom statement */}
           {slide.content && (
             <div className="mt-4">
-              <p className="text-[36px] font-bold text-[#2dd4bf]">
+              <p className="text-[36px] font-bold text-white">
                 <RichText text={slide.content} />
               </p>
             </div>
