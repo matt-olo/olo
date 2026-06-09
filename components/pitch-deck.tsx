@@ -139,9 +139,8 @@ const slidesData = [
     title: "market gap",
     subtitle: "SMBs know AI is useful. They do not know what to do with it.",
     bullets: [
-      "\u201CBoring\u201D brick-and-mortar and service-based businesses are watching AI from the sidelines. They do not have the time, technical confidence, or automation know-how to implement it themselves.",
-      "They know AI can automate a large share of their administrative overhead. They also worry their competitors will figure it out first.",
-      "They do not want to understand the tech. They want the work identified, automated, and handled for them.",
+      "\u201CBoring\u201D brick-and-mortar and service-based businesses are watching AI from the sidelines, worried competitors will figure it out first.",
+      "They do not want to understand the tech. They want as much work as possible identified, automated, and handled properly for them.",
     ],
     content: "This is where {{turq}}olo{{/turq}} comes in.",
     bgColor: "bg-[#040e14]",
@@ -2791,7 +2790,7 @@ function SlideOnboarding({ slide }: { slide: (typeof slidesData)[0] }) {
             </p>
 
             {/* Painless setup header */}
-            <h2 className="mb-5 text-[22px] font-bold text-[#2dd4bf] border-b border-[#2dd4bf]/20 pb-3">
+            <h2 className="mb-5 text-[26px] font-bold text-[#2dd4bf] border-b border-[#2dd4bf]/20 pb-3 border-l-4 border-l-[#2dd4bf] pl-4">
               Painless setup
             </h2>
 
@@ -2799,7 +2798,7 @@ function SlideOnboarding({ slide }: { slide: (typeof slidesData)[0] }) {
             <ul className="space-y-4 mb-8">
               {slide.onboardingSteps?.map((step, idx) => (
                 <li key={idx} className="flex items-start gap-4 text-[22px] text-white/75">
-                  <span className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded bg-[#2dd4bf]/15 text-[15px] font-bold text-[#2dd4bf]">
+                  <span className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded bg-[#2dd4bf]/15 text-[24px] font-bold text-[#2dd4bf]">
                     {idx + 1}
                   </span>
                   <RichText text={step} />
