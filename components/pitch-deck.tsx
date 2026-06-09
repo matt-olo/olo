@@ -44,7 +44,7 @@ const slidesData = [
       "AI can fix this, but today\u2019s automation tools are too {{red}}high-friction{{/red}} for the businesses that need them most. Business owners are not going to research tools, learn how to manage prompts, agents, and dashboards, and coordinate disconnected apps just to get routine work done.",
       "Entrepreneurs spend {{turq}}36% of their workweek{{/turq}} [1] on non-revenue-generating administrative work. Meanwhile, {{turq}}1 in 3 SMBs{{/turq}} [2] {{red}}still lacked a basic website in 2025{{/red}}, showing how far the market remains from adopting current automation tools.",
     ],
-    content: "{{turq}}The{{/turq}} {{red}}blocker{{/red}} {{turq}}is{{/turq}} {{turq}}usability{{/turq}}. {{turq}}The{{/turq}} {{red}}burden{{/red}} {{turq}}is{{/turq}} {{turq}}administrative{{/turq}}. {{turq}}The{{/turq}} {{red}}cost{{/red}} {{turq}}is{{/turq}} {{turqunderline}}real{{/turqunderline}}.",
+    content: "{{white}}The{{/white}} {{red}}blocker{{/red}} {{white}}is{{/white}} {{white}}usability{{/white}}. {{white}}The{{/white}} {{red}}burden{{/red}} {{white}}is{{/white}} {{white}}administrative{{/white}}. {{white}}The{{/white}} {{red}}cost{{/red}} {{white}}is{{/white}} {{turqunderline}}real{{/turqunderline}}.",
     bgColor: "bg-[#040e14]",
     footer: "Source: [1] Time Etc Survey, [2] Visual Objects Survey",
   },
@@ -1977,7 +1977,7 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
         <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
           {/* Title statement */}
           <h1 className="mb-14 text-[52px] font-bold leading-tight text-white">
-            <RichText text={slide.subtitle} />
+            The <span style={{ background: 'linear-gradient(135deg, #2dd4bf, #06b6d4, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>solution is</span> automation with <span style={{ background: 'linear-gradient(135deg, #2dd4bf, #06b6d4, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>olo</span>.
           </h1>
 
           {/* Sub-title statement */}
