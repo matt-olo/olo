@@ -3083,14 +3083,14 @@ export default function PitchDeck() {
             aspectRatio: "16/9",
           }}
         >
-          {/* Scaled slide container */}
+          {/* Scaled slide container using CSS scale to avoid distortion */}
           <div
+            className="origin-top-left"
             style={{
               width: "1920px",
               height: "1080px",
-              transform: `scale(${Math.min(0.9 * viewportWidth / 1920, 0.5)})`,
+              transform: "scale(0.5)",
               transformOrigin: "top left",
-              willChange: "auto",
             }}
           >
             <div
