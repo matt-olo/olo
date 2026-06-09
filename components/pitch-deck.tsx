@@ -2178,7 +2178,7 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
             <div className="flex-1 rounded-xl border border-[#2dd4bf]/25 bg-[#2dd4bf]/[0.08] p-9">
               <div className="mb-6 flex items-center gap-4">
                 <h2 className="text-[30px] font-bold text-[#2dd4bf]">Pilot release</h2>
-                <div className="flex-1 h-[2px] bg-[#2dd4bf]/50" />
+                <div className="flex-1 h-[2px] bg-[#2dd4bf]" />
               </div>
               <ul className="mb-6 space-y-4">
                 {slide.pilotRelease?.items.map((item, idx) => (
