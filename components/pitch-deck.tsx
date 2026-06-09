@@ -2321,7 +2321,7 @@ function SlideMeetOlo({ slide }: { slide: (typeof slidesData)[0] }) {
           <div className="rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
 
           {/* Subheadline */}
-          <p className="mb-6 text-[26px] font-medium text-[#2dd4bf]">The power of AI without the complexity.</p>
+          <p className="mb-6 text-[32px] font-medium text-[#2dd4bf]">The power of AI without the complexity.</p>
 
           {/* Description paragraphs */}
           <p className="mb-4 text-[20px] leading-relaxed text-white/70">
@@ -2334,20 +2334,20 @@ function SlideMeetOlo({ slide }: { slide: (typeof slidesData)[0] }) {
           {/* Keyword rows */}
           <div className="space-y-5">
             <div className="flex items-baseline gap-6">
-              <span className="text-[32px] font-black text-[#2dd4bf] w-[220px] flex-shrink-0">DETECT</span>
-              <span className="text-[19px] text-white/75">Finds admin work the moment it shows up.</span>
+              <span className="text-[38px] font-black w-[260px] flex-shrink-0" style={{ background: 'linear-gradient(135deg, #2dd4bf, #06b6d4, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>DETECT</span>
+              <span className="text-[22px] text-white/75">Finds admin work the moment it shows up.</span>
             </div>
             <div className="flex items-baseline gap-6">
-              <span className="text-[32px] font-black text-[#2dd4bf] w-[220px] flex-shrink-0">COORDINATE</span>
-              <span className="text-[19px] text-white/75">Turns business tasks into completed workflows.</span>
+              <span className="text-[38px] font-black w-[260px] flex-shrink-0" style={{ background: 'linear-gradient(135deg, #2dd4bf, #06b6d4, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>COORDINATE</span>
+              <span className="text-[22px] text-white/75">Turns business tasks into completed workflows.</span>
             </div>
             <div className="flex items-baseline gap-6">
-              <span className="text-[32px] font-black text-[#2dd4bf] w-[220px] flex-shrink-0">VALIDATE</span>
-              <span className="text-[19px] text-white/75">Checks the work before action.</span>
+              <span className="text-[38px] font-black w-[260px] flex-shrink-0" style={{ background: 'linear-gradient(135deg, #2dd4bf, #06b6d4, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>VALIDATE</span>
+              <span className="text-[22px] text-white/75">Checks the work before action.</span>
             </div>
             <div className="flex items-baseline gap-6">
-              <span className="text-[32px] font-black text-[#2dd4bf] w-[220px] flex-shrink-0">LEARN</span>
-              <span className="text-[19px] text-white/75">Improves with every rule, approval, correction, and outcome.</span>
+              <span className="text-[38px] font-black w-[260px] flex-shrink-0" style={{ background: 'linear-gradient(135deg, #2dd4bf, #06b6d4, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>LEARN</span>
+              <span className="text-[22px] text-white/75">Improves with every rule, approval, correction, and outcome.</span>
             </div>
           </div>
           </div>
