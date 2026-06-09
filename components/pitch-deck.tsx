@@ -2477,7 +2477,7 @@ function SlideSolution2({ slide }: { slide: (typeof slidesData)[0] }) {
                   </div>
 
                   {/* "SEVERAL tasks completed" label */}
-                  <div className="absolute text-center" style={{ bottom: '-30px', right: '180px' }}>
+                  <div className="absolute text-center" style={{ bottom: '-40px', right: '180px' }}>
                     <p className="text-[36px] font-bold tracking-[0.3em] text-[#34d399]">MULTIPLE</p>
                     <p className="text-[18px] font-light tracking-[0.2em] text-[#34d399] -mt-1">tasks completed</p>
                   </div>
