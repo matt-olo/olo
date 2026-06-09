@@ -2176,7 +2176,10 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
           <div className="flex gap-8">
             {/* Pilot Release */}
             <div className="flex-1 rounded-xl border border-[#2dd4bf]/25 bg-[#2dd4bf]/[0.08] p-9">
-              <h2 className="mb-6 text-[30px] font-bold text-[#2dd4bf]">Pilot release</h2>
+              <div className="mb-6 flex items-center gap-4">
+                <h2 className="text-[30px] font-bold text-[#2dd4bf]">Pilot release</h2>
+                <div className="flex-1 h-[1px] bg-[#2dd4bf]/30" />
+              </div>
               <ul className="mb-6 space-y-4">
                 {slide.pilotRelease?.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-[23px] text-white/85">
@@ -2192,7 +2195,10 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
 
             {/* Full Release */}
             <div className="flex-1 rounded-xl border border-[#0ea5e9]/25 p-9" style={{ background: 'linear-gradient(145deg, rgba(14,165,233,0.15) 0%, rgba(6,182,212,0.08) 100%)' }}>
-              <h2 className="mb-6 text-[30px] font-bold text-[#0ea5e9]">Full release</h2>
+              <div className="mb-6 flex items-center gap-4">
+                <h2 className="text-[30px] font-bold text-[#0ea5e9]">Full release</h2>
+                <div className="flex-1 h-[1px] bg-[#0ea5e9]/30" />
+              </div>
               <ul className="mb-6 space-y-4">
                 {slide.fullRelease?.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-[23px] text-white/85">
