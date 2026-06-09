@@ -1868,8 +1868,8 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
           <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
             {/* Big title */}
             <h1 className="mb-14 text-[72px] font-black leading-none tracking-tight">
-              <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Powerful AI tools exist.</span><br/>
-              <span style={{ background: 'linear-gradient(to right, #fca5a5, #ef4444, #dc2626)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>SMB automation does not.</span>
+              <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Powerful AI tools exist.</span>{" "}
+              <span className="text-red-400">SMB automation does not.</span>
             </h1>
 
             {/* Body paragraphs */}
@@ -1896,7 +1896,10 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
         <div className="relative flex w-[45%] items-center justify-center">
           {/* Red X overlay */}
           <div className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center">
-            <span className="font-black leading-none select-none" style={{ color: 'rgba(239, 68, 68, 0.5)', fontSize: '500px' }}>✕</span>
+            <div className="relative w-[400px] h-[400px]">
+              <div className="absolute top-1/2 left-1/2 w-[90%] h-[12px] rounded-full" style={{ background: 'rgba(239, 68, 68, 0.55)', transform: 'translate(-50%, -50%) rotate(45deg)' }} />
+              <div className="absolute top-1/2 left-1/2 w-[90%] h-[12px] rounded-full" style={{ background: 'rgba(239, 68, 68, 0.55)', transform: 'translate(-50%, -50%) rotate(-45deg)' }} />
+            </div>
           </div>
           {/* SMB Desktop - outer frame */}
           <div className="relative w-[580px] rounded-xl bg-[#0f3d3d] p-5 shadow-[0_0_40px_rgba(0,0,0,0.6)]">
