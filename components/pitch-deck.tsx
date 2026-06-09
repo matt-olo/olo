@@ -2181,13 +2181,13 @@ function SlideMarketGap({ slide }: { slide: (typeof slidesData)[0] }) {
         <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
           {/* Big title */}
           <h1 className="mb-12 text-[48px] font-bold leading-tight text-white">
-            <RichText text={slide.subtitle} />
+            SMBs <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>know AI is useful</span>. They <span style={{ background: 'linear-gradient(135deg, #ef4444, #dc2626, #991b1b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>do not know what to do with it</span>.
           </h1>
 
           {/* Body paragraphs */}
           <div className="space-y-8 max-w-[1400px] mb-12">
             {slide.bullets?.map((bullet, idx) => (
-              <p key={idx} className="text-[26px] leading-relaxed text-white/80">
+              <p key={idx} className="text-[26px] leading-relaxed text-white">
                 <RichText text={bullet} />
               </p>
             ))}
