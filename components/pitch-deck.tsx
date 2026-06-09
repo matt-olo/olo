@@ -2232,7 +2232,7 @@ function SlideMarket({ slide }: { slide: (typeof slidesData)[0] }) {
       <div className="relative flex h-full flex-col justify-between px-[120px] py-[80px]">
         {/* Top heading */}
         <div>
-          <h3 className="mb-2 text-[28px] font-medium uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
+          <h3 className="mb-2 text-[36px] font-bold uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
             {slide.title}
           </h3>
         </div>
@@ -2241,7 +2241,7 @@ function SlideMarket({ slide }: { slide: (typeof slidesData)[0] }) {
         <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
           {/* Big title */}
           <h1 className="mb-14 text-[46px] font-bold leading-tight text-white">
-            <RichText text={slide.subtitle} />
+            There is <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>$940B/year</span> in SMB administrative overhead we built olo to <span className="text-red-500 font-black">delete</span>
           </h1>
 
           {/* Stats / data points */}
@@ -2252,7 +2252,7 @@ function SlideMarket({ slide }: { slide: (typeof slidesData)[0] }) {
               <div className="text-[20px] text-white/70">U.S. small businesses [1]</div>
             </div>
             <div className="flex-1 rounded-xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/5 p-8">
-              <div className="mb-2 text-[56px] font-black text-[#2dd4bf]">~$26K</div>
+              <div className="mb-2 text-[56px] font-black" style={{ background: 'linear-gradient(135deg, #fca5a5, #ef4444, #dc2626)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>~$26K</div>
               <div className="text-[20px] text-white/70">lost per entrepreneur/year to admin [2]</div>
             </div>
             <div className="flex-1 rounded-xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/5 p-8">
