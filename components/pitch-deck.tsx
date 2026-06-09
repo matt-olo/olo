@@ -145,7 +145,7 @@ const slidesData = [
         "**Value-based subscription** — 10–25% of measured savings / additional revenue",
         "**Bundled tooling** + hands-on support",
       ],
-      footer: "The value-based pilot model acts as a trust accelerator: olo is positioned as a savings partner, not another SaaS subscription.",
+      footer: "Value-based pricing makes olo a savings partner, not another SaaS bill.",
     },
     fullRelease: {
       items: [
@@ -154,7 +154,7 @@ const slidesData = [
         "**Flat-rate** subscription tiers by SMB size",
         "**Volume-discounted** tooling",
       ],
-      footer: "Flat-rate pricing enables scalability through self-serve onboarding.",
+      footer: "Simple pricing unlocks self-serve onboarding.",
     },
     bgColor: "bg-[#040e14]",
   },
