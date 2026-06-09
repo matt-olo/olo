@@ -1896,7 +1896,7 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
         <div className="relative flex w-[45%] items-center justify-center">
           {/* Red X overlay */}
           <div className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center">
-            <span className="text-[200px] font-black text-red-500/40 leading-none select-none">✕</span>
+            <span className="text-[400px] font-black leading-none select-none" style={{ color: 'rgba(239, 68, 68, 0.4)' }}>✕</span>
           </div>
           {/* SMB Desktop - outer frame */}
           <div className="relative w-[580px] rounded-xl bg-[#0f3d3d] p-5 shadow-[0_0_40px_rgba(0,0,0,0.6)]">
