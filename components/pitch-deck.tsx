@@ -67,9 +67,8 @@ const slidesData = [
       "SMB admin work cannot happen in AI chatboxes. It never fails to appear every day through incoming {{turq}}calls{{/turq}}, outgoing {{turq}}invoices{{/turq}}, {{turq}}scheduling{{/turq}} changes, and more.",
       "When that work waits, leads (and dollars) are {{red}}lost{{/red}}. Customers move to competitors who respond faster and operate with better tools.",
       "If AI still requires the owner to constantly operate it, it is not automation.",
-      "It is just more {{red}}overhead{{/red}}.",
     ],
-    content: "",
+    content: "{{white}}It is just more{{/white}} {{red}}overhead{{/red}}.",
     bgColor: "bg-[#040e14]",
   },
   {
@@ -1885,7 +1884,7 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
             {/* Closing punch */}
             {slide.content && (
               <div className="mt-20 border-l-4 border-[#2dd4bf]/60 pl-8">
-                <p className="text-[34px] font-bold italic text-white">
+                <p className="text-[38px] font-bold text-white">
                   <RichText text={slide.content} />
                 </p>
               </div>
