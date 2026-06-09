@@ -1866,9 +1866,10 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
 
           {/* Main content */}
           <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
-            {/* Big title - Isolation = Inefficiency */}
+            {/* Big title */}
             <h1 className="mb-14 text-[72px] font-black leading-none tracking-tight">
-              <RichText text={slide.subtitle} />
+              <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Powerful AI tools exist.</span>{" "}
+              <span style={{ background: 'linear-gradient(135deg, #fca5a5, #ef4444, #dc2626)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>SMB automation does not.</span>
             </h1>
 
             {/* Body paragraphs */}
@@ -1883,8 +1884,8 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
             {/* Closing punch */}
             {slide.content && (
               <div className="mt-14 border-l-4 border-[#2dd4bf]/60 pl-8">
-                <p className="text-[34px] font-bold italic text-[#2dd4bf]">
-                  {slide.content}
+                <p className="text-[34px] font-bold italic text-white">
+                  <RichText text={slide.content} />
                 </p>
               </div>
             )}
