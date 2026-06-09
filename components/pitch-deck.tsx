@@ -2249,15 +2249,15 @@ function SlideMarket({ slide }: { slide: (typeof slidesData)[0] }) {
             {/* Big number cards */}
             <div className="flex-1 rounded-xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/5 p-8">
               <div className="mb-2 text-[56px] font-black text-[#2dd4bf]">36.2M</div>
-              <div className="text-[20px] text-white/70">U.S. small businesses [1]</div>
+              <div className="text-[24px] text-white/70">U.S. small businesses [1]</div>
             </div>
             <div className="flex-1 rounded-xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/5 p-8">
               <div className="mb-2 text-[56px] font-black text-red-500">~$26K</div>
-              <div className="text-[20px] text-white/70">lost per entrepreneur/year to admin [2]</div>
+              <div className="text-[24px] text-white/70">lost per entrepreneur/year to admin [2]</div>
             </div>
             <div className="flex-1 rounded-xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/5 p-8">
               <div className="mb-2 text-[56px] font-black text-white">$940B</div>
-              <div className="text-[20px] text-white/70">total addressable overhead/year</div>
+              <div className="text-[24px] text-white/70">total addressable overhead/year</div>
             </div>
           </div>
 
