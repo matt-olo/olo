@@ -2098,7 +2098,7 @@ function SlideRoadmap({ slide }: { slide: (typeof slidesData)[0] }) {
               </div>
 
               {/* Card */}
-              <div className={`flex-1 rounded-2xl border p-8 backdrop-blur-sm ${idx === 0 ? 'border-[#2dd4bf]/20 bg-[#0a2020]/60' : idx === 1 ? 'border-[#0ea5e9]/40 bg-[#0ea5e9]/[0.12]' : 'border-[#34d399]/40 bg-[#34d399]/[0.12]'}`}>
+              <div className="flex-1 rounded-2xl border p-8 backdrop-blur-sm" style={{ borderColor: idx === 0 ? 'rgba(45,212,191,0.2)' : idx === 1 ? 'rgba(14,165,233,0.4)' : 'rgba(52,211,153,0.4)', background: idx === 0 ? 'rgba(10,32,32,0.6)' : idx === 1 ? 'rgba(14,165,233,0.12)' : 'rgba(52,211,153,0.12)' }}>
                 <div className={`mb-2 text-[18px] font-semibold uppercase tracking-wider ${idx === 0 ? 'text-[#2dd4bf]' : idx === 1 ? 'text-[#0ea5e9]' : 'text-[#34d399]'}`}>
                   {phase.label}
                 </div>
