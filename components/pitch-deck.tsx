@@ -62,13 +62,13 @@ const slidesData = [
   {
     id: 4,
     title: "problem",
-    subtitle: "{{red}}Isolation{{/red}} {{white}}={{/white}} {{red}}Inefficiency{{/red}}",
+    subtitle: "Powerful AI tools exist. SMB {{red}}automation{{/red}} does not.",
     bullets: [
-      "AI tools are powerful in isolation, but SMB owners cannot babysit a multitude of **prompts**, **agents**, **dashboards**, and **disconnected apps**.",
-      "Their work does not live in one tool or software. It moves across {{turq}}calls{{/turq}}, {{turq}}email{{/turq}}, {{turq}}scheduling{{/turq}}, {{turq}}accounting{{/turq}}, {{turq}}invoicing{{/turq}}, {{turq}}payroll{{/turq}}, {{turq}}customer messages{{/turq}}, and more.",
-      "When each tool needs direction, context, and follow-up, {{underline}}the user becomes the manager of the automation layer.{{/underline}}",
+      "SMB admin work cannot happen in AI chatboxes. It never fails to appear every day through incoming {{turq}}calls{{/turq}}, outgoing {{turq}}invoices{{/turq}}, {{turq}}scheduling{{/turq}} changes, and more.",
+      "When that work waits, leads (and dollars) are {{red}}lost{{/red}}. Customers move to competitors who respond faster and operate with better tools.",
+      "If AI still requires the owner to constantly operate it, it is not automation. It is just more {{red}}overhead{{/red}}.",
     ],
-    content: "This is the new administrative overhead.",
+    content: "",
     bgColor: "bg-[#040e14]",
   },
   {
@@ -1859,7 +1859,7 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
         <div className="flex w-[55%] flex-col justify-between pr-10">
           {/* Top heading */}
           <div>
-            <h3 className="mb-2 text-[28px] font-medium uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
+            <h3 className="mb-2 text-[36px] font-bold uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_4px_rgba(45,212,191,0.2)]">
               {slide.title}
             </h3>
           </div>
