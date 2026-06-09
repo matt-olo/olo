@@ -117,7 +117,7 @@ const slidesData = [
       "**Phone Setup** — olo configures a phone agent to answer calls, capture requests, and escalate when needed.",
       "**Meet with olo** — olo learns your business and expectations in a guided interview.",
     ],
-    footer: "Go live with you in control — olo starts by asking before acting and logging every task — until you decide it is ready for a promotion.",
+    footer: "",
     bgColor: "bg-[#040e14]",
   },
   {
@@ -2681,15 +2681,16 @@ function SlideOnboarding({ slide }: { slide: (typeof slidesData)[0] }) {
       <div className="relative flex h-full px-[80px] py-[50px]">
         {/* Left side - text (bigger) */}
         <div className="flex w-[58%] flex-col justify-center pr-10">
-          <div className="rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
-            {/* Heading */}
-            <h3 className="mb-4 text-[28px] font-medium uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
-              {slide.title}
-            </h3>
+          {/* Heading - above box */}
+          <h3 className="mb-4 text-[36px] font-bold uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
+            {slide.title}
+          </h3>
 
-            {/* Title */}
-            <h1 className="mb-5 text-[48px] font-bold leading-tight text-white">
-              {slide.subtitle}
+          <div className="rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.08] px-10 py-8">
+            {/* Title with gradients */}
+            <h1 className="mb-5 text-[52px] font-bold leading-tight">
+              <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Keep your software.</span>{" "}
+              <span style={{ background: 'linear-gradient(135deg, #fca5a5, #ef4444, #dc2626)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Nix the overhead.</span>
             </h1>
 
             {/* Description */}
@@ -2703,23 +2704,16 @@ function SlideOnboarding({ slide }: { slide: (typeof slidesData)[0] }) {
             </h2>
 
             {/* Steps */}
-            <ul className="space-y-3.5 mb-8">
+            <ul className="space-y-4 mb-8">
               {slide.onboardingSteps?.map((step, idx) => (
-                <li key={idx} className="flex items-start gap-3 text-[20px] text-white/75">
-                  <span className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded bg-[#2dd4bf]/15 text-[12px] font-bold text-[#2dd4bf]">
+                <li key={idx} className="flex items-start gap-4 text-[22px] text-white/75">
+                  <span className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded bg-[#2dd4bf]/15 text-[15px] font-bold text-[#2dd4bf]">
                     {idx + 1}
                   </span>
                   <RichText text={step} />
                 </li>
               ))}
             </ul>
-
-            {/* Footer */}
-            {slide.footer && (
-              <p className="text-[22px] font-semibold text-[#2dd4bf] border-t border-[#2dd4bf]/15 pt-5">
-                {slide.footer}
-              </p>
-            )}
           </div>
         </div>
 
