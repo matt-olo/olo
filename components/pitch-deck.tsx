@@ -2639,7 +2639,7 @@ function SlideAsk({ slide }: { slide: (typeof slidesData)[0] }) {
               <div key={idx} className="flex-1 rounded-2xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/[0.08] p-6 shadow-[0_4px_20px_rgba(0,0,0,0.2)]">
                 <div className="flex items-baseline justify-between mb-3">
                   <span className="text-[22px] font-bold text-[#2dd4bf]">{fund.label}</span>
-                  <span className="text-[24px] font-black text-[#2dd4bf]/50">{fund.pct}</span>
+                  <span className="text-[28px] font-black text-[#0ea5e9]">{fund.pct}</span>
                 </div>
                 <p className="text-[38px] font-black text-white mb-3 drop-shadow-[0_0_8px_rgba(45,212,191,0.22)]">{fund.amount}</p>
                 <p className="text-[18px] text-white/50 leading-[1.7]">{fund.desc}</p>
