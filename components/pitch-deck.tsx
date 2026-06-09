@@ -1589,7 +1589,7 @@ function SlideTitle({ slide }: { slide: (typeof slidesData)[0] }) {
       {/* Content */}
       <div className="relative flex flex-col items-center text-center">
         {/* Heading */}
-        <h3 className="mb-12 text-[28px] font-medium uppercase tracking-[0.3em] text-[#2dd4bf]/70">
+        <h3 className="mb-12 text-[36px] font-bold uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
           {slide.title}
         </h3>
 
@@ -1614,6 +1614,9 @@ function SlideTitle({ slide }: { slide: (typeof slidesData)[0] }) {
                 <div className="text-[28px] font-semibold text-white">
                   {founder.name}
                 </div>
+                <div className="mt-2 text-[18px] text-[#2dd4bf]/70">
+                  {idx === 0 ? 'josh@meetolo.ai' : 'matt@meetolo.ai'}
+                </div>
               </div>
             ))}
           </div>
@@ -1621,7 +1624,7 @@ function SlideTitle({ slide }: { slide: (typeof slidesData)[0] }) {
 
         {/* URL */}
         <div className="mb-8 text-[24px] font-medium text-[#2dd4bf]">
-          oloai.com
+          meetolo.ai
         </div>
 
         {/* Confidential */}
