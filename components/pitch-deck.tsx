@@ -199,7 +199,7 @@ const slidesData = [
         label: "Phase 1",
         name: "Bootstrap & MVP Development",
         highlight: "Raise **$375,000** at a **$7.5M** post-money cap.",
-        desc: "Funds build the {{turq}}olo{{/turq}} MVP: an agentic automation runtime with scheduled workflows, persistent memory, reusable skills, parallel subagents, permissioned access to four SMB tool connectors, an isolated validation agent, and the {{turq}}olo{{/turq}} iOS Admin app for trust controls, worklog, approvals, and interview-based onboarding.",
+        desc: "Funds build the olo MVP: an agentic automation runtime with scheduled workflows, persistent memory, reusable skills, parallel subagents, permissioned access to four SMB tool connectors, an isolated validation agent, and the olo iOS Admin app for trust controls, worklog, approvals, and interview-based onboarding.",
       },
       {
         label: "Phase 2",
@@ -2128,7 +2128,7 @@ function SlideRoadmap({ slide }: { slide: (typeof slidesData)[0] }) {
                   </p>
                 )}
                 <p className={`text-[19px] leading-relaxed ${idx === 0 ? 'text-[#2dd4bf]' : idx === 1 ? 'text-[#0ea5e9]' : 'text-[#34d399]'}`}>
-                  {phase.desc}
+                  <RichText text={phase.desc} />
                 </p>
               </div>
             </div>
@@ -2255,7 +2255,7 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
 
           {/* Description */}
           <p className="mb-10 max-w-[1400px] text-[24px] leading-relaxed text-white">
-            {slide.content}
+            <RichText text={slide.content || ""} />
           </p>
 
           {/* Two columns: Pilot vs Full Release */}
@@ -2787,7 +2787,7 @@ function SlideOnboarding({ slide }: { slide: (typeof slidesData)[0] }) {
 
             {/* Description */}
             <p className="mb-8 text-[24px] leading-relaxed text-white/60">
-              {slide.content}
+              <RichText text={slide.content || ""} />
             </p>
 
             {/* Painless setup header */}
