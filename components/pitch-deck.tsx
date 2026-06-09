@@ -1883,7 +1883,7 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
 
             {/* Closing punch */}
             {slide.content && (
-              <div className="mt-14 border-l-4 border-[#2dd4bf]/60 pl-8">
+              <div className="mt-20 border-l-4 border-[#2dd4bf]/60 pl-8">
                 <p className="text-[34px] font-bold italic text-white">
                   <RichText text={slide.content} />
                 </p>
