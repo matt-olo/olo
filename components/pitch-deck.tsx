@@ -2394,86 +2394,66 @@ function SlideSolution2({ slide }: { slide: (typeof slidesData)[0] }) {
             </p>
           )}
 
-          {/* Flow diagram - illustrated pipeline */}
+          {/* Visual: One Call → Fanned cards */}
           {slide.flow && (
             <div className="mb-12">
-              <div className="relative flex items-stretch justify-between gap-0">
-                {/* Step 1: Trigger */}
-                <div className="flex flex-col items-center" style={{ flex: "1 1 0" }}>
-                  <div className="mb-5 flex h-[90px] w-[90px] items-center justify-center rounded-full border-2 border-[#2dd4bf] bg-[#2dd4bf]/15 shadow-[0_0_24px_rgba(45,212,191,0.25)]">
-                    <svg viewBox="0 0 24 24" className="h-10 w-10 text-[#2dd4bf]" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <div className="relative flex items-center justify-center gap-0">
+                {/* Left: ONE CALL - phone icon */}
+                <div className="flex flex-col items-center mr-16">
+                  <div className="mb-4 flex h-[110px] w-[110px] items-center justify-center rounded-full border-2 border-[#2dd4bf] bg-[#2dd4bf]/15 shadow-[0_0_30px_rgba(45,212,191,0.3)]">
+                    <svg viewBox="0 0 24 24" className="h-14 w-14 text-[#2dd4bf]" fill="none" stroke="currentColor" strokeWidth="1.5">
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
                     </svg>
                   </div>
-                  <div className="rounded-xl border border-[#2dd4bf]/30 bg-[#0a2525]/80 px-5 py-4 text-center shadow-[0_0_16px_rgba(45,212,191,0.1)]">
-                    <p className="text-[15px] font-semibold text-white">{slide.flow[0]}</p>
-                  </div>
+                  <p className="text-[20px] font-bold tracking-wider text-[#2dd4bf]">ONE CALL</p>
                 </div>
 
-                {/* Arrow 1 */}
-                <div className="flex items-center px-8 self-center -mt-8">
-                  <div className="flex flex-col items-center gap-1">
-                    <span className="text-[11px] font-medium tracking-wider text-[#2dd4bf]/70">signal</span>
-                    <div className="flex items-center">
-                      <div className="h-[2px] w-[70px] bg-gradient-to-r from-[#2dd4bf]/60 to-[#2dd4bf]" />
-                      <span className="text-[16px] text-[#2dd4bf]">›</span>
+                {/* Arrow */}
+                <div className="flex items-center mr-12">
+                  <div className="h-[3px] w-[80px] bg-gradient-to-r from-[#2dd4bf] to-[#2dd4bf]/40" />
+                  <span className="text-[28px] text-[#2dd4bf] -ml-1">›</span>
+                </div>
+
+                {/* Right: Fanned cards */}
+                <div className="relative flex items-end justify-center" style={{ width: '600px', height: '280px' }}>
+                  {/* Card 1 - Calendar (Schedule) */}
+                  <div className="absolute rounded-xl border border-[#0ea5e9]/40 bg-gradient-to-br from-[#0c2a3a] to-[#0a1e2e] px-6 py-5 shadow-[0_8px_32px_rgba(0,0,0,0.4)]" style={{ width: '130px', height: '170px', left: '40px', bottom: '30px', transform: 'rotate(-18deg)' }}>
+                    <div className="flex flex-col items-center justify-center h-full">
+                      <svg viewBox="0 0 24 24" className="h-12 w-12 text-[#0ea5e9] mb-3" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><rect x="7" y="14" width="3" height="3" rx="0.5"/>
+                      </svg>
+                      <p className="text-[12px] font-semibold text-[#0ea5e9] text-center">Schedule</p>
                     </div>
                   </div>
-                </div>
 
-                {/* Step 2: olo */}
-                <div className="flex flex-col items-center" style={{ flex: "1 1 0" }}>
-                  <div className="mb-5 flex h-[90px] w-[90px] items-center justify-center rounded-full border-2 border-[#2dd4bf] bg-[#2dd4bf]/20 shadow-[0_0_30px_rgba(45,212,191,0.35)]">
-                    <span className="text-[24px] font-black text-[#2dd4bf]">olo</span>
-                  </div>
-                  <div className="rounded-xl border border-[#2dd4bf]/40 bg-[#2dd4bf]/10 px-5 py-4 text-center shadow-[0_0_20px_rgba(45,212,191,0.22)]">
-                    <p className="text-[15px] font-semibold text-[#2dd4bf]">{slide.flow[1]}</p>
-                  </div>
-                </div>
-
-                {/* Arrow 2 */}
-                <div className="flex items-center px-8 self-center -mt-8">
-                  <div className="flex flex-col items-center gap-1">
-                    <span className="text-[11px] font-medium tracking-wider text-[#2dd4bf]/70">execute</span>
-                    <div className="flex items-center">
-                      <div className="h-[2px] w-[70px] bg-gradient-to-r from-[#2dd4bf] to-[#2dd4bf]/60" />
-                      <span className="text-[16px] text-[#2dd4bf]">›</span>
+                  {/* Card 2 - Invoice */}
+                  <div className="absolute rounded-xl border border-[#2dd4bf]/40 bg-gradient-to-br from-[#0a2a2a] to-[#0a1e1e] px-6 py-5 shadow-[0_8px_32px_rgba(0,0,0,0.4)]" style={{ width: '130px', height: '170px', left: '180px', bottom: '60px', transform: 'rotate(-6deg)' }}>
+                    <div className="flex flex-col items-center justify-center h-full">
+                      <svg viewBox="0 0 24 24" className="h-12 w-12 text-[#2dd4bf] mb-3" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/>
+                      </svg>
+                      <p className="text-[12px] font-semibold text-[#2dd4bf] text-center">Invoice</p>
                     </div>
                   </div>
-                </div>
 
-                {/* Step 3: Actions */}
-                <div className="flex flex-col items-center" style={{ flex: "1 1 0" }}>
-                  <div className="mb-5 flex h-[90px] w-[90px] items-center justify-center rounded-full border-2 border-[#2dd4bf] bg-[#2dd4bf]/15 shadow-[0_0_24px_rgba(45,212,191,0.25)]">
-                    <svg viewBox="0 0 24 24" className="h-10 w-10 text-[#2dd4bf]" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/>
-                    </svg>
-                  </div>
-                  <div className="rounded-xl border border-[#2dd4bf]/30 bg-[#0a2525]/80 px-5 py-4 text-center shadow-[0_0_16px_rgba(45,212,191,0.1)]">
-                    <p className="text-[15px] font-semibold text-white">{slide.flow[2]}</p>
-                  </div>
-                </div>
-
-                {/* Arrow 3 */}
-                <div className="flex items-center px-8 self-center -mt-8">
-                  <div className="flex flex-col items-center gap-1">
-                    <span className="text-[11px] font-medium tracking-wider text-[#2dd4bf]/50">done</span>
-                    <div className="flex items-center">
-                      <div className="h-[2px] w-[70px] bg-gradient-to-r from-[#2dd4bf]/60 to-[#2dd4bf]/30" />
-                      <span className="text-[16px] text-[#2dd4bf]/60">›</span>
+                  {/* Card 3 - Email */}
+                  <div className="absolute rounded-xl border border-[#34d399]/40 bg-gradient-to-br from-[#0a2a1a] to-[#081e14] px-6 py-5 shadow-[0_8px_32px_rgba(0,0,0,0.4)]" style={{ width: '130px', height: '170px', left: '320px', bottom: '60px', transform: 'rotate(6deg)' }}>
+                    <div className="flex flex-col items-center justify-center h-full">
+                      <svg viewBox="0 0 24 24" className="h-12 w-12 text-[#34d399] mb-3" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 7 12 13 2 7"/>
+                      </svg>
+                      <p className="text-[12px] font-semibold text-[#34d399] text-center">Email</p>
                     </div>
                   </div>
-                </div>
 
-                {/* Step 4: Complete */}
-                <div className="flex flex-col items-center" style={{ flex: "1 1 0" }}>
-                  <div className="mb-5 flex h-[90px] w-[90px] items-center justify-center rounded-full border-2 border-green-400 bg-green-500/15 shadow-[0_0_24px_rgba(74,222,128,0.25)]">
-                    <svg viewBox="0 0 24 24" className="h-10 w-10 text-green-400" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <polyline points="20 6 9 17 4 12"/>
-                    </svg>
-                  </div>
-                  <div className="rounded-xl border border-green-400/30 bg-green-900/20 px-5 py-4 text-center shadow-[0_0_16px_rgba(74,222,128,0.1)]">
-                    <p className="text-[15px] font-semibold text-green-300">{slide.flow[3]}</p>
+                  {/* Card 4 - Message */}
+                  <div className="absolute rounded-xl border border-[#a78bfa]/40 bg-gradient-to-br from-[#1a1a2e] to-[#12121e] px-6 py-5 shadow-[0_8px_32px_rgba(0,0,0,0.4)]" style={{ width: '130px', height: '170px', left: '460px', bottom: '30px', transform: 'rotate(18deg)' }}>
+                    <div className="flex flex-col items-center justify-center h-full">
+                      <svg viewBox="0 0 24 24" className="h-12 w-12 text-[#a78bfa] mb-3" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="8" y1="9" x2="16" y2="9"/><line x1="8" y1="13" x2="12" y2="13"/>
+                      </svg>
+                      <p className="text-[12px] font-semibold text-[#a78bfa] text-center">Message</p>
+                    </div>
                   </div>
                 </div>
               </div>
