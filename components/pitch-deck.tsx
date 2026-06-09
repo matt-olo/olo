@@ -2253,7 +2253,7 @@ function SlideMarket({ slide }: { slide: (typeof slidesData)[0] }) {
             </div>
             <div className="flex-1 rounded-xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/5 p-8">
               <div className="mb-2 text-[56px] font-black text-red-500">~$26K</div>
-              <div className="text-[24px] text-white/70">lost per entrepreneur/year to admin [2]</div>
+              <div className="text-[24px] text-white/70">avg. admin cost per SMB/year [2]</div>
             </div>
             <div className="flex-1 rounded-xl border border-[#2dd4bf]/20 bg-[#2dd4bf]/5 p-8">
               <div className="mb-2 text-[56px] font-black text-white">$940B</div>
