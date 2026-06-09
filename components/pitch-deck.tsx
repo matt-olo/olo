@@ -2185,7 +2185,7 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
                   </li>
                 ))}
               </ul>
-              <p className="text-[22px] font-bold text-white border-t border-[#2dd4bf]/15 pt-5">
+              <p className="text-[22px] font-bold text-[#2dd4bf] border-t border-[#2dd4bf]/15 pt-5">
                 {slide.pilotRelease?.footer}
               </p>
             </div>
@@ -2201,7 +2201,7 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
                   </li>
                 ))}
               </ul>
-              <p className="text-[22px] font-bold text-white border-t border-white/10 pt-5">
+              <p className="text-[22px] font-bold text-[#2dd4bf] border-t border-white/10 pt-5">
                 {slide.fullRelease?.footer}
               </p>
             </div>
