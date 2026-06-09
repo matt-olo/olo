@@ -2098,8 +2098,8 @@ function SlideRoadmap({ slide }: { slide: (typeof slidesData)[0] }) {
               </div>
 
               {/* Card */}
-              <div className={`flex-1 rounded-2xl border p-8 backdrop-blur-sm ${idx === 0 ? 'border-[#2dd4bf]/20 bg-[#0a2020]/60' : idx === 1 ? 'border-[#0ea5e9]/25 bg-[#0a1828]/80' : 'border-[#34d399]/25 bg-[#0a2818]/80'}`}>
-                <div className={`mb-2 text-[18px] font-semibold uppercase tracking-wider ${idx === 0 ? 'text-[#2dd4bf]/60' : idx === 1 ? 'text-[#0ea5e9]/60' : 'text-[#34d399]/60'}`}>
+              <div className={`flex-1 rounded-2xl border p-8 backdrop-blur-sm ${idx === 0 ? 'border-[#2dd4bf]/20 bg-[#0a2020]/60' : idx === 1 ? 'border-[#0ea5e9]/30 bg-[#081a2e]/80' : 'border-[#34d399]/30 bg-[#082818]/80'}`}>
+                <div className={`mb-2 text-[18px] font-semibold uppercase tracking-wider ${idx === 0 ? 'text-[#2dd4bf]' : idx === 1 ? 'text-[#0ea5e9]' : 'text-[#34d399]'}`}>
                   {phase.label}
                 </div>
                 <h2 className="mb-5 text-[28px] font-bold text-white leading-tight">
@@ -2110,7 +2110,7 @@ function SlideRoadmap({ slide }: { slide: (typeof slidesData)[0] }) {
                     <RichText text={phase.highlight} />
                   </p>
                 )}
-                <p className={`text-[19px] leading-relaxed ${idx === 0 ? 'text-[#2dd4bf]/80' : idx === 1 ? 'text-[#0ea5e9]/80' : 'text-[#34d399]/80'}`}>
+                <p className={`text-[19px] leading-relaxed ${idx === 0 ? 'text-[#2dd4bf]' : idx === 1 ? 'text-[#0ea5e9]' : 'text-[#34d399]'}`}>
                   {phase.desc}
                 </p>
               </div>
