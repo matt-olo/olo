@@ -2642,7 +2642,7 @@ function SlideAsk({ slide }: { slide: (typeof slidesData)[0] }) {
                   <span className="text-[28px] font-black text-[#0ea5e9]">{fund.pct}</span>
                 </div>
                 <p className="text-[38px] font-black text-white mb-3 drop-shadow-[0_0_8px_rgba(45,212,191,0.22)]">{fund.amount}</p>
-                <p className="text-[18px] text-white/50 leading-[1.7]">{fund.desc}</p>
+                <p className="text-[20px] text-white leading-[1.7]">{fund.desc}</p>
                 {/* Progress bar */}
                 <div className="mt-4 h-[4px] w-full rounded-full bg-white/[0.06] overflow-hidden">
                   <div className="h-full rounded-full bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9]" style={{ width: fund.pct }} />
