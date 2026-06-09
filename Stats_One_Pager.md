@@ -717,12 +717,368 @@ Ask yourself these 3 things:
 
 ---
 
-## SPSS QUICK REFERENCE
+## SPSS STEP-BY-STEP WALKTHROUGHS
+
+---
+
+### 🖥️ SPSS: INDEPENDENT SAMPLES T-TEST
+
+**When:** You have 2 different groups and want to compare their averages on something.
+
+**Your data should look like this in SPSS:**
+
+| Participant | Group | Score |
+|---|---|---|
+| 1 | Drug | 85 |
+| 2 | Drug | 78 |
+| 3 | Placebo | 62 |
+| 4 | Placebo | 59 |
+
+(One column for the grouping variable, one column for the score)
+
+**Steps — click by click:**
+1. **Analyze** → **Compare Means** → **Independent-Samples T Test**
+2. Move your score variable (the DV — what you measured) into the **"Test Variable(s)"** box
+3. Move your grouping variable (the IV — what defines the 2 groups) into the **"Grouping Variable"** box
+4. Click **"Define Groups"**
+5. Type the value for Group 1 (e.g., 1 or "Drug") and Group 2 (e.g., 2 or "Placebo")
+6. Click **Continue**
+7. Click **OK**
+
+**Reading the output (2 tables show up):**
+
+**Table 1 — Group Statistics:**
+- Shows N, Mean, SD for each group
+- Use these numbers in your write-up
+
+**Table 2 — Independent Samples Test:**
+- **FIRST** look at "Levene's Test for Equality of Variances" → the "Sig." column
+  - If Sig. > 0.05 → variances are equal → read the **top row** ("Equal variances assumed")
+  - If Sig. < 0.05 → variances are NOT equal → read the **bottom row** ("Equal variances not assumed")
+- In the correct row, find:
+  - **t** = your t-statistic
+  - **df** = degrees of freedom
+  - **Sig. (2-tailed)** = YOUR P-VALUE ← this is what matters
+- If Sig. (2-tailed) < 0.05 → **significant difference between groups**
+
+**Write-up:** "An independent-samples t-test showed that the Drug group (M = 81.5, SD = 4.95) scored significantly higher than the Placebo group (M = 60.5, SD = 2.12), t(2) = 5.52, p = .031."
+
+---
+
+### 🖥️ SPSS: PAIRED SAMPLES T-TEST
+
+**When:** Same people measured twice (before/after, time 1/time 2).
+
+**Your data should look like this:**
+
+| Participant | Before | After |
+|---|---|---|
+| 1 | 60 | 75 |
+| 2 | 65 | 70 |
+| 3 | 70 | 80 |
+
+(Each person gets ONE row. Two columns for the two time points.)
+
+**Steps:**
+1. **Analyze** → **Compare Means** → **Paired-Samples T Test**
+2. Click the first variable (Before) → it goes into "Variable 1"
+3. Click the second variable (After) → it goes into "Variable 2"
+4. They should appear as a pair in the "Paired Variables" box
+5. Click **OK**
+
+**Reading the output (3 tables):**
+
+**Table 1 — Paired Samples Statistics:** Means and SDs for each time point.
+
+**Table 2 — Paired Samples Correlations:** Ignore this usually.
+
+**Table 3 — Paired Samples Test:** THIS IS THE ONE.
+- **Mean** = average difference (After - Before)
+- **t** = t-statistic
+- **df** = N - 1
+- **Sig. (2-tailed)** = YOUR P-VALUE
+- If Sig. < 0.05 → **significant change from before to after**
+
+**Write-up:** "A paired-samples t-test indicated a significant increase in scores from pre-test (M = 65, SD = 5) to post-test (M = 75, SD = 5), t(2) = 3.46, p = .037."
+
+---
+
+### 🖥️ SPSS: ONE-WAY ANOVA
+
+**When:** 3+ different groups, comparing their averages.
+
+**Your data should look like this:**
+
+| Participant | Group | Sprint_Time |
+|---|---|---|
+| 1 | Nonsmoker | 6.2 |
+| 2 | Past_Smoker | 6.8 |
+| 3 | Current_Smoker | 7.3 |
+
+**Steps:**
+1. **Analyze** → **Compare Means** → **One-Way ANOVA**
+2. Move your DV (Sprint_Time) into **"Dependent List"**
+3. Move your IV (Group) into **"Factor"**
+4. Click **"Post Hoc"** → check **Tukey** → click Continue
+5. (Optional) Click **"Options"** → check **Descriptive** and **Homogeneity of variance test** → Continue
+6. Click **OK**
+
+**Reading the output:**
+
+**Table 1 — Descriptives** (if you checked it): N, Mean, SD for each group.
+
+**Table 2 — Test of Homogeneity of Variances (Levene's):**
+- Sig. > 0.05 → good, variances are equal, proceed normally
+- Sig. < 0.05 → variances unequal, use Welch or Games-Howell instead of Tukey
+
+**Table 3 — ANOVA:**
+- Look at the **F** value and **Sig.** column
+- If Sig. < 0.05 → **at least one group is significantly different from another**
+- But you DON'T know which one yet → that's what post-hoc is for
+
+**Table 4 — Post Hoc (Multiple Comparisons / Tukey):**
+- Shows every possible pair of groups compared
+- Look at the **Sig.** column for each pair
+- Any pair where Sig. < 0.05 → those two groups are significantly different
+- Example: Nonsmoker vs Current_Smoker Sig. = .001 → they differ. Nonsmoker vs Past_Smoker Sig. = .12 → they don't.
+
+**Write-up:** "A one-way ANOVA showed a significant effect of smoking status on sprint time, F(2, 350) = 9.21, p < .001. Tukey post-hoc tests revealed that current smokers (M = 7.12) were significantly slower than nonsmokers (M = 6.41, p < .001), but past smokers (M = 6.84) did not differ significantly from either group."
+
+---
+
+### 🖥️ SPSS: TWO-WAY ANOVA
+
+**When:** 2 grouping variables (factors) at once + 1 continuous DV.
+
+**Your data should look like this:**
+
+| Participant | Gender | Treatment | Score |
+|---|---|---|---|
+| 1 | Male | Drug | 82 |
+| 2 | Female | Drug | 91 |
+| 3 | Male | Placebo | 65 |
+| 4 | Female | Placebo | 70 |
+
+**Steps:**
+1. **Analyze** → **General Linear Model** → **Univariate**
+2. Move your DV (Score) into **"Dependent Variable"**
+3. Move BOTH IVs (Gender, Treatment) into **"Fixed Factor(s)"**
+4. Click **"Options"** → check **Descriptive statistics** → Move effects to "Display Means for" → Continue
+5. Click **"Post Hoc"** if any factor has 3+ levels → select it → check Tukey → Continue
+6. Click **OK**
+
+**Reading the output:**
+
+**Table — Tests of Between-Subjects Effects:**
+This is the main table. Look at these rows:
+- **Factor A (e.g., Gender):** Look at Sig. → if < 0.05, gender has a significant effect
+- **Factor B (e.g., Treatment):** Look at Sig. → if < 0.05, treatment has a significant effect
+- **A * B (Interaction):** Look at Sig. → if < 0.05, the effect of one factor DEPENDS on the other
+
+**IMPORTANT:** Check the interaction FIRST.
+- If interaction is significant → the main effects are misleading on their own. You need to look at "simple effects" (how one factor works at each level of the other).
+- If interaction is NOT significant → you can interpret main effects normally.
+
+**Write-up:** "A two-way ANOVA revealed a significant main effect of treatment, F(1, 96) = 12.34, p < .001, and a significant main effect of gender, F(1, 96) = 5.67, p = .019. The interaction was not significant, F(1, 96) = 0.45, p = .504."
+
+---
+
+### 🖥️ SPSS: PEARSON CORRELATION
+
+**When:** 2 continuous variables, want to see if they're related.
+
+**Your data:**
+
+| Participant | Study_Hours | Exam_Score |
+|---|---|---|
+| 1 | 2 | 60 |
+| 2 | 5 | 80 |
+| 3 | 8 | 95 |
+
+**Steps:**
+1. **Analyze** → **Correlate** → **Bivariate**
+2. Move BOTH variables into the **"Variables"** box
+3. Make sure **Pearson** is checked (it is by default)
+4. Make sure **"Flag significant correlations"** is checked
+5. Click **OK**
+
+**Reading the output:**
+
+You get a correlation matrix (table). Find the cell where your two variables intersect:
+- **Top number** = Pearson r (the correlation coefficient, -1 to +1)
+- **Middle number** = Sig. (2-tailed) ← YOUR P-VALUE
+- **Bottom number** = N (sample size)
+- Stars (* or **) = SPSS flagging significance for you
+
+**Interpreting r:**
+- r = 0 to 0.3 → weak
+- r = 0.3 to 0.7 → moderate
+- r = 0.7 to 1.0 → strong
+- Positive r = both go up together. Negative r = one goes up, other goes down.
+
+**Write-up:** "There was a significant strong positive correlation between study hours and exam score, r(48) = .89, p < .001."
+
+---
+
+### 🖥️ SPSS: CHI-SQUARE TEST OF INDEPENDENCE
+
+**When:** 2 categorical variables, testing if they're associated.
+
+**Your data:**
+
+| Participant | Gender | Pet_Preference |
+|---|---|---|
+| 1 | Male | Dogs |
+| 2 | Female | Cats |
+| 3 | Male | Dogs |
+
+**Steps:**
+1. **Analyze** → **Descriptive Statistics** → **Crosstabs**
+2. Move one categorical variable into **"Row(s)"**
+3. Move the other into **"Column(s)"**
+4. Click **"Statistics"** → check **Chi-square** → Continue
+5. (Optional) Click **"Cells"** → check **Expected** (to see expected frequencies) → Continue
+6. Click **OK**
+
+**Reading the output:**
+
+**Table 1 — Crosstabulation:** Shows the observed counts in each cell.
+
+**Table 2 — Chi-Square Tests:**
+- Look at the row that says **"Pearson Chi-Square"**
+- **Value** = your χ² statistic
+- **df** = degrees of freedom
+- **Asymptotic Significance (2-sided)** = YOUR P-VALUE
+- If Sig. < 0.05 → **significant association between the variables**
+
+**WARNING:** Check the footnote! If it says "X cells have expected count less than 5" → your sample is too small for chi-square. Use Fisher's Exact Test instead (it's in the same output table if your table is 2×2).
+
+**Write-up:** "A chi-square test of independence showed a significant association between gender and pet preference, χ²(1) = 9.09, p = .003."
+
+---
+
+### 🖥️ SPSS: LINEAR REGRESSION
+
+**When:** Predicting a continuous outcome from one or more predictors.
+
+**Steps:**
+1. **Analyze** → **Regression** → **Linear**
+2. Move your DV (what you're predicting) into **"Dependent"**
+3. Move your IV(s) (predictors) into **"Independent(s)"**
+4. Click **OK**
+
+**Reading the output (several tables):**
+
+**Table 1 — Model Summary:**
+- **R** = correlation between predicted and observed values
+- **R Square** = how much variance your predictors explain (the big one!)
+  - R² = .79 means your predictor(s) explain 79% of the variation in the outcome
+
+**Table 2 — ANOVA:**
+- Tests if the overall model is significant
+- Look at **Sig.** → if < 0.05, the model significantly predicts the outcome
+
+**Table 3 — Coefficients:**
+- **(Constant)** row: "B" = your intercept (a)
+- **Predictor** row: "B" = your slope (b) → for every 1-unit increase in X, Y changes by this much
+- **Sig.** column for each predictor: is that predictor significant?
+- **Your equation:** Y = (Constant B) + (Predictor B × X)
+
+**Write-up:** "A linear regression showed that study hours significantly predicted exam scores, F(1, 48) = 180.5, p < .001, R² = .79. For every additional hour studied, exam scores increased by 5.58 points (b = 5.58, p < .001)."
+
+---
+
+### 🖥️ SPSS: MANN-WHITNEY U (Non-parametric)
+
+**When:** 2 independent groups but DV is ordinal or not normally distributed.
+
+**Steps:**
+1. **Analyze** → **Nonparametric Tests** → **Legacy Dialogs** → **2 Independent Samples**
+2. Move your DV into **"Test Variable List"**
+3. Move your grouping variable into **"Grouping Variable"**
+4. Click **"Define Groups"** → enter the two group codes → Continue
+5. Make sure **Mann-Whitney U** is checked
+6. Click **OK**
+
+**Reading the output:**
+
+**Table 1 — Ranks:** Mean rank for each group. Higher mean rank = higher scores in that group.
+
+**Table 2 — Test Statistics:**
+- **Mann-Whitney U** = the U statistic
+- **Z** = standardized version
+- **Asymp. Sig. (2-tailed)** = YOUR P-VALUE
+- If Sig. < 0.05 → groups are significantly different
+
+**Write-up:** "A Mann-Whitney U test indicated that pain ratings were significantly higher in Group B (Mdn = 7) than Group A (Mdn = 4), U = 45, z = -2.83, p = .005."
+
+---
+
+### 🖥️ SPSS: KRUSKAL-WALLIS (Non-parametric ANOVA)
+
+**When:** 3+ independent groups, DV is ordinal or non-normal.
+
+**Steps:**
+1. **Analyze** → **Nonparametric Tests** → **Legacy Dialogs** → **K Independent Samples**
+2. Move DV into **"Test Variable List"**
+3. Move grouping variable into **"Grouping Variable"**
+4. Click **"Define Range"** → enter the minimum and maximum group codes (e.g., 1 and 3)
+5. Make sure **Kruskal-Wallis H** is checked
+6. Click **OK**
+
+**Reading output:**
+- **Chi-Square** (this is actually the H statistic) and **Asymp. Sig.** = your p-value
+- If significant → at least one group differs (need follow-up pairwise Mann-Whitney tests to find which)
+
+---
+
+### 🖥️ SPSS: CHECK NORMALITY (DO THIS BEFORE CHOOSING YOUR TEST)
+
+**Steps:**
+1. **Analyze** → **Descriptive Statistics** → **Explore**
+2. Move your DV into **"Dependent List"**
+3. (Optional) Move grouping variable into **"Factor List"** to check normality per group
+4. Click **"Plots"** → check **"Normality plots with tests"** → Continue
+5. Click **OK**
+
+**Reading output:**
+
+**Table — Tests of Normality:**
+- **Shapiro-Wilk** (use this if N < 50): Look at Sig.
+- **Kolmogorov-Smirnov** (use this if N ≥ 50): Look at Sig.
+- If Sig. > 0.05 → data IS normally distributed → use parametric test ✓
+- If Sig. < 0.05 → data is NOT normal → use non-parametric test
+
+**Also look at:**
+- The **histogram** → does it look roughly bell-shaped?
+- The **Q-Q plot** → do dots follow the diagonal line? If yes → normal enough.
+
+---
+
+### 🖥️ SPSS: DESCRIPTIVE STATISTICS
+
+**For continuous variables (means, SD, etc.):**
+1. **Analyze** → **Descriptive Statistics** → **Descriptives**
+2. Move variables into the box
+3. Click **Options** → check what you want: Mean, Std. Deviation, Minimum, Maximum, Variance, Range, etc.
+4. Click Continue → OK
+
+**For categorical variables (counts, percentages):**
+1. **Analyze** → **Descriptive Statistics** → **Frequencies**
+2. Move variables into the box
+3. Click **Statistics** → check: Mean, Median, Mode, Std. Deviation, Quartiles, etc.
+4. Click **Charts** → choose Bar chart or Histogram
+5. Click OK
+
+---
+
+## SPSS QUICK REFERENCE TABLE
 
 | What you want | SPSS Menu Path |
 |---------------|----------------|
 | Descriptives (mean, SD, etc.) | Analyze → Descriptive Statistics → Descriptives |
 | Frequencies + Mode + Median | Analyze → Descriptive Statistics → Frequencies → Statistics |
+| Check normality | Analyze → Descriptive Statistics → Explore → Plots → Normality |
 | Independent t-test | Analyze → Compare Means → Independent-Samples T Test |
 | Paired t-test | Analyze → Compare Means → Paired-Samples T Test |
 | One-way ANOVA | Analyze → Compare Means → One-Way ANOVA |
@@ -734,22 +1090,40 @@ Ask yourself these 3 things:
 | Mann-Whitney U | Analyze → Nonparametric Tests → Legacy Dialogs → 2 Independent Samples |
 | Kruskal-Wallis | Analyze → Nonparametric Tests → Legacy Dialogs → K Independent Samples |
 | Wilcoxon Signed-Rank | Analyze → Nonparametric Tests → Legacy Dialogs → 2 Related Samples |
-| Check normality | Analyze → Descriptive Statistics → Explore → Plots → check Normality plots |
+| Friedman Test | Analyze → Nonparametric Tests → Legacy Dialogs → K Related Samples |
 | Levene's test (equal variances) | Comes automatically with t-test output |
+| Reliability (Cronbach's α) | Analyze → Scale → Reliability Analysis |
 
 ---
 
-## READING SPSS OUTPUT (THE IMPORTANT BITS)
+## READING SPSS OUTPUT — THE UNIVERSAL CHEAT
 
-**For any test, you mainly need:**
-1. **Test statistic** (t, F, χ², U, z — depends on the test)
-2. **Degrees of freedom** (df)
-3. **Sig. (2-tailed)** ← THIS IS YOUR P-VALUE
-4. **Descriptives** (means, SDs for each group)
+**No matter what test you ran, do this:**
 
-**Reporting format:** "There was a significant difference in sprint time between groups, F(2, 350) = 9.21, p < .001."
+1. **Find the "Sig." or "Sig. (2-tailed)" column** ← that's ALWAYS your p-value
+2. **Is it less than 0.05?**
+   - YES → Significant. There IS a difference/relationship/effect.
+   - NO → Not significant. You can't say there's a difference.
+3. **Report these numbers:** test statistic (t, F, χ², U), df, p-value, and group means/SDs
 
-**If Levene's test is significant (p < .05):** Your groups have unequal variances → use the "Equal variances NOT assumed" row in the t-test output.
+**What each output column means:**
+
+| Column you see in SPSS | What it is | Do you care? |
+|---|---|---|
+| N | Sample size | Yes — report it |
+| Mean | Group average | Yes — report it |
+| Std. Deviation | Spread | Yes — report it |
+| Std. Error Mean | SE (noise estimate) | Usually no |
+| t | t-test statistic | Yes — report it |
+| F | ANOVA F-statistic | Yes — report it |
+| df | Degrees of freedom | Yes — report it |
+| Sig. (2-tailed) | **P-VALUE** | **YES — this is the whole point** |
+| Mean Difference | Difference between group means | Sometimes useful |
+| 95% Confidence Interval | Range the true difference probably falls in | Report if asked |
+| Levene's Sig. | Are variances equal? | Yes — tells you which row to read |
+| R Square | % of variance explained (regression) | Yes — report it |
+| B (Coefficients) | Slope/intercept in regression | Yes — report it |
+| Beta (Standardized) | Standardized slope (for comparing predictors) | Report in multiple regression |
 
 ---
 

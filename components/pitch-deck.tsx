@@ -2155,7 +2155,7 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
       <div className="relative flex h-full flex-col justify-between px-[120px] py-[70px]">
         {/* Top heading */}
         <div>
-          <h3 className="mb-2 text-[28px] font-medium uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
+          <h3 className="mb-2 text-[36px] font-bold uppercase tracking-[0.2em] text-[#2dd4bf] drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]">
             {slide.title}
           </h3>
         </div>
@@ -2168,7 +2168,7 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
           </h1>
 
           {/* Description */}
-          <p className="mb-10 max-w-[1400px] text-[22px] leading-relaxed text-white/70">
+          <p className="mb-10 max-w-[1400px] text-[24px] leading-relaxed text-white">
             {slide.content}
           </p>
 
@@ -2176,32 +2176,32 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
           <div className="flex gap-8">
             {/* Pilot Release */}
             <div className="flex-1 rounded-xl border border-[#2dd4bf]/25 bg-[#2dd4bf]/[0.08] p-9">
-              <h2 className="mb-6 text-[28px] font-bold text-[#2dd4bf]">Pilot release</h2>
+              <h2 className="mb-6 text-[30px] font-bold text-[#2dd4bf]">Pilot release</h2>
               <ul className="mb-6 space-y-4">
                 {slide.pilotRelease?.items.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-[21px] text-white/85">
+                  <li key={idx} className="flex items-start gap-3 text-[23px] text-white/85">
                     <span className="mt-1.5 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[#2dd4bf]/60" />
                     <RichText text={item} />
                   </li>
                 ))}
               </ul>
-              <p className="text-[20px] italic text-[#2dd4bf]/80 border-t border-[#2dd4bf]/15 pt-5">
+              <p className="text-[22px] italic text-[#2dd4bf]/80 border-t border-[#2dd4bf]/15 pt-5">
                 {slide.pilotRelease?.footer}
               </p>
             </div>
 
             {/* Full Release */}
             <div className="flex-1 rounded-xl border border-white/15 bg-white/[0.03] p-9">
-              <h2 className="mb-6 text-[28px] font-bold text-white">Full release</h2>
+              <h2 className="mb-6 text-[30px] font-bold text-white">Full release</h2>
               <ul className="mb-6 space-y-4">
                 {slide.fullRelease?.items.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-[21px] text-white/85">
+                  <li key={idx} className="flex items-start gap-3 text-[23px] text-white/85">
                     <span className="mt-1.5 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-white/40" />
                     <RichText text={item} />
                   </li>
                 ))}
               </ul>
-              <p className="text-[20px] italic text-white/60 border-t border-white/10 pt-5">
+              <p className="text-[22px] italic text-white/60 border-t border-white/10 pt-5">
                 {slide.fullRelease?.footer}
               </p>
             </div>
