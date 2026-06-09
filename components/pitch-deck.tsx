@@ -2197,7 +2197,7 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
             <div className="flex-1 rounded-xl border border-[#0ea5e9]/25 p-9" style={{ background: 'linear-gradient(145deg, rgba(14,165,233,0.15) 0%, rgba(6,182,212,0.08) 100%)' }}>
               <div className="mb-6 flex items-center gap-4">
                 <h2 className="text-[30px] font-bold text-[#0ea5e9]">Full release</h2>
-                <div className="flex-1 h-[1px] bg-[#0ea5e9]/30" />
+                <div className="flex-1 h-[2px] bg-[#0ea5e9]/50" />
               </div>
               <ul className="mb-6 space-y-4">
                 {slide.fullRelease?.items.map((item, idx) => (
