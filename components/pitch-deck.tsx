@@ -2185,14 +2185,14 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
                   </li>
                 ))}
               </ul>
-              <p className="text-[22px] font-bold text-[#2dd4bf] border-t border-[#2dd4bf]/15 pt-5">
+              <p className="text-[24px] font-bold text-[#2dd4bf] border-t border-[#2dd4bf]/15 pt-5">
                 {slide.pilotRelease?.footer}
               </p>
             </div>
 
             {/* Full Release */}
             <div className="flex-1 rounded-xl border border-[#0ea5e9]/25 p-9" style={{ background: 'linear-gradient(145deg, rgba(14,165,233,0.15) 0%, rgba(6,182,212,0.08) 100%)' }}>
-              <h2 className="mb-6 text-[30px] font-bold text-white">Full release</h2>
+              <h2 className="mb-6 text-[30px] font-bold text-[#0ea5e9]">Full release</h2>
               <ul className="mb-6 space-y-4">
                 {slide.fullRelease?.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-[23px] text-white/85">
@@ -2201,7 +2201,7 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
                   </li>
                 ))}
               </ul>
-              <p className="text-[22px] font-bold text-[#2dd4bf] border-t border-white/10 pt-5">
+              <p className="text-[24px] font-bold text-[#2dd4bf] border-t border-white/10 pt-5">
                 {slide.fullRelease?.footer}
               </p>
             </div>
