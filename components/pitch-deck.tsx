@@ -2416,7 +2416,7 @@ function SlideMeetOlo({ slide }: { slide: (typeof slidesData)[0] }) {
 
           {/* Description paragraphs */}
           <p className="mb-10 text-[22px] leading-relaxed text-white/70">
-            <span className="text-[#2dd4bf] font-bold">olo</span> is the AI that gets things done for your business. It works in the background, learning how your business operates and watching for routine admin work.
+            <span className="text-[#2dd4bf] font-bold">olo</span> is the AI that gets things done for your business. It works in the background, learning how your business operates and watching for routine admin work to complete.
           </p>
 
           {/* Keyword rows */}
