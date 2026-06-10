@@ -2415,11 +2415,8 @@ function SlideMeetOlo({ slide }: { slide: (typeof slidesData)[0] }) {
           <p className="mb-6 text-[34px] font-medium italic text-[#2dd4bf]">The power of AI without the complexity.</p>
 
           {/* Description paragraphs */}
-          <p className="mb-4 text-[22px] leading-relaxed text-white/70">
-            <span className="text-[#2dd4bf] font-bold">olo</span> is the AI that gets things done for your business. It works in the background, learning how your business operates and watching for routine admin work.
-          </p>
           <p className="mb-10 text-[22px] leading-relaxed text-white/70">
-            When <span className="text-[#2dd4bf] font-bold">olo</span> spots a task from a signal — like an incoming call, email, or scheduled workflow — it builds the workflow, manages the tools, validates the output, and brings it to you for review or approval.
+            <span className="text-[#2dd4bf] font-bold">olo</span> is the AI that gets things done for your business. It works in the background, learning how your business operates and watching for routine admin work.
           </p>
 
           {/* Keyword rows */}
