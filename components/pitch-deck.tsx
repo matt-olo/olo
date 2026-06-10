@@ -210,7 +210,7 @@ const slidesData = [
         label: "Phase 3",
         name: "Standardize & Finalize RC",
         highlight: "",
-        desc: "Turn pilot learnings into a release-ready product: expand SMB workflow coverage, automate onboarding from proven implementation patterns, and lock in repeatable pricing, support, and tooling partnerships.",
+        desc: "Turn pilot learnings into a release-ready product: expand connector tooling, automate onboarding, and lock in repeatable pricing, support, and tooling partnerships.",
       },
     ],
     bgColor: "bg-[#040e14]",
