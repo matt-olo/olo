@@ -198,7 +198,7 @@ const slidesData = [
         label: "Phase 1",
         name: "Bootstrap & MVP Development",
         highlight: "Raise **$375,000** at a **$7.5M** post-money cap.",
-        desc: "Funds build the olo MVP: an agentic automation runtime with scheduled workflows, persistent memory, reusable skills, parallel subagents, permissioned access to four SMB tool connectors, an isolated validation agent, and the olo iOS Admin app for trust controls, worklog, approvals, and interview-based onboarding.",
+        desc: "Funds build the MVP, which will include;\n\u2022 Autonomous automation\n\u2022 Scheduled workflows\n\u2022 Persistent memory\n\u2022 Reusable skills\n\u2022 Parallel subagents\n\u2022 Four tool connectors\n\u2022 Isolated validation agent\n\u2022 iOS Admin app\n\u2022 Automated onboarding",
       },
       {
         label: "Phase 2",
@@ -2724,7 +2724,7 @@ function SlideAsk({ slide }: { slide: (typeof slidesData)[0] }) {
                   <span className="text-[28px] font-black text-[#0ea5e9]">{fund.pct}</span>
                 </div>
                 <p className="text-[38px] font-black text-white mb-3 drop-shadow-[0_0_8px_rgba(45,212,191,0.22)]">{fund.amount}</p>
-                <p className="text-[20px] text-white leading-[1.7]">{fund.desc}</p>
+                <p className="text-[20px] text-white leading-[1.7] whitespace-pre-line">{fund.desc}</p>
                 {/* Progress bar */}
                 <div className="mt-4 h-[4px] w-full rounded-full bg-white/[0.06] overflow-hidden">
                   <div className="h-full rounded-full bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9]" style={{ width: fund.pct }} />
