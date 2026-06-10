@@ -1776,7 +1776,7 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(140deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
+              "repeating-linear-gradient(255deg, transparent 0px, transparent 38px, rgba(0,150,160,0.3) 38px, rgba(0,150,160,0.3) 39.5px, transparent 39.5px, transparent 78px, rgba(45,212,191,0.22) 78px, rgba(45,212,191,0.22) 79.5px, transparent 79.5px, transparent 118px, rgba(0,130,140,0.25) 118px, rgba(0,130,140,0.25) 119.5px, transparent 119.5px, transparent 158px, rgba(12,200,190,0.18) 158px, rgba(12,200,190,0.18) 159.5px)",
           }}
         />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,_rgba(10,50,50,0.5)_0%,_transparent_60%)]" />
