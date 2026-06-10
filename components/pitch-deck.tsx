@@ -1792,7 +1792,7 @@ function SlideProblem({ slide }: { slide: (typeof slidesData)[0] }) {
         </div>
 
         {/* Main content area */}
-        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.25] backdrop-blur-sm px-10 py-8 mt-4">
+        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#0a1a1a]/[0.6] backdrop-blur-sm px-10 py-8 mt-4">
           {/* Main title */}
           <h1 className="mb-6 text-[48px] font-bold leading-tight text-white">
             Small-to-medium businesses are <span className="font-black" style={{ background: 'linear-gradient(135deg, #fca5a5, #ef4444, #dc2626)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>drowning</span> in administrative overhead.
@@ -1880,7 +1880,7 @@ function SlideProblem2({ slide }: { slide: (typeof slidesData)[0] }) {
           </div>
 
           {/* Main content */}
-          <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.25] backdrop-blur-sm px-10 py-8">
+          <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#0a1a1a]/[0.6] backdrop-blur-sm px-10 py-8">
             {/* Big title */}
             <h1 className="mb-14 text-[72px] font-black leading-none tracking-tight">
               <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Powerful AI tools exist.</span>{" "}
@@ -1995,7 +1995,7 @@ function SlideSolution({ slide }: { slide: (typeof slidesData)[0] }) {
         </div>
 
         {/* Main content */}
-        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.25] backdrop-blur-sm px-10 py-8">
+        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#0a1a1a]/[0.6] backdrop-blur-sm px-10 py-8">
           {/* Title statement */}
           <h1 className="mb-14 text-[58px] font-bold leading-tight text-white">
             The <span style={{ background: 'linear-gradient(135deg, #2dd4bf, #06b6d4, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>solution is</span> automation with <span style={{ background: 'linear-gradient(135deg, #2dd4bf, #06b6d4, #0ea5e9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>olo</span>.
@@ -2177,7 +2177,7 @@ function SlideMarketGap({ slide }: { slide: (typeof slidesData)[0] }) {
         </div>
 
         {/* Main */}
-        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.25] backdrop-blur-sm px-10 py-8">
+        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#0a1a1a]/[0.6] backdrop-blur-sm px-10 py-8">
           {/* Big title */}
           <h1 className="mb-4 text-[48px] font-bold leading-tight text-white">
             SMBs <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>know AI is useful</span>. They <span style={{ background: 'linear-gradient(135deg, #ef4444, #dc2626, #991b1b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>do not know what to do with it</span>.
@@ -2246,7 +2246,7 @@ function SlideBusinessModel({ slide }: { slide: (typeof slidesData)[0] }) {
         </div>
 
         {/* Main */}
-        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.25] backdrop-blur-sm px-10 py-6">
+        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#0a1a1a]/[0.6] backdrop-blur-sm px-10 py-6">
           {/* Title */}
           <h1 className="mb-4 text-[48px] font-bold leading-tight text-white">
             <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>High-touch bespoke pilot</span> → <span style={{ background: 'linear-gradient(135deg, #34d399, #059669, #047857)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>scalable subscription model</span>
@@ -2329,7 +2329,7 @@ function SlideMarket({ slide }: { slide: (typeof slidesData)[0] }) {
         </div>
 
         {/* Main */}
-        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.25] backdrop-blur-sm px-10 py-8">
+        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#0a1a1a]/[0.6] backdrop-blur-sm px-10 py-8">
           {/* Big title */}
           <h1 className="mb-14 text-[46px] font-bold leading-tight text-white">
             There is <span className="text-[58px]" style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>$940B/year</span> in SMB admin overhead we built olo to <span className="font-black" style={{ background: 'linear-gradient(135deg, #ef4444, #dc2626, #991b1b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>delete</span>
@@ -2409,7 +2409,7 @@ function SlideMeetOlo({ slide }: { slide: (typeof slidesData)[0] }) {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.25] backdrop-blur-sm px-10 py-8">
+          <div className="rounded-2xl border border-[#2dd4bf]/10 bg-[#0a1a1a]/[0.6] backdrop-blur-sm px-10 py-8">
 
           {/* Subheadline */}
           <p className="mb-6 text-[34px] font-medium italic text-[#2dd4bf]">The power of AI without the complexity.</p>
@@ -2477,7 +2477,7 @@ function SlideSolution2({ slide }: { slide: (typeof slidesData)[0] }) {
         </div>
 
         {/* Main content */}
-        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.25] backdrop-blur-sm px-10 py-8">
+        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#0a1a1a]/[0.6] backdrop-blur-sm px-10 py-8">
           {/* Title */}
           <h1 className="mb-10 text-[56px] font-bold leading-tight text-white">
             <RichText text={slide.subtitle} />
@@ -2703,7 +2703,7 @@ function SlideAsk({ slide }: { slide: (typeof slidesData)[0] }) {
         </div>
 
         {/* Main */}
-        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.25] backdrop-blur-sm px-10 py-8">
+        <div className="flex-1 flex flex-col justify-center rounded-2xl border border-[#2dd4bf]/10 bg-[#0a1a1a]/[0.6] backdrop-blur-sm px-10 py-8">
           {/* Big CTA headline with glow */}
           <div className="relative mb-10 text-center">
             <div className="absolute inset-0 flex items-center justify-center">
@@ -2774,7 +2774,7 @@ function SlideOnboarding({ slide }: { slide: (typeof slidesData)[0] }) {
             {slide.title}
           </h3>
 
-          <div className="rounded-2xl border border-[#2dd4bf]/10 bg-[#2dd4bf]/[0.25] backdrop-blur-sm px-10 py-8">
+          <div className="rounded-2xl border border-[#2dd4bf]/10 bg-[#0a1a1a]/[0.6] backdrop-blur-sm px-10 py-8">
             {/* Title with gradients */}
             <h1 className="mb-5 text-[52px] font-bold leading-tight">
               <span style={{ background: 'linear-gradient(135deg, #67e8f9, #0ea5e9, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Keep your software.</span>{" "}
