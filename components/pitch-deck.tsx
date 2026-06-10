@@ -176,8 +176,8 @@ const slidesData = [
     subtitle: "Raising $375K on a $7.5M SAFE",
     funds: [
       { label: "Engineering", pct: "60%", amount: "$225K", desc: "3 developers hired in year 1 to ship MVP, support early deployments, and build olo into full release." },
-      { label: "Operations", pct: "27%", amount: "$100K", desc: "First-year runway buffer covering company operations, infrastructure, tooling, legal, admin, and support overhead." },
-      { label: "Sales & Support", pct: "13%", amount: "$50K", desc: "Targeted pilot sales, onboarding support, customer success, and workflow setup for early SMB deployments." },
+      { label: "Operations", pct: "27%", amount: "$100K", desc: "First-year runway buffer covering company operations." },
+      { label: "Sales & Support", pct: "13%", amount: "$50K", desc: "Targeted pilot sales, onboarding support, and customer success." },
     ],
     milestones: [
       "MVP + Release Candidate shipped",
