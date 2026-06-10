@@ -2126,7 +2126,7 @@ function SlideRoadmap({ slide }: { slide: (typeof slidesData)[0] }) {
                     <RichText text={phase.highlight} />
                   </p>
                 )}
-                <p className={`text-[19px] leading-relaxed ${idx === 0 ? 'text-[#2dd4bf]' : idx === 1 ? 'text-[#0ea5e9]' : 'text-[#34d399]'}`}>
+                <p className={`text-[19px] leading-relaxed whitespace-pre-line ${idx === 0 ? 'text-[#2dd4bf]' : idx === 1 ? 'text-[#0ea5e9]' : 'text-[#34d399]'}`}>
                   <RichText text={phase.desc} />
                 </p>
               </div>
