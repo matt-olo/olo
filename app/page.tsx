@@ -659,7 +659,7 @@ function MeetOloSection() {
             <Typewriter segments={[{ text: "Meet " }, { text: "olo", className: "bg-gradient-to-r from-[#2dd4bf] to-[#0ea5e9] bg-clip-text text-transparent" }]} />
           </h2>
           <p className="mb-16 text-center text-[18px] font-semibold text-white">
-            Autonomous Small Business Automation.
+            Agentic Small Business Automation.
           </p>
 
           <div className="grid gap-8 lg:grid-cols-5 lg:pl-10">
